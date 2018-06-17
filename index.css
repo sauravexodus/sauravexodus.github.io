@@ -1,0 +1,122 @@
+body {
+  background: #134E5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  height: calc(100vh - 40px);
+  width: calc(100% - 40px);
+  padding: 20px;
+  font-family: 'Open Sans';
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.picture {
+  height: 140px;
+  width: 140px;
+  border-radius: 70px;
+  border: 2px solid #FFF;
+  object-fit: cover;
+  object-position: top;
+  margin-top: 20vh;
+}
+
+.header {
+  color: #FFF;
+  margin-top: 32px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #AAA;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.typing-and-deleting {
+  overflow: hidden;
+  border-right: .15em solid #CCC; /* The typwriter cursor */
+  animation: 
+    typing-and-deleting 3s steps(60, end) infinite,
+    blink-caret .5s step-end infinite;
+}
+
+#language-container {
+  margin-left: 8px;
+}
+
+.language {
+  color: #EEE;
+  font-weight: 600;
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .06em;
+}
+
+/* The typing effect */
+@keyframes typing-and-deleting {
+  0% {
+    width: 0;
+    alpha: 0;
+  }
+  30%, 60% {
+    width: auto;
+    alpha: 1;
+  }
+  98%, 100% {
+    width: 0;
+    alpha: 0;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #CCC }
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFF;
+}
+
+.footer > .icons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 36px;
+  color: #CCC;
+  padding: 4px 7px;
+  margin: 0px 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+ion-icon:hover {
+  color: white;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #EEE;
+}
