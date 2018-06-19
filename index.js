@@ -15,7 +15,7 @@ $(document).ready(() => {
     'Adobe Illustrator',
     'Adobe After Effects',
     'Ruby',
-    'Rbuy on Rails',
+    'Ruby on Rails',
     'Express.js',
     'GraphQL'
     ];
