@@ -135,7 +135,7 @@ a.icon:hover {
   }
 
   .container > .last-name {
-    opacity: 75%;
+    opacity: 90%;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     left: unset;
     top: 512px;
