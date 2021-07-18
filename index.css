@@ -1,122 +1,207 @@
 body {
-  background: #134E5E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  height: 100vh;
-  width: 100%;
-  margin: 0!important;
-  font-family: 'Open Sans';
+  background-color: #0E293B;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 50px;
+}
+
+.nav > .location-icon {
+  margin-left: auto;
+  font-size: 20px;
+  color: #497C98;
+}
+
+.nav > .location {
+  margin-left: 12px;
+  font-size: 20px;
+  color: #B9B9B9;
 }
 
 .container {
-  display: flex;
-  flex: 1;
-  height: 100%;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
+  margin-top: 80px;
+  margin-left: 12vw;
+  height: 80vh;
+  transition: all 0.3s;
 }
 
-.picture {
-  height: 140px;
-  width: 140px;
-  border-radius: 70px;
-  border: 2px solid #FFF;
-  object-fit: cover;
-  object-position: top;
-  margin-top: 20vh;
+.container > img {
+  z-index: 10;
+  position: absolute;
 }
 
-.header {
-  color: #FFF;
-  margin-top: 32px;
-  font-size: 40px;
+.container > .first-name {
+  z-index: 9;
   font-weight: 600;
+  font-size: 120px;
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  color: #85D0F5;
+  opacity: 50%;
 }
 
-.subtitle {
-  color: #AAA;
-  font-weight: 300;
-  display: flex;
-  flex-direction: row;
-  width: 300px;
-  justify-content: flex-start;
-  margin-top: 8px;
+.container > .last-name {
+  font-size: 120px;
+  z-index: 9;
+  position: absolute;
+  top: 182px;
+  left: 340px;
+  color: #2C4E65;
+  opacity: 50%;
 }
 
-.typing-and-deleting {
-  overflow: hidden;
-  border-right: .15em solid #CCC; /* The typwriter cursor */
-  animation: 
-    typing-and-deleting 3s steps(60, end) infinite,
-    blink-caret .5s step-end infinite;
-}
-
-#language-container {
-  margin-left: 8px;
-}
-
-.language {
-  color: #EEE;
-  font-weight: 600;
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .06em;
-}
-
-/* The typing effect */
-@keyframes typing-and-deleting {
-  0% {
-    width: 0;
-    alpha: 0;
-  }
-  30%, 60% {
-    width: auto;
-    alpha: 1;
-  }
-  98%, 100% {
-    width: 0;
-    alpha: 0;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #CCC }
-}
-
-.footer {
-  margin-top: auto;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.footer p {
-  font-size: 20px;
-  font-weight: 300;
-  color: #FFF;
-}
-
-.footer > .icons {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-}
-
-ion-icon {
-  font-size: 36px;
-  color: #CCC;
-  padding: 4px 7px;
-  margin: 0px 4px;
-  cursor: pointer;
-  transition: all 0.5s;
-  background: transparent;
-  border: 1px solid transparent;
-}
-
-ion-icon:hover {
+.container > .description {
+  font-size: 24px;
   color: white;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #EEE;
+  opacity: 36%;
+  top: 340px;
+  left: 400px;
+  position: absolute;
+  z-index: 9;
+}
+
+.container > .social {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 400px;
+  left: 400px;
+  z-index: 9;
+}
+
+.container > .social > a {
+  margin-right: 24px;
+}
+
+a.icon {
+  color: #657682;
+  font-size: 24px;
+  transition: all 0.3s;
+}
+
+a.icon:hover {
+  color: #AACCDF;
+}
+
+.stats-container {
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(10px, 10px, 10px, 0.3);
+  bottom: 80px;
+  right: 80px;
+}
+
+.stats-container.collapsed {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  background-color: #497C98;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.stats-container.collapsed > .stats-icon {
+  color: #0E293B;
+  font-size: 32px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container > img {
+    z-index: 8;
+  }
+
+  .container > .first-name {
+    opacity: 75%;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    left: unset;
+    top: 416px;
+  }
+
+  .container > .last-name {
+    opacity: 75%;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    left: unset;
+    top: 512px;
+  }
+
+  .container > .description {
+    top: 660px;
+    left: unset;
+    opacity: 60%;
+
+  }
+
+  .container > .social {
+    top: unset;
+    left: unset;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .nav {
+    padding: 16px;
+  }
+
+  .container > img {
+    width: 240px;
+    margin-top: 40px;
+  }
+
+  .container > .first-name {
+    font-size: 100px;
+    top: 300px;
+  }
+
+  .container > .last-name {
+    font-size: 100px;
+    top: 380px;
+  }
+
+  .container > .description {
+    font-size: 14px;
+    top: 500px;
+  }
+
+  .stats-container {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .stats-container {
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .stats-container.collapsed {
+    height: 48px;
+    width: 48px;
+  }
+
+  .stats-container.collapsed > .stats-icon {
+    font-size: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
 }

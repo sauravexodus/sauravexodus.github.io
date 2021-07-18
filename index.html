@@ -13,8 +13,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
@@ -34,48 +36,39 @@
     <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <title>Sourav Chandra</title>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-      crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </head>
   
   <body>
+    <div class="nav">
+      <img src="logo.svg">
+      <ion-icon class="location-icon" name="location"></ion-icon>
+      <span class="location">Bangalore, India</span>
+    </div>
     <div class="container">
-      <img class="picture" src="picture.jpg" alt="Sourav Chandra"/>
-      <span class="header">Sourav Chandra</span>
-      <div class="subtitle">
-        <div>I know</div>
-        <div id="language-container" class="typing-and-deleting">
-          <div id="language" class="language">Typescript</div>
-        </div>
-        <div style="flex-grow: 1"></div>
+      <img src="symbol.png">
+      <div class="first-name">sourav</div>
+      <div class="last-name">chandra</div>
+      <div class="description">Entreprenuer, software engineer and a rider.</div>
+      <div class="social">
+        <a class="icon" target="_blank" rel="no-referrer" href="https://www.facebook.com/chandrashiness/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a class="icon" target="_blank" rel="no-referrer" href="https://www.instagram.com/travelfreakrider/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="icon" target="_blank" rel="no-referrer" href="https://github.com/sauravexodus">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a class="icon" target="_blank" rel="no-referrer" href="https://www.linkedin.com/in/souravchan/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
       </div>
-      <div class="footer">
-        <p>Let's make something great.</p>
-        <div class="icons">
-          <a href="https://github.com/sauravexodus" target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-          <a href="https://www.facebook.com/chandrashiness" target="_blank">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-          <a href="https://medium.com/@sauravchandra" target="_blank">
-            <ion-icon name="ios-paper"></ion-icon>
-          </a>
-          <a href="https://www.linkedin.com/in/souravchan/" target="_blank">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-          <a href="mailto:saurav.chandra1992@live.com">
-            <ion-icon name="ios-at"></ion-icon>
-          </a>
-          <a href="https://github.com/sauravexodus/sauravexodus.github.io/raw/master/resume/Sourav%20Chandra%20%7C%20iOS%20%7C%20Android%20%7C%20React.pdf" target="_blank">
-            <ion-icon name="ios-cloud-download"></ion-icon>
-          </a>
-        </div>
-      </div>
+    </div>
+    <div class="stats-container collapsed">
+      <ion-icon class="stats-icon" name="stats-chart"></ion-icon>
     </div>
   </body>
   
