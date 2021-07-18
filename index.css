@@ -189,6 +189,18 @@ a.icon:hover {
 
 @media only screen and (max-width: 480px) {
 
+  .nav > .logo {
+    width: 140px;
+  }
+
+  .nav > .location-icon {
+    font-size: 18px;
+  }
+
+  .nav > .location {
+    font-size: 16px;
+  }
+
   .stats-container {
     bottom: 24px;
     right: 24px;
