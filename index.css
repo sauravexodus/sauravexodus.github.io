@@ -98,7 +98,7 @@ a.icon:hover {
   bottom: 80px;
   right: 80px;
   position: fixed;
-  background-color: rgb(192, 227, 225, 0.4);
+  background-color: #768D8C;
 }
 
 .stats-container.collapsed {
@@ -140,11 +140,12 @@ a.icon:hover {
 .stats-container.expanded > .footer {
   display: flex;
   justify-content: flex-end;
-  margin: 10px 16px 0px 0px;
+  padding: 10px 16px 0px 0px;
   color: white;
   font-size: 20px;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .stats-container.expanded > .footer > ion-icon {
@@ -159,6 +160,7 @@ a.icon:hover {
   flex: 1;
   row-gap: 4px;
   column-gap: 48px;
+  transition: all 0.3s;
 }
 
 .stats-container.expanded > .details > .header {
@@ -311,6 +313,19 @@ a.icon:hover {
 
   .nav > .location {
     font-size: 16px;
+  }
+
+  .container > .first-name {
+    font-size: 64px;
+  }
+
+  .container > .last-name {
+    font-size: 64px;
+    top: 350px;
+  }
+
+  .container > .description {
+    top: 440px;
   }
 
   .stats-container {
