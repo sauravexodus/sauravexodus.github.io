@@ -94,18 +94,22 @@ a.icon:hover {
 
 .stats-container {
   transition: all 0.3s;
-  box-shadow: 0 0 10px rgba(10px, 10px, 10px, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   bottom: 80px;
   right: 80px;
+  position: fixed;
+  background-color: rgb(192, 227, 225, 0.4);
 }
 
 .stats-container.collapsed {
   height: 80px;
   width: 80px;
-  position: fixed;
-  background-color: #497C98;
   border-radius: 40px;
   cursor: pointer;
+}
+
+.stats-container.collapsed > .details {
+  opacity: 0;
 }
 
 .stats-container.collapsed > .stats-icon {
@@ -114,6 +118,59 @@ a.icon:hover {
   position: absolute;
   bottom: 24px;
   right: 24px;
+}
+
+.stats-container.expanded {
+  height: 300px;
+  width: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-container.expanded > .stats-icon {
+  opacity: 0;
+}
+
+.stats-container.expanded > .footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 16px 0px 0px;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stats-container.expanded > .footer > ion-icon {
+  margin-right: 10px;
+}
+
+.stats-container.expanded > .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #193141;
+  padding: 24px;
+  flex: 1;
+}
+
+.stats-container.expanded > .details > .header {
+  display: flex;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.stats-container.expanded > .details > .header > .title {
+  color: white;
+  font-size: 24px;
+}
+
+.stats-container.expanded > .details > .header > .close {
+  margin-left: auto;
+  font-size: 24px;
+  color: white;
 }
 
 @media only screen and (max-width: 1024px) {
