@@ -7,6 +7,10 @@ statsContainer.addEventListener('click', function(event) {
 
 const close = document.querySelector('.stats-container .close')
 close.addEventListener('click', function(event) {
-  statsContainer.classList.replace("expanded", "collapsed")
-  event.stopPropagation();
+  if (statsContainer.classList.contains("collapsed")) {
+    statsContainer.classList.replace("collapsed", "expanded")
+  } else {
+    statsContainer.classList.replace("expanded", "collapsed")
+    event.stopPropagation();
+  }
 })
