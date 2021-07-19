@@ -157,6 +157,8 @@ a.icon:hover {
   background-color: #193141;
   padding: 24px;
   flex: 1;
+  row-gap: 4px;
+  column-gap: 48px;
 }
 
 .stats-container.expanded > .details > .header {
@@ -164,6 +166,7 @@ a.icon:hover {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: span 2;
+  margin-bottom: 8px;
 }
 
 .stats-container.expanded > .details > .header > .title {
@@ -176,6 +179,29 @@ a.icon:hover {
   font-size: 24px;
   color: white;
   cursor: pointer;
+}
+
+.stats-container.expanded > .details > .skill-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-container.expanded > .details > .skill-container > .skill-name {
+  color: white;
+  font-size: 16px;
+}
+
+.stats-container.expanded > .details > .skill-container > .skill-track {
+  background: rgba(201, 199, 199, 0.24);
+  height: 6px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.stats-container.expanded > .details > .skill-container > .skill-track > .skill-progress {
+  background: #C9C7C7;
+  height: 6px;
+  border-radius: 3px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -215,6 +241,26 @@ a.icon:hover {
     left: unset;
     bottom: 0;
   }
+
+  .stats-container.expanded {
+    z-index: 12;
+    height: auto;
+    left: 80px;
+    width: auto;
+  }
+
+  .stats-container.expanded > .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats-container.expanded > .details .header {
+    margin-bottom: 32px;
+  }
+
+  .stats-container.expanded > .details > .skill-container {
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -247,6 +293,10 @@ a.icon:hover {
     bottom: 40px;
     right: 40px;
   }
+
+  .stats-container.expanded {
+    left: 40px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -277,5 +327,9 @@ a.icon:hover {
     font-size: 16px;
     bottom: 16px;
     right: 16px;
+  }
+
+  .stats-container.expanded {
+    left: 24px;
   }
 }
