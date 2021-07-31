@@ -1,0 +1,96 @@
+body {
+  background-color: #0E293B;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 50px;
+}
+
+.nav > .location-icon {
+  margin-left: auto;
+  font-size: 20px;
+  color: #497C98;
+}
+
+.nav > .location {
+  margin-left: 12px;
+  font-size: 20px;
+  color: #B9B9B9;
+}
+
+.container {
+  position: relative;
+  margin-top: 96px;
+  margin-left: 64px;
+  margin-right: 64px;
+  height: calc(100vh - 110px);
+  transition: all 0.3s;
+  display: flex;
+}
+
+ul.experiment-list {
+  list-style: none;
+  padding-left: 0;
+  width: 25%;
+  height: calc(100% - 128px);
+  overflow: scroll;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+ul.experiment-list::-webkit-scrollbar {
+  display: none;
+}
+
+ul.experiment-list > li {
+  margin-left: 0px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+ul.experiment-list > li > a {
+  font-size: 40px;
+  color: #FFF;
+  opacity: 0.5;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+ul.experiment-list > li > a:hover {
+  opacity: 1;
+  transform: scale(2);
+}
+
+.separator {
+  width: 1px;
+  background-color: white;
+  opacity: 0.2;
+  height: 70%;
+  margin-left: 48px;
+  margin-right: 48px;
+  align-self: center;
+}
+
+.preview {
+  flex: 1;
+  height: 80%;
+  background-color: rosybrown;
+  opacity: 0.5;
+  margin-left: 24px;
+  margin-right: 24px;
+  align-self: center;
+  border-radius: 24px;
+  overflow: hidden;
+  border: none;
+}
+
+.preview > iframe {
+  margin: 0;
+}
