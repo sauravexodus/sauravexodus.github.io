@@ -17,6 +17,6 @@ close.addEventListener('click', function(event) {
 
 document.addEventListener('load', () => {
   const location = Intl.DateTimeFormat().resolvedOptions().timeZone?.includes("Dubai") ? "Dubai, UAE" : "Bangalore, India"
-    document.querySelector('.location').innerHTML = location
-})
+  document.querySelector('.location').innerHTML = location
+}, { once: true, capture: true })
     
