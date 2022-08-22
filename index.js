@@ -15,9 +15,8 @@ close.addEventListener('click', function(event) {
   }
 })
 
-fetch('http://ip-api.com/json')
-  .then(res => res.json())
-  .then(json => {
-    const location = json.country === "India" ? "Bangalore, India" : "Dubai, UAE"
+document.addEventListener('load', () => {
+  const location = Intl.DateTimeFormat().resolvedOptions().timeZone?.includes("Dubai") ? "Dubai, UAE" : "Bangalore, India"
     document.querySelector('.location').innerHTML = location
-  })
+})
+    
