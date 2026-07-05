@@ -265,11 +265,20 @@ h2{
   text-transform:uppercase;color:var(--faint);margin-bottom:18px;
 }
 .trust-logos{
-  display:flex;gap:14px 44px;flex-wrap:wrap;align-items:baseline;
+  display:flex;gap:14px 40px;flex-wrap:wrap;align-items:center;
+}
+.trust-logos .t-item{
+  display:inline-flex;align-items:center;gap:10px;
+  opacity:.62;transition:opacity .15s ease;white-space:nowrap;
+}
+.trust-logos .t-item:hover{opacity:1;}
+.trust-logos img{
+  width:22px;height:22px;border-radius:5px;display:block;
+  filter:saturate(.8);
 }
 .trust-logos span{
   font-family:var(--font-display);font-weight:700;font-size:17px;
-  color:var(--text);opacity:.52;letter-spacing:-.01em;white-space:nowrap;
+  color:var(--text);letter-spacing:-.01em;
 }
 
 /* ---------- metrics ---------- */
@@ -664,11 +673,11 @@ footer{
     <div class="trust reveal">
       <div class="trust-label">Built and led at</div>
       <div class="trust-logos">
-        <span>Y Combinator</span>
-        <span>Speechify</span>
-        <span>Henry AI</span>
-        <span>Yuna.io</span>
-        <span>Pulse (DocTalk)</span>
+        <div class="t-item"><img src="assets/logos/ycombinator.png" alt="Y Combinator logo" loading="lazy"><span>Y Combinator</span></div>
+        <div class="t-item"><img src="assets/logos/speechify.png" alt="Speechify logo" loading="lazy"><span>Speechify</span></div>
+        <div class="t-item"><img src="assets/logos/henry.png" alt="Henry AI logo" loading="lazy"><span>Henry AI</span></div>
+        <div class="t-item"><img src="assets/logos/yuna.png" alt="Yuna logo" loading="lazy"><span>Yuna.io</span></div>
+        <div class="t-item"><img src="assets/logos/doctalk.png" alt="DocTalk logo" loading="lazy"><span>Pulse (DocTalk)</span></div>
       </div>
     </div>
   </div>
