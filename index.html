@@ -1,126 +1,956 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125968480-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fractional CTO for Startups | Sourav Chandra · Ex-Speechify, 2× YC Founding Engineer</title>
+<meta name="description" content="Sourav Chandra is a fractional CTO for AI and early-stage startups. 2× YC founding engineer, ex-Speechify lead engineer. Shipped products to 1M+ users and $1M+/month. Based in the UAE, working globally.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-      gtag('config', 'UA-125968480-1');
-    </script>
+:root{
+  --bg:#0A1422;
+  --bg-2:#0D1A2C;
+  --panel:#101F34;
+  --panel-2:#0E1B2E;
+  --line:rgba(112,168,232,.16);
+  --line-strong:rgba(112,168,232,.32);
+  --grid:rgba(112,168,232,.05);
+  --text:#E9F1FA;
+  --muted:#8FA4BD;
+  --faint:#5F7490;
+  --amber:#FFB224;
+  --amber-deep:#D98F07;
+  --cyan:#5AD1E6;
+  --ink:#081019;
+  --radius:12px;
+  --font-display:'Bricolage Grotesque', sans-serif;
+  --font-body:'IBM Plex Sans', sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#0E293B">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#0E293B">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0E293B">
-    <title>Sourav Chandra</title>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </head>
-  
-  <body>
-    <div class="nav">
-      <img class="logo" src="logo.svg">
-      <ion-icon class="location-icon" name="location"></ion-icon>
-      <span class="location">Bangalore, India</span>
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ambient layers: blueprint grid + glow */
+.backdrop{
+  position:fixed;inset:0;z-index:-2;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+.backdrop::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 480px at 78% -5%, rgba(90,209,230,.09), transparent 62%),
+    radial-gradient(720px 420px at 4% 12%, rgba(255,178,36,.05), transparent 60%),
+    linear-gradient(180deg, rgba(10,20,34,0) 55%, rgba(8,16,26,.9) 100%);
+}
+
+::selection{background:rgba(255,178,36,.28);}
+
+a{color:var(--cyan);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px;}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,20,34,.78);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brand{
+  font-family:var(--font-mono);font-size:14px;letter-spacing:.02em;
+  color:var(--text);display:flex;align-items:center;gap:10px;
+}
+.brand:hover{text-decoration:none;}
+.brand-node{
+  width:10px;height:10px;background:var(--amber);
+  transform:rotate(45deg);flex-shrink:0;
+}
+.brand span{color:var(--faint);}
+.nav-links{display:flex;gap:30px;align-items:center;}
+.nav-links a{
+  font-family:var(--font-mono);font-size:12.5px;color:var(--muted);
+  letter-spacing:.04em;text-transform:uppercase;
+}
+.nav-links a:hover{color:var(--text);text-decoration:none;}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-mono);font-size:13.5px;font-weight:500;
+  letter-spacing:.01em;
+  padding:13px 22px;border-radius:10px;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  white-space:nowrap;
+}
+.btn:hover{text-decoration:none;}
+.btn-primary{
+  background:var(--amber);color:var(--ink);
+  box-shadow:0 0 0 1px rgba(255,178,36,.25), 0 8px 28px -10px rgba(255,178,36,.45);
+}
+.btn-primary:hover{background:#FFC14A;transform:translateY(-1px);}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  border-color:var(--line-strong);
+}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+.btn-sm{padding:10px 16px;font-size:12.5px;}
+
+.btn .arrow{transition:transform .15s ease;}
+.btn:hover .arrow{transform:translateX(3px);}
+
+/* ---------- shared section bits ---------- */
+section{padding:96px 0;}
+.eyebrow{
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--cyan);
+  display:flex;align-items:center;gap:10px;margin-bottom:20px;
+}
+.eyebrow::before{
+  content:"";width:8px;height:8px;background:var(--cyan);
+  transform:rotate(45deg);opacity:.85;
+}
+h1,h2,h3{font-family:var(--font-display);}
+h2{
+  font-size:clamp(1.9rem, 3.4vw, 2.7rem);font-weight:800;
+  letter-spacing:-.02em;line-height:1.12;margin-bottom:16px;
+}
+.section-intro{color:var(--muted);max-width:640px;font-size:17px;}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 72px;}
+.hero-grid{
+  display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.55rem, 5.4vw, 4.15rem);
+  font-weight:800;letter-spacing:-.028em;line-height:1.04;
+  margin-bottom:22px;
+}
+.hero h1 .accent{color:var(--amber);}
+.hero-sub{
+  color:var(--muted);font-size:18px;max-width:540px;margin-bottom:32px;
+}
+.hero-sub strong{color:var(--text);font-weight:600;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:22px;}
+.slots{
+  font-family:var(--font-mono);font-size:12.5px;color:var(--muted);
+  display:flex;align-items:center;gap:9px;
+}
+.pulse-dot{
+  width:8px;height:8px;border-radius:50%;background:#3DDC84;position:relative;flex-shrink:0;
+}
+.pulse-dot::after{
+  content:"";position:absolute;inset:-4px;border-radius:50%;
+  border:1px solid rgba(61,220,132,.5);animation:pulse 2s ease-out infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(.6);opacity:1;}
+  100%{transform:scale(1.5);opacity:0;}
+}
+@media (prefers-reduced-motion: reduce){.pulse-dot::after{animation:none;display:none;}}
+
+/* diagram panel */
+.diagram-panel{
+  background:linear-gradient(165deg, #10203A 0%, #0B1727 100%);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 24px 60px -28px rgba(0,0,0,.7);
+}
+.panel-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px;border-bottom:1px solid var(--line);
+  font-family:var(--font-mono);font-size:11.5px;color:var(--faint);
+  letter-spacing:.05em;
+}
+.panel-head .status{display:flex;align-items:center;gap:7px;color:var(--muted);}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#3DDC84;}
+.diagram-panel svg{display:block;width:100%;height:auto;}
+.panel-foot{
+  padding:12px 18px 16px;border-top:1px solid var(--line);
+  font-family:var(--font-mono);font-size:11.5px;color:var(--faint);
+}
+.panel-foot em{color:var(--muted);font-style:normal;}
+
+/* svg internals */
+.node-rect{fill:#122238;stroke:rgba(112,168,232,.38);stroke-width:1;}
+.node-ghost{fill:#0E1B2E;stroke:rgba(112,168,232,.22);stroke-width:1;}
+.node-label{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;fill:#D6E4F2;letter-spacing:.06em;}
+.node-sub{font-family:'IBM Plex Mono',monospace;font-size:8.5px;fill:#6E86A3;letter-spacing:.04em;}
+.edge{stroke:rgba(90,209,230,.42);stroke-width:1.4;fill:none;}
+.chip-rect{fill:#0B1626;stroke:rgba(255,178,36,.45);stroke-width:1;}
+.chip-text{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:var(--amber);letter-spacing:.03em;}
+.packet{fill:#FFB224;}
+@media (prefers-reduced-motion: reduce){.packet{display:none;}}
+
+/* trust row */
+.trust{
+  margin-top:56px;padding-top:30px;border-top:1px solid var(--line);
+}
+.trust-label{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:18px;
+}
+.trust-logos{
+  display:flex;gap:14px 44px;flex-wrap:wrap;align-items:baseline;
+}
+.trust-logos span{
+  font-family:var(--font-display);font-weight:700;font-size:17px;
+  color:var(--text);opacity:.52;letter-spacing:-.01em;white-space:nowrap;
+}
+
+/* ---------- metrics ---------- */
+.metrics{padding:0;}
+.metrics-band{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:rgba(13,26,44,.5);
+}
+.metrics-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);
+}
+.metric{
+  padding:34px 22px 30px;
+  border-left:1px solid var(--line);
+}
+.metric:first-child{border-left:none;}
+.metric-num{
+  font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,2.6vw,2.3rem);
+  letter-spacing:-.02em;line-height:1;margin-bottom:10px;
+}
+.metric-num sup{font-size:.5em;color:var(--amber);font-weight:700;}
+.metric-label{
+  font-family:var(--font-mono);font-size:11px;color:var(--muted);
+  line-height:1.5;letter-spacing:.02em;
+}
+
+/* ---------- fit (who I help) ---------- */
+.cards-3{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;
+}
+.card{
+  background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 28px;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.card:hover{border-color:var(--line-strong);transform:translateY(-3px);}
+.card-mark{
+  width:34px;height:34px;border:1px solid var(--line-strong);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  color:var(--cyan);font-family:var(--font-mono);font-size:14px;
+}
+.card h3{font-size:19.5px;font-weight:700;letter-spacing:-.015em;margin-bottom:10px;}
+.card p{color:var(--muted);font-size:15px;}
+
+/* ---------- services ---------- */
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;
+}
+.service{
+  background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px 28px;display:flex;flex-direction:column;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.service:hover{border-color:var(--line-strong);transform:translateY(-3px);}
+.service.featured{
+  background:linear-gradient(170deg, #14263F 0%, #0E1B2E 100%);
+  border-color:rgba(255,178,36,.4);
+}
+.service-tag{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:16px;
+}
+.service.featured .service-tag{color:var(--amber);}
+.service h3{font-size:21px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;}
+.service-desc{color:var(--muted);font-size:14.5px;margin-bottom:22px;}
+.service ul{list-style:none;margin-bottom:28px;flex-grow:1;}
+.service li{
+  font-size:14.5px;color:var(--text);padding:7px 0 7px 24px;position:relative;
+}
+.service li::before{
+  content:"";position:absolute;left:2px;top:14px;
+  width:7px;height:7px;background:var(--cyan);transform:rotate(45deg);opacity:.7;
+}
+.service.featured li::before{background:var(--amber);}
+.service .btn{align-self:flex-start;}
+
+/* ---------- track record ---------- */
+.case{
+  display:grid;grid-template-columns:220px 1fr 230px;gap:36px;
+  padding:38px 0;border-top:1px solid var(--line);align-items:start;
+}
+.case:last-of-type{border-bottom:1px solid var(--line);}
+.case-co{
+  font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-.01em;
+}
+.case-meta{
+  font-family:var(--font-mono);font-size:11.5px;color:var(--faint);
+  margin-top:8px;line-height:1.7;letter-spacing:.02em;
+}
+.case-body p{font-size:15px;color:var(--muted);margin-bottom:10px;}
+.case-body p:last-child{margin-bottom:0;}
+.case-body .k{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:3px;
+}
+.case-result{
+  text-align:right;
+}
+.case-result .num{
+  font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.02em;
+  color:var(--amber);line-height:1.25;
+}
+.case-result .num-sub{
+  font-family:var(--font-mono);font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.7;
+}
+
+/* ---------- about ---------- */
+.about-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:64px;margin-top:48px;align-items:start;
+}
+.about-story p{color:var(--muted);font-size:16px;margin-bottom:18px;}
+.about-story p strong{color:var(--text);font-weight:600;}
+.stack-line{
+  margin-top:26px;padding:18px 20px;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel-2);
+  font-family:var(--font-mono);font-size:12.5px;color:var(--muted);line-height:1.9;
+}
+.stack-line b{color:var(--cyan);font-weight:500;}
+.timeline{position:relative;padding-left:26px;}
+.timeline::before{
+  content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(180deg, var(--line-strong), var(--line));
+}
+.tl-item{position:relative;padding-bottom:26px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:"";position:absolute;left:-26px;top:7px;
+  width:9px;height:9px;background:var(--bg);border:1.5px solid var(--cyan);
+  transform:rotate(45deg);
+}
+.tl-item.now::before{background:var(--amber);border-color:var(--amber);}
+.tl-year{font-family:var(--font-mono);font-size:11px;color:var(--faint);letter-spacing:.1em;}
+.tl-role{font-weight:600;font-size:15px;margin-top:3px;}
+.tl-note{font-size:13.5px;color:var(--muted);margin-top:2px;}
+
+/* ---------- newsletter ---------- */
+.news-panel{
+  background:linear-gradient(150deg, #13253F 0%, #0C1828 100%);
+  border:1px solid var(--line-strong);border-radius:16px;
+  padding:52px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+}
+.news-panel h2{margin-bottom:12px;}
+.news-panel p{color:var(--muted);font-size:15.5px;}
+.news-form{display:flex;gap:12px;}
+.news-form input{
+  flex:1;background:rgba(8,16,26,.7);border:1px solid var(--line-strong);
+  border-radius:10px;padding:13px 16px;color:var(--text);
+  font-family:var(--font-mono);font-size:13.5px;min-width:0;
+}
+.news-form input::placeholder{color:var(--faint);}
+.news-form input:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:transparent;}
+.news-fine{
+  font-family:var(--font-mono);font-size:11px;color:var(--faint);margin-top:14px;
+}
+.news-success{
+  font-family:var(--font-mono);font-size:14px;color:#3DDC84;
+  display:flex;align-items:center;gap:10px;
+}
+
+/* ---------- faq ---------- */
+.faq-list{max-width:780px;margin:44px auto 0;}
+.faq-item{border-top:1px solid var(--line);}
+.faq-item:last-child{border-bottom:1px solid var(--line);}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:24px 44px 24px 4px;position:relative;
+  font-family:var(--font-display);font-weight:700;font-size:17.5px;letter-spacing:-.01em;
+  transition:color .15s ease;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary:hover{color:var(--cyan);}
+.faq-item summary::after{
+  content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-mono);font-size:20px;color:var(--amber);font-weight:400;
+  transition:transform .2s ease;
+}
+.faq-item[open] summary::after{content:"−";}
+.faq-a{padding:0 4px 26px;color:var(--muted);font-size:15px;max-width:680px;}
+
+/* ---------- final cta ---------- */
+.book{padding:120px 0 130px;text-align:center;}
+.book h2{font-size:clamp(2.1rem, 4.4vw, 3.3rem);max-width:760px;margin:0 auto 18px;}
+.book h2 .accent{color:var(--amber);}
+.book p{color:var(--muted);max-width:560px;margin:0 auto 36px;font-size:17px;}
+.book .slots{justify-content:center;margin-top:22px;}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);padding:40px 0 48px;
+}
+.foot-grid{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;
+}
+.foot-id .name{font-family:var(--font-display);font-weight:700;font-size:17px;}
+.foot-id .role{font-family:var(--font-mono);font-size:11.5px;color:var(--faint);margin-top:6px;letter-spacing:.04em;}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;}
+.foot-links a{
+  font-family:var(--font-mono);font-size:12.5px;color:var(--muted);letter-spacing:.03em;
+}
+.foot-links a:hover{color:var(--cyan);text-decoration:none;}
+.foot-loc{
+  font-family:var(--font-mono);font-size:11.5px;color:var(--faint);line-height:1.8;text-align:right;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1000px){
+  .hero-grid{grid-template-columns:1fr;gap:44px;}
+  .hero-sub{max-width:100%;}
+  .metrics-grid{grid-template-columns:repeat(3,1fr);}
+  .metric:nth-child(4){border-left:none;}
+  .metric{border-top:1px solid var(--line);}
+  .metric:nth-child(-n+3){border-top:none;}
+  .cards-3,.services-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto;}
+  .case{grid-template-columns:1fr;gap:18px;}
+  .case-result{text-align:left;}
+  .about-grid{grid-template-columns:1fr;gap:48px;}
+  .news-panel{grid-template-columns:1fr;padding:40px 32px;gap:28px;}
+}
+@media (max-width: 720px){
+  .nav-links{display:none;}
+  section{padding:72px 0;}
+  .hero{padding:56px 0 56px;}
+  .metrics-grid{grid-template-columns:repeat(2,1fr);}
+  .metric{border-top:1px solid var(--line);}
+  .metric:nth-child(-n+2){border-top:none;}
+  .metric:nth-child(odd){border-left:none;}
+  .metric:nth-child(even){border-left:1px solid var(--line);}
+  .metric:nth-child(4){border-left:1px solid var(--line);}
+  .trust-logos{gap:12px 28px;}
+  .trust-logos span{font-size:15px;}
+  .news-form{flex-direction:column;}
+  .wrap{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-node" aria-hidden="true"></span>
+      sourav<span>.</span>chandra
+    </a>
+    <div class="nav-links">
+      <a href="#work">Track record</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <div class="container">
-      <img src="symbol.png">
-      <div class="first-name">sourav</div>
-      <div class="last-name">chandra</div>
-      <div class="description">Entreprenuer, software engineer and a rider.</div>
-      <div class="social">
-        <a class="icon" target="_blank" rel="no-referrer" href="https://www.facebook.com/chandrashiness/">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-        <a class="icon" target="_blank" rel="no-referrer" href="https://www.instagram.com/travelfreakrider/">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a class="icon" target="_blank" rel="no-referrer" href="https://github.com/sauravexodus">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a class="icon" target="_blank" rel="no-referrer" href="https://www.linkedin.com/in/souravchan/">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
+    <a class="btn btn-primary btn-sm" href="#book">Book a call</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Fractional CTO · Based in UAE · Working globally</div>
+        <h1>Your fractional CTO for the <span class="accent">0 → 1</span> climb.</h1>
+        <p class="hero-sub">
+          I'm Sourav Chandra: <strong>2× YC founding engineer</strong>, ex-Speechify lead engineer, 3× founder.
+          I've shipped products to <strong>1M+ users</strong> and <strong>$1M+ per month</strong> in revenue.
+          Now I help founders build AI-native products that hold up at scale.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#book">Book a free 30-min technical call <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#work">See the track record</a>
+        </div>
+        <div class="slots"><span class="pulse-dot" aria-hidden="true"></span> 2 fractional slots open this quarter</div>
+      </div>
+
+      <!-- signature: animated architecture schematic -->
+      <div class="diagram-panel reveal" aria-label="Illustrative system architecture diagram">
+        <div class="panel-head">
+          <span>architecture / production_sketch</span>
+          <span class="status"><span class="status-dot" aria-hidden="true"></span> shipping</span>
+        </div>
+        <svg viewBox="0 0 560 378" role="img" aria-label="Diagram of a distributed system: client to load balancer to Go API, with a queue, autoscaled workers, Postgres, an LLM gateway and eval pipeline">
+          <!-- edges (drawn first, packets travel under nodes) -->
+          <g class="edges">
+            <path class="edge" d="M134,62 L416,62"/>
+            <path class="edge" d="M460,84 L460,127 L270,127 L270,327 L134,327"/>
+            <path class="edge" d="M492,84 L492,300"/>
+          </g>
+          <!-- packets -->
+          <g>
+            <circle class="packet" r="3.5">
+              <animateMotion dur="2.8s" repeatCount="indefinite" path="M134,62 L416,62"/>
+            </circle>
+            <circle class="packet" r="3.5">
+              <animateMotion dur="5.2s" begin="0.7s" repeatCount="indefinite" path="M460,84 L460,127 L270,127 L270,327 L134,327"/>
+            </circle>
+            <circle class="packet" r="3.5">
+              <animateMotion dur="3.1s" begin="1.4s" repeatCount="indefinite" path="M492,84 L492,300"/>
+            </circle>
+          </g>
+          <!-- nodes -->
+          <g>
+            <rect class="node-rect" x="24" y="40" width="110" height="44" rx="8"/>
+            <text class="node-label" x="79" y="59" text-anchor="middle">CLIENT</text>
+            <text class="node-sub" x="79" y="74" text-anchor="middle">web · mobile</text>
+
+            <rect class="node-rect" x="210" y="40" width="120" height="44" rx="8"/>
+            <text class="node-label" x="270" y="59" text-anchor="middle">EDGE / LB</text>
+            <text class="node-sub" x="270" y="74" text-anchor="middle">tls · rate limits</text>
+
+            <rect class="node-rect" x="416" y="40" width="120" height="44" rx="8"/>
+            <text class="node-label" x="476" y="59" text-anchor="middle">API</text>
+            <text class="node-sub" x="476" y="74" text-anchor="middle">go · grpc</text>
+
+            <rect class="node-rect" x="210" y="170" width="120" height="44" rx="8"/>
+            <text class="node-label" x="270" y="189" text-anchor="middle">QUEUE</text>
+            <text class="node-sub" x="270" y="204" text-anchor="middle">jobs · retries</text>
+
+            <rect class="node-rect" x="416" y="170" width="120" height="44" rx="8"/>
+            <text class="node-label" x="476" y="189" text-anchor="middle">LLM GATEWAY</text>
+            <text class="node-sub" x="476" y="204" text-anchor="middle">routing · cache</text>
+
+            <rect class="node-ghost" x="222" y="288" width="120" height="54" rx="8"/>
+            <rect class="node-ghost" x="216" y="294" width="120" height="54" rx="8"/>
+            <rect class="node-rect" x="210" y="300" width="120" height="54" rx="8"/>
+            <text class="node-label" x="270" y="323" text-anchor="middle">WORKERS</text>
+            <text class="node-sub" x="270" y="338" text-anchor="middle">autoscaled ×N</text>
+
+            <rect class="node-rect" x="24" y="300" width="110" height="54" rx="8"/>
+            <text class="node-label" x="79" y="323" text-anchor="middle">POSTGRES</text>
+            <text class="node-sub" x="79" y="338" text-anchor="middle">primary + replica</text>
+
+            <rect class="node-rect" x="416" y="300" width="120" height="44" rx="8"/>
+            <text class="node-label" x="476" y="319" text-anchor="middle">EVALS</text>
+            <text class="node-sub" x="476" y="334" text-anchor="middle">quality gates</text>
+          </g>
+          <!-- metric chips -->
+          <g>
+            <rect class="chip-rect" x="24" y="130" width="86" height="22" rx="6"/>
+            <text class="chip-text" x="67" y="144" text-anchor="middle">1M+ MAU</text>
+
+            <rect class="chip-rect" x="340" y="181" width="70" height="22" rx="6"/>
+            <text class="chip-text" x="375" y="195" text-anchor="middle">p99 42ms</text>
+
+            <rect class="chip-rect" x="24" y="248" width="96" height="22" rx="6"/>
+            <text class="chip-text" x="72" y="262" text-anchor="middle">$1M+/mo rev</text>
+          </g>
+        </svg>
+        <div class="panel-foot">// the kind of system I design: <em>boring, observable, hard to kill.</em></div>
       </div>
     </div>
-    <div class="stats-container collapsed">
-      <div class="details">
-        <div class="header">
-          <div class="title">skills</div>
-          <ion-icon class="close" name="close-circle"></ion-icon>
+
+    <!-- trust -->
+    <div class="trust reveal">
+      <div class="trust-label">Built and led at</div>
+      <div class="trust-logos">
+        <span>Y Combinator</span>
+        <span>Speechify</span>
+        <span>Henry AI</span>
+        <span>Yuna.io</span>
+        <span>Pulse (DocTalk)</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= METRICS ================= -->
+<div class="metrics-band reveal">
+  <div class="wrap">
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-num">$1M<sup>+/mo</sup></div>
+        <div class="metric-label">revenue from the Chrome extension I built at Speechify</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">1M<sup>+</sup></div>
+        <div class="metric-label">users on that same extension, from zero</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">2M<sup>+</sup></div>
+        <div class="metric-label">Android installs on the app my team shipped</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">$60k<sup>MRR</sup></div>
+        <div class="metric-label">audiobooks line, taken from experiment to flagship</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">2×</div>
+        <div class="metric-label">YC founding engineer (Henry AI S24, Pulse)</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">10<sup>+yrs</sup></div>
+        <div class="metric-label">shipping 0 → 1 across backend, web and mobile</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WHO I HELP ================= -->
+<section id="fit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Who I work with</div>
+      <h2>Three kinds of people call me.</h2>
+      <p class="section-intro">If you see yourself below, we should talk. If not, I'll happily point you to someone better suited.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card reveal">
+        <div class="card-mark">01</div>
+        <h3>Founders without a technical co-founder</h3>
+        <p>You have the vision, maybe the funding, and no one to own the build. I take architecture, hiring and shipping off your plate so you can sell.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-mark">02</div>
+        <h3>AI startups that need to move fast</h3>
+        <p>Ship an AI-native MVP in weeks, with eval pipelines and inference costs under control, minus the tech debt that kills version two.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-mark">03</div>
+        <h3>Investors who need the truth</h3>
+        <p>Technical due diligence in one to two weeks: what's real, what's risk, and what it actually costs to fix. A report you can act on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Services</div>
+      <h2>Productized. Scoped. No "it depends."</h2>
+      <p class="section-intro">Three ways to work with me, each with a clear deliverable. Every engagement starts with a free 30 minute call.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service featured reveal">
+        <div class="service-tag">Most engagements</div>
+        <h3>Fractional CTO Retainer</h3>
+        <p class="service-desc">Ongoing technical leadership, typically two days a week.</p>
+        <ul>
+          <li>Architecture and roadmap ownership</li>
+          <li>Hiring: from job spec to final round</li>
+          <li>Cloud, vendor and AI cost control</li>
+          <li>Board and investor ready reporting</li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="#book">Book a call <span class="arrow">→</span></a>
+      </div>
+      <div class="service reveal">
+        <div class="service-tag">Fixed scope · Fixed price</div>
+        <h3>AI MVP Sprint</h3>
+        <p class="service-desc">From idea to a working AI-native product, not a demo.</p>
+        <ul>
+          <li>Scope locked in week zero</li>
+          <li>LLM integration with an eval pipeline</li>
+          <li>Production infrastructure from day one</li>
+          <li>Handover docs your next hire will thank you for</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" href="#book">Book a call <span class="arrow">→</span></a>
+      </div>
+      <div class="service reveal">
+        <div class="service-tag">For investors &amp; acquirers</div>
+        <h3>Technical Due Diligence</h3>
+        <p class="service-desc">A one to two week read on any codebase, team and architecture.</p>
+        <ul>
+          <li>Architecture and scalability review</li>
+          <li>Code quality and security posture</li>
+          <li>Team, process and velocity assessment</li>
+          <li>A written report you can invest on</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" href="#book">Book a call <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRACK RECORD ================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Track record</div>
+      <h2>Proof, not promises.</h2>
+      <p class="section-intro">A few things I've built and led. Problem, what I did, and the number it produced.</p>
+    </div>
+    <div style="margin-top:48px;">
+      <div class="case reveal">
+        <div>
+          <div class="case-co">Speechify Chrome Extension</div>
+          <div class="case-meta">Lead Full Stack Engineer<br>2021</div>
         </div>
-        <div class="skill-container">
-          <span class="skill-name">full stack</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 95%;"></div>
-          </div>
+        <div class="case-body">
+          <p><span class="k">Problem</span>Speechify needed a wedge into the browser: a listening product that could convert at massive scale.</p>
+          <p><span class="k">Built</span>Designed and built the extension from scratch, then the growth infrastructure around it: tracking, experiments, retargeting, performance and web vitals.</p>
         </div>
-        <div class="skill-container">
-          <span class="skill-name">android</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="skill-container">
-          <span class="skill-name">ios</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 90%;"></div>
-          </div>
-        </div>
-        <div class="skill-container">
-          <span class="skill-name">react native</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 98%;"></div>
-          </div>
-        </div>
-        <div class="skill-container">
-          <span class="skill-name">leadership</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 99%;"></div>
-          </div>
-        </div>
-        <div class="skill-container">
-          <span class="skill-name">product</span>
-          <div class="skill-track">
-            <div class="skill-progress" style="width: 90%;"></div>
-          </div>
+        <div class="case-result">
+          <div class="num">0 → 1M+ users</div>
+          <div class="num-sub">$1M+/month in subscription revenue · 750k weekly active payers</div>
         </div>
       </div>
-      <a href="mailto:sourav@pyzalabs.com" class="footer">
-        <ion-icon class="close" name="mail"></ion-icon>
-        <span>send an email</span>
-      </a>
-      <ion-icon class="stats-icon" name="stats-chart"></ion-icon>
+
+      <div class="case reveal">
+        <div>
+          <div class="case-co">Speechify Android</div>
+          <div class="case-meta">Android Engineering Lead<br>2020 · 2022</div>
+        </div>
+        <div class="case-body">
+          <p><span class="k">Problem</span>No Android presence, no Android team, and a market waiting.</p>
+          <p><span class="k">Built</span>Bootstrapped the app from zero. Hired and led the squad, built CI/CD from scratch, ran OKRs, and wired Sentry pipelines so quality never slipped.</p>
+        </div>
+        <div class="case-result">
+          <div class="num">2M+ installs</div>
+          <div class="num-sub">$100k/month revenue · 4.3★ on the Play Store</div>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div>
+          <div class="case-co">Speechify Audiobooks</div>
+          <div class="case-meta">Lead Software Engineer<br>2022 · 2023</div>
+        </div>
+        <div class="case-body">
+          <p><span class="k">Problem</span>A highly experimental bet with no guarantee of product-market fit.</p>
+          <p><span class="k">Built</span>Led the 0-to-1 build and the scaling work that turned an experiment into a flagship product line.</p>
+        </div>
+        <div class="case-result">
+          <div class="num">$0 → $60k MRR</div>
+          <div class="num-sub">experiment to flagship</div>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div>
+          <div class="case-co">Henry AI</div>
+          <div class="case-meta">Founding Engineer<br>YC S24 · 2024 · 2025</div>
+        </div>
+        <div class="case-body">
+          <p><span class="k">Problem</span>Commercial real estate runs on pixel-perfect PDFs and maps. Nothing off the shelf came close.</p>
+          <p><span class="k">Built</span>Co-created V1 in two months. A Playwright based high-fidelity PDF render pipeline, and a fully custom Mapbox editor with drag-and-drop UX, 3D, satellite and road rendering.</p>
+        </div>
+        <div class="case-result">
+          <div class="num">V1 in 2 months</div>
+          <div class="num-sub">founding engineer, architecture owner</div>
+        </div>
+      </div>
     </div>
-  </body>
-  
-  <script src="index.js"></script>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2>A decade of 0 → 1, on every layer of the stack.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-story reveal">
+        <p>I've spent 10+ years as the engineer founders call when a thing has to exist, and then survive its own success. <strong>Founding engineer at two YC companies</strong> (Henry AI, S24, and Pulse, formerly DocTalk). <strong>Lead engineer at Speechify</strong> through its hyper-growth years. Three times a founder myself: CTO at Dogether (0 to 1M+ users), CEO at Pyza Labs (bootstrapped to $500k), co-founder at Countd.</p>
+        <p>My depth is in <strong>Go, distributed systems and AI infrastructure</strong>: queues, schedulers, job runners, databases, and the LLM plumbing modern products need. My breadth covers iOS, Android, React and Node, so nothing on your stack is foreign to me.</p>
+        <p>I've hired and led teams of 5 to 16, and helped scale Speechify's tech org past 100 people. Today I'm a Staff Software Architect at Yuna.io, and I take on a small number of fractional engagements. I'm based in the UAE (GMT+4): full-day overlap with Europe and India, and US East Coast mornings.</p>
+        <div class="stack-line">
+          <b>depth:</b> go · distributed systems · schedulers &amp; job runners · llm infra · postgres<br>
+          <b>breadth:</b> react / typescript / nextjs · swift / swiftui · kotlin / compose · react native · node
+        </div>
+      </div>
+      <div class="timeline reveal" aria-label="Career timeline">
+        <div class="tl-item">
+          <div class="tl-year">2015</div>
+          <div class="tl-role">CTO &amp; Founding Member · Dogether</div>
+          <div class="tl-note">0 → 1M+ users, raised $80k, team of 16</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2017</div>
+          <div class="tl-role">Engineering Lead · Pulse (DocTalk, YC)</div>
+          <div class="tl-note">7+ products shipped, team 4 → 10+</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2019</div>
+          <div class="tl-role">CEO · Pyza Labs</div>
+          <div class="tl-note">bootstrapped consultancy to $500k gross</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2020</div>
+          <div class="tl-role">Lead Engineer · Speechify</div>
+          <div class="tl-note">Chrome extension, Android, audiobooks</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024</div>
+          <div class="tl-role">Founding Engineer · Henry AI (YC S24)</div>
+          <div class="tl-note">V1 in 2 months, CRE platform architecture</div>
+        </div>
+        <div class="tl-item now">
+          <div class="tl-year">Now</div>
+          <div class="tl-role">Staff Software Architect · Yuna.io</div>
+          <div class="tl-note">+ fractional CTO, 2 slots per quarter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section id="notes">
+  <div class="wrap">
+    <div class="news-panel reveal">
+      <div>
+        <div class="eyebrow">The newsletter</div>
+        <h2>Field notes from the 0 → 1.</h2>
+        <p>One email, most weeks: what I'm building, what broke, and what I'd do differently. No fluff, no funnels.</p>
+      </div>
+      <div>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" name="email" placeholder="you@yourstartup.com" aria-label="Email address" required>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <div class="news-fine">Read by founders and engineers at YC companies. Unsubscribe anytime.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">FAQ</div>
+      <h2>The questions founders actually ask.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>How does a fractional CTO actually work with my team?</summary>
+        <div class="faq-a">Like a part-time executive, not an agency. I join your Slack, the standups that matter, and your board prep. Typically one to two days a week with clear ownership: architecture, hiring, delivery. Your team ships; I make sure it's the right thing, built the right way.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What does it cost?</summary>
+        <div class="faq-a">Less than a bad senior hire. Retainers are scoped by days per week; the due diligence review and the AI MVP Sprint are fixed price. For context, a full-time CTO in the UAE runs AED 400k+ a year before equity. We'll put exact numbers on a 30 minute call.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you work remotely? What about timezones?</summary>
+        <div class="faq-a">Most engagements are remote-first. I'm in the UAE (GMT+4): full-day overlap with Europe, comfortable overlap with India, and US East Coast mornings. Dubai and Sharjah teams can have me in the room.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>How is this different from hiring a dev agency?</summary>
+        <div class="faq-a">An agency sells hours and owns nothing. I sit on your side of the table. I've been the founding engineer and the founder, so I optimize for the decisions that matter at your stage, including telling you what not to build.</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you still write code, or just advise?</summary>
+        <div class="faq-a">I ship. Architecture reviews are worth little from someone who stopped coding years ago. Depending on scope, I prototype, pair with your engineers, and review pull requests.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Next step</div>
+      <h2>I open <span class="accent">2 fractional slots</span> a quarter.</h2>
+      <p>If you're building something AI-native and want it to survive its own growth, let's talk. Worst case, you leave the call with a clearer technical roadmap.</p>
+      <a class="btn btn-primary" href="mailto:hello@souravchandra.com?subject=Fractional%20CTO%20intro%20call">Book the free 30-min call <span class="arrow">→</span></a>
+      <div class="slots"><span class="pulse-dot" aria-hidden="true"></span> 30 minutes · free · no deck required</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <div class="name">Sourav Chandra</div>
+      <div class="role">Fractional CTO · 2× YC Founding Engineer</div>
+    </div>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/souravchan" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sauravexodus" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:hello@souravchandra.com">hello@souravchandra.com</a>
+    </div>
+    <div class="foot-loc">
+      Sharjah / Dubai, United Arab Emirates<br>
+      Working globally · © <span id="year">2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// scroll reveal
+(function(){
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+// newsletter (front-end only: wire to your ESP of choice)
+(function(){
+  var form = document.getElementById('newsForm');
+  if (!form) return;
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var input = form.querySelector('input[type="email"]');
+    if (!input.value || input.validity.typeMismatch || input.value.indexOf('@') === -1) {
+      input.focus();
+      input.style.borderColor = 'rgba(255,120,120,.7)';
+      return;
+    }
+    form.outerHTML = '<div class="news-success">✓ You\'re in. Watch your inbox.</div>';
+  });
+})();
+
+// current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
