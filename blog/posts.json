@@ -1,0 +1,13 @@
+{
+  "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
+  "posts": [
+    {
+      "slug": "fractional-cto-dubai-uae-guide",
+      "title": "Fractional CTO in Dubai & the UAE: costs, models, and when you actually need one",
+      "date": "2026-07-06",
+      "theme": "fractional-cto-uae",
+      "primary_keyword": "fractional CTO Dubai",
+      "secondary_keywords": ["fractional CTO UAE", "part-time CTO cost", "CTO as a service Dubai"]
+    }
+  ]
+}
