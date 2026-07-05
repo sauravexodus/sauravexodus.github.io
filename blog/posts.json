@@ -2,6 +2,14 @@
   "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
   "posts": [
     {
+      "slug": "ai-mvp-development",
+      "title": "How to scope an AI MVP that ships in 30 days (and survives month two)",
+      "date": "2026-07-06",
+      "theme": "ai-mvp",
+      "primary_keyword": "AI MVP development",
+      "secondary_keywords": ["how to build an AI product fast", "AI MVP cost 2026", "RAG vs fine-tuning for startups", "LLM app architecture"]
+    },
+    {
       "slug": "fractional-cto-dubai-uae-guide",
       "title": "Fractional CTO in Dubai & the UAE: costs, models, and when you actually need one",
       "date": "2026-07-06",
