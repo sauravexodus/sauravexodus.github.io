@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fractional CTO for Startups | Sourav Chandra · Ex-Speechify, 2× YC Founding Engineer</title>
 <meta name="description" content="Sourav Chandra is a fractional CTO for AI and early-stage startups. 2× YC founding engineer, ex-Speechify lead engineer. Shipped products to 1M+ users and $1M+/month. Based in the UAE, working globally.">
+<meta property="og:title" content="Sourav Chandra · Fractional CTO for AI &amp; early-stage startups">
+<meta property="og:description" content="2× YC founding engineer, ex-Speechify. Shipped products to 1M+ users and $1M+/month. Based in the UAE, working globally.">
+<meta property="og:image" content="https://souravchandra.com/assets/picture.png">
+<meta property="og:url" content="https://souravchandra.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
@@ -340,7 +346,7 @@ h2{
 
 /* ---------- about ---------- */
 .about-grid{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:64px;margin-top:48px;align-items:start;
+  display:grid;grid-template-columns:260px 1fr 280px;gap:40px;margin-top:48px;align-items:start;
 }
 .about-story p{color:var(--muted);font-size:16px;margin-bottom:18px;}
 .about-story p strong{color:var(--text);font-weight:600;}
@@ -366,6 +372,41 @@ h2{
 .tl-year{font-family:var(--font-mono);font-size:11px;color:var(--faint);letter-spacing:.1em;}
 .tl-role{font-weight:600;font-size:15px;margin-top:3px;}
 .tl-note{font-size:13.5px;color:var(--muted);margin-top:2px;}
+
+/* portrait */
+.portrait{position:relative;margin:0;}
+.portrait img{
+  display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:14px;border:1px solid var(--line-strong);
+  filter:saturate(.88) contrast(1.04);
+  background:var(--panel-2);
+}
+.portrait-fallback{
+  display:none;width:100%;aspect-ratio:4/5;border-radius:14px;
+  border:1px solid var(--line-strong);
+  background:linear-gradient(165deg,#14263F 0%,#0C1828 100%);
+  align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:800;font-size:72px;
+  color:var(--cyan);letter-spacing:-.02em;
+}
+.portrait.img-missing img{display:none;}
+.portrait.img-missing .portrait-fallback{display:flex;}
+.portrait figcaption{
+  position:absolute;left:10px;right:10px;bottom:10px;
+  background:rgba(8,16,26,.82);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  border:1px solid var(--line);border-radius:8px;
+  padding:8px 12px;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);text-align:center;
+}
+.portrait .corner{
+  position:absolute;width:14px;height:14px;color:rgba(90,209,230,.55);
+}
+.portrait .corner-tl{top:-6px;left:-6px;border-top:1.5px solid;border-left:1.5px solid;}
+.portrait .corner-tr{top:-6px;right:-6px;border-top:1.5px solid;border-right:1.5px solid;}
+.portrait .corner-bl{bottom:-6px;left:-6px;border-bottom:1.5px solid;border-left:1.5px solid;}
+.portrait .corner-br{bottom:-6px;right:-6px;border-bottom:1.5px solid;border-right:1.5px solid;}
 
 /* ---------- newsletter ---------- */
 .news-panel{
@@ -446,7 +487,8 @@ footer{
   .cards-3,.services-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto;}
   .case{grid-template-columns:1fr;gap:18px;}
   .case-result{text-align:left;}
-  .about-grid{grid-template-columns:1fr;gap:48px;}
+  .about-grid{grid-template-columns:260px 1fr;gap:44px;}
+  .timeline{grid-column:1 / -1;max-width:640px;}
   .news-panel{grid-template-columns:1fr;padding:40px 32px;gap:28px;}
 }
 @media (max-width: 720px){
@@ -462,6 +504,8 @@ footer{
   .trust-logos{gap:12px 28px;}
   .trust-logos span{font-size:15px;}
   .news-form{flex-direction:column;}
+  .about-grid{grid-template-columns:1fr;}
+  .portrait{max-width:300px;}
   .wrap{padding:0 20px;}
 }
 </style>
@@ -786,6 +830,16 @@ footer{
       <h2>A decade of 0 → 1, on every layer of the stack.</h2>
     </div>
     <div class="about-grid">
+      <figure class="portrait reveal">
+        <img src="assets/picture.png" alt="Sourav Chandra" loading="lazy"
+             onerror="this.closest('.portrait').classList.add('img-missing')">
+        <div class="portrait-fallback" aria-hidden="true">SC</div>
+        <figcaption>Sharjah, UAE · GMT+4</figcaption>
+        <span class="corner corner-tl" aria-hidden="true"></span>
+        <span class="corner corner-tr" aria-hidden="true"></span>
+        <span class="corner corner-bl" aria-hidden="true"></span>
+        <span class="corner corner-br" aria-hidden="true"></span>
+      </figure>
       <div class="about-story reveal">
         <p>I've spent 10+ years as the engineer founders call when a thing has to exist, and then survive its own success. <strong>Founding engineer at two YC companies</strong> (Henry AI, S24, and Pulse, formerly DocTalk). <strong>Lead engineer at Speechify</strong> through its hyper-growth years. Three times a founder myself: CTO at Dogether (0 to 1M+ users), CEO at Pyza Labs (bootstrapped to $500k), co-founder at Countd.</p>
         <p>My depth is in <strong>Go, distributed systems and AI infrastructure</strong>: queues, schedulers, job runners, databases, and the LLM plumbing modern products need. My breadth covers iOS, Android, React and Node, so nothing on your stack is foreign to me.</p>
