@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Scope an AI MVP That Ships in 30 Days (and Survives Month Two) | Sourav Chandra</title>
+<meta name="description" content="A practical scoping framework for AI MVP development: what to build in 30 days, what it costs in 2026, RAG vs fine-tuning, and why most AI MVPs die in month two — from a 2× YC founding engineer.">
+<link rel="canonical" href="https://souravchandra.com/blog/ai-mvp-development.html">
+<meta property="og:title" content="How to Scope an AI MVP That Ships in 30 Days (and Survives Month Two)">
+<meta property="og:description" content="What to build in 30 days, what it costs in 2026, RAG vs fine-tuning, and why most AI MVPs die in month two.">
+<meta property="og:image" content="https://souravchandra.com/assets/picture.png">
+<meta property="og:url" content="https://souravchandra.com/blog/ai-mvp-development.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Scope an AI MVP That Ships in 30 Days (and Survives Month Two)",
+  "description": "A practical scoping framework for AI MVP development: what to build in 30 days, what it costs in 2026, RAG vs fine-tuning, and why most AI MVPs die in month two.",
+  "author": {
+    "@type": "Person",
+    "name": "Sourav Chandra",
+    "url": "https://souravchandra.com",
+    "jobTitle": "Fractional CTO",
+    "sameAs": ["https://www.linkedin.com/in/souravchan", "https://github.com/sauravexodus"]
+  },
+  "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06",
+  "mainEntityOfPage": "https://souravchandra.com/blog/ai-mvp-development.html",
+  "image": "https://souravchandra.com/assets/picture.png"
+}
+</script>
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <span class="brand-node" aria-hidden="true"></span>
+      Sourav Chandra
+    </a>
+    <div class="nav-links">
+      <a href="/#work">Track record</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/">Writing</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="/#book">Book a call</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="article-head">
+    <div class="eyebrow">AI MVP · Playbook</div>
+    <h1>How to scope an AI MVP that ships in 30 days (and survives month two)</h1>
+    <div class="meta">
+      <span>Sourav Chandra</span>
+      <span>July 6, 2026</span>
+      <span>9 min read</span>
+    </div>
+  </header>
+
+  <article class="article-body">
+    <p>An AI MVP that ships in 30 days has exactly one AI-powered workflow, uses a managed model API instead of anything custom, retrieves your data with RAG instead of fine-tuning, and has an evaluation set before it has a UI. That is the whole formula. Everything else in this post is the reasoning behind it and the numbers to hold your team — or your agency — against.</p>
+
+    <p>I have shipped AI products as a founding engineer at two YC companies and led engineering on a product doing over $1M/month at Speechify, and I now scope these builds for founders as a fractional CTO. The pattern I keep seeing in 2026 is not MVPs that fail to ship. It is MVPs that demo beautifully in week four and then quietly die in month two, when the token bill arrives, latency doubles under real usage, and nobody can say whether last week's prompt change made the product better or worse.</p>
+
+    <h2>What counts as an AI MVP in 2026?</h2>
+    <p>Not a custom model. Not a "platform." One user, one painful task, one AI-assisted workflow that completes that task measurably faster or better than the current alternative. If your spec has the words "and it also," you are scoping a Series A product with seed money.</p>
+    <p>The good news is that the infrastructure argument is over. In 2026 you can rent frontier intelligence by the token: Gemini 3.1 Flash-Lite runs around $0.10 per million input tokens, DeepSeek V3.2 around $0.14, and even top-shelf reasoning models like Claude Opus 4.8 ($5 input / $25 output per million tokens) or GPT-5.4 ($2.50 / $15) are cheap at prototype volume. Anyone quoting you a data-science team and a training pipeline for a v1 is selling you their org chart, not your product.</p>
+
+    <h2>How much does AI MVP development actually cost?</h2>
+    <p>Agency quotes for "AI MVP development" in 2026 cluster between $140k and $300k over three to six months. A simple chatbot-style product gets quoted at $15k–30k, and a properly architected B2B product on managed APIs with RAG typically lands at $35k–70k. Those market numbers are real, but they hide the variable that matters: how much of the budget goes to the one workflow that proves the business, versus scaffolding around it.</p>
+    <p>My rule of thumb after scoping dozens of these: if the first shippable version costs more than $50k or takes more than six weeks, the scope is wrong, not the budget. A senior team of two — or one strong engineer plus someone like me one day a week — can put a single-workflow AI product in front of paying users inside 30 days. What you are buying at the higher price points is usually breadth, and breadth before validation is the most expensive thing a seed-stage company can purchase.</p>
+
+    <h2>What can you actually build in 30 days?</h2>
+    <p>Here is the week-by-week shape I use for AI MVP sprints:</p>
+    <ul>
+      <li><strong>Week 1 — scope and evals.</strong> Pick the one workflow. Write 30–50 real input/output examples with the founder — actual customer documents, actual expected answers. This becomes your evaluation set. No code beyond a script that runs the eval against two or three candidate models. This week kills more bad ideas than any amount of architecture review.</li>
+      <li><strong>Weeks 2–3 — the thin product.</strong> One model provider behind an abstraction layer, RAG over your domain data (a managed vector store is fine — pgvector, Pinecone, whatever your team already knows), auth, billing if you are charging from day one (you should be), and the single workflow end to end. Boring stack: Postgres, one backend framework, one frontend framework. Every exotic choice costs you a day now and a week in month three.</li>
+      <li><strong>Week 4 — harden and instrument.</strong> Rate limits, fallbacks to a second model, token-level cost tracking per user, latency budgets on every AI call, and logging every prompt/response pair (with consent) to grow the eval set. This is the week most teams skip, and it is the week that decides whether month two is iteration or firefighting.</li>
+    </ul>
+
+    <h2>RAG or fine-tuning for a startup MVP?</h2>
+    <p>RAG, almost always. Retrieval keeps your data fresh, auditable, and out of the model weights; you can swap models in an afternoon; and it fails in ways you can debug. Fine-tuning at MVP stage locks this quarter's model into your product right before the next generation ships, and in 2026 the generations are arriving every few months. The honest test: if you cannot first write down 500 excellent training examples, you have no business fine-tuning — and if you can, RAG with good retrieval over those examples usually gets you 90% of the value with none of the lock-in.</p>
+    <p>Fine-tuning earns its place later, for narrow jobs with stable inputs — classification, extraction, a house style — once usage data exists. That is a month-six optimization, not a month-one architecture.</p>
+
+    <h2>Why do AI MVPs die in month two?</h2>
+    <p>Four failure modes account for nearly every post-launch collapse I get called in to fix:</p>
+    <ul>
+      <li><strong>Unit economics nobody calculated.</strong> The demo used 2k-token prompts; production users paste in 60-page PDFs. At $15–25 per million output tokens on a frontier model, a "generous free tier" can cost more per user than your paid plan charges. Track cost per completed workflow from day one and route easy requests to a model in the $0.10–0.50 range.</li>
+      <li><strong>Latency that was fine in the demo.</strong> Eight seconds feels fine when you are watching your own product and fatal when a customer is. Stream everything, cache aggressively, and set a hard latency budget per call before you write the prompt.</li>
+      <li><strong>No evals, so no ability to change anything.</strong> Teams without an eval set stop shipping prompt and model improvements out of fear. The 30–50 examples from week one are what let you upgrade to next quarter's model in a day instead of a month.</li>
+      <li><strong>Wrapper fragility.</strong> If your product is a thin UI over one provider's API with no retrieval, no proprietary data loop, and no workflow depth, the next model release absorbs you. The moat is never the model call. It is the data you accumulate and the workflow you own.</li>
+    </ul>
+
+    <h2>What should you cut from the scope?</h2>
+    <p>Cut multi-model orchestration, agents that "do everything," mobile apps alongside web, admin dashboards, and every second persona. Keep the eval set, cost tracking, streaming, and billing. Founders consistently cut in exactly the wrong direction — they keep the second feature and drop the instrumentation, which is how you end up with two workflows you cannot measure instead of one you can.</p>
+
+    <h2>The bottom line</h2>
+    <p>Scoping an AI MVP is not a technology problem in 2026 — the models are commoditized down to $0.10 per million tokens at the low end. It is a discipline problem: one workflow, one model behind an abstraction, RAG over fine-tuning, evals before UI, and instrumentation before launch. Teams that hold that line ship in 30 days for a fraction of the $140k+ agency quote and are still standing in month two, with data instead of anecdotes. Teams that do not, join the demo graveyard.</p>
+
+    <div class="post-cta">
+      <h2>Scoping an AI build right now?</h2>
+      <p>My AI MVP Sprint does exactly this: scope, evals, and a shipped product in 30 days. Worst case, you leave the call with a tighter spec and a realistic budget.</p>
+      <a class="btn btn-primary" href="mailto:hello@souravchandra.com?subject=AI%20MVP%20Sprint%20intro%20call">Book the free 30-min call →</a>
+    </div>
+  </article>
+</div>
+
+<footer>
+  <a href="/">souravchandra.com</a> · Fractional CTO · Sharjah / Dubai, UAE · © 2026
+</footer>
+</body>
+</html>
