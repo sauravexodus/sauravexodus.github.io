@@ -2,6 +2,14 @@
   "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
   "posts": [
     {
+      "slug": "technical-due-diligence-checklist",
+      "title": "The technical due diligence checklist investors actually use",
+      "date": "2026-07-06",
+      "theme": "tech-dd",
+      "primary_keyword": "technical due diligence checklist",
+      "secondary_keywords": ["startup tech DD for investors", "how VCs evaluate a codebase", "red flags in technical due diligence", "AI-generated code due diligence"]
+    },
+    {
       "slug": "ai-mvp-development",
       "title": "How to scope an AI MVP that ships in 30 days (and survives month two)",
       "date": "2026-07-06",
