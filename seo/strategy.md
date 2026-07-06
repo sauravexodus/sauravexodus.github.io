@@ -28,10 +28,11 @@ CTA box linking to the free 30-min call.
 |---|--------|-------|---------------|-----------------|
 | 1 | PUBLISHED 2026-07-06 | fractional-cto-uae | Fractional CTO in Dubai & the UAE: costs, models, and when you actually need one | fractional CTO Dubai |
 | 2 | PUBLISHED 2026-07-06 | ai-mvp | How to scope an AI MVP that ships in 30 days (and survives month two) | AI MVP development |
-| 3 | QUEUED | tech-dd | The technical due diligence checklist investors actually use | technical due diligence checklist |
+| 3 | PUBLISHED 2026-07-06 | tech-dd | The technical due diligence checklist investors actually use | technical due diligence checklist |
 | 4 | QUEUED | founder-guides | Non-technical founder? How to keep a dev agency honest | non-technical founder building an app |
 | 5 | QUEUED | trending-ai | (auto-discover: pick the week's most relevant AI development and give the CTO take) | (derive from topic) |
 | 6 | QUEUED | fractional-cto-uae | Fractional CTO vs dev agency vs full-time hire: the real math for UAE startups | CTO as a service Dubai |
+| 7 | QUEUED | ai-mvp | RAG vs fine-tuning: what your startup actually needs (and what each costs) | RAG vs fine-tuning for startups |
 
 After item 6, continue rotating themes 1→5. Generate new working titles informed
 by `seo/tracking-log.md` performance data: double down on themes/keywords that
