@@ -28,9 +28,49 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-06",
+  "dateModified": "2026-07-13",
   "mainEntityOfPage": "https://souravchandra.com/blog/ai-mvp-development.html",
   "image": "https://souravchandra.com/assets/picture.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does AI MVP development cost in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agency quotes for AI MVP development in 2026 cluster between $140k and $300k over three to six months. A simple chatbot-style product gets quoted at $15k-30k, and a properly architected B2B product on managed APIs with RAG typically lands at $35k-70k. Rule of thumb: if the first shippable version costs more than $50k or takes more than six weeks, the scope is wrong, not the budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can you build in an AI MVP in 30 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One AI-powered workflow, end to end. Week 1: scope plus an evaluation set of 30-50 real input/output examples. Weeks 2-3: the thin product, meaning one model provider behind an abstraction layer, RAG over your domain data, auth, billing, and the single workflow. Week 4: hardening, meaning rate limits, fallbacks to a second model, per-user cost tracking, and latency budgets on every AI call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a startup use RAG or fine-tuning for an MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RAG, almost always. Retrieval keeps your data fresh and auditable, lets you swap models in an afternoon, and fails in ways you can debug. Fine-tuning at MVP stage locks this quarter's model into your product right before the next generation ships. It earns its place around month six, for narrow jobs with stable inputs, once real usage data exists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do AI MVPs fail after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four failure modes cover nearly every collapse: unit economics nobody calculated (production users paste 60-page PDFs where the demo used 2k-token prompts), latency that was fine in the demo but fatal for customers, no evaluation set so the team stops shipping prompt and model improvements out of fear, and wrapper fragility where a thin UI over one provider's API has no data moat or workflow depth."
+      }
+    }
+  ]
 }
 </script>
 </head>

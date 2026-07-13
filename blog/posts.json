@@ -2,6 +2,14 @@
   "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
   "posts": [
     {
+      "slug": "non-technical-founder-building-an-app",
+      "title": "Non-technical founder building an app? How to keep a dev agency honest",
+      "date": "2026-07-13",
+      "theme": "founder-guides",
+      "primary_keyword": "non-technical founder building an app",
+      "secondary_keywords": ["how to keep a dev agency honest", "dev agency vs in-house team", "how to evaluate a dev shop quote", "app development cost 2026"]
+    },
+    {
       "slug": "technical-due-diligence-checklist",
       "title": "The technical due diligence checklist investors actually use",
       "date": "2026-07-06",
