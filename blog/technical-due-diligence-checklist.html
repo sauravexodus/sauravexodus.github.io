@@ -28,9 +28,49 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-06",
+  "dateModified": "2026-07-13",
   "mainEntityOfPage": "https://souravchandra.com/blog/technical-due-diligence-checklist.html",
   "image": "https://souravchandra.com/assets/picture.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a technical due diligence checklist cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven areas: team and bus factor (who actually built the system), architecture fit for the next 18 months, code quality and delivery cadence, security and data handling, IP and licensing, infrastructure and unit economics, and for AI products an AI layer review covering evaluation discipline, model dependency, and prompt-injection exposure. Weight them by stage: at pre-seed the team section is most of the answer; by Series A security and unit economics carry far more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does technical due diligence take and what does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a seed-stage company: three to five working days of actual work spread over one to two weeks, including interviews, an architecture walkthrough, and a written report. Series A runs two to three weeks. An independent senior practitioner typically charges USD 4k-15k (roughly AED 15k-55k) depending on depth; consultancy firms charge a multiple of that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What red flags actually kill deals in technical due diligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A bus factor of one (the system lives in a departed contractor's head), fear of deploys (shipping less than weekly at seed stage), copyleft license contamination inside the proprietary core, secrets or PII in the repository history, AI products with great demos but no evals and unknown failure rates, and founders with no answer to what breaks at 10x load. Ugly code by itself does not kill deals; ugly ownership does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much AI-generated code is acceptable in a startup codebase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The share matters less than the supervision. Roughly a quarter of Y Combinator's Winter 2025 batch reported codebases about 95% AI-generated, while Veracode's research found 45% of AI-generated code contains security flaws. A heavily AI-written codebase with strong evals, review discipline, and founders who can defend the architecture is investable. The same codebase where the honest answer is 'it works, we're not sure why' is not."
+      }
+    }
+  ]
 }
 </script>
 </head>
