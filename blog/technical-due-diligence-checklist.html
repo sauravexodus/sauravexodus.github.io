@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Technical Due Diligence Checklist Investors Actually Use | Sourav Chandra</title>
-<meta name="description" content="The technical due diligence checklist investors actually use: team, architecture, code quality, security, IP, unit economics, and the 2026 AI-generated-code layer — from a 2× YC founding engineer who runs DD for funds.">
+<title>The 7-Area Technical Due Diligence Checklist Investors Actually Use | Sourav Chandra</title>
+<meta name="description" content="The 7-area technical due diligence checklist investors actually use: team, architecture, code quality, security, IP, unit economics, and the 2026 AI-generated-code layer. Plus what investors do NOT look at, from a 2× YC founding engineer who runs DD for funds.">
 <link rel="canonical" href="https://souravchandra.com/blog/technical-due-diligence-checklist.html">
-<meta property="og:title" content="The Technical Due Diligence Checklist Investors Actually Use">
+<meta property="og:title" content="The 7-Area Technical Due Diligence Checklist Investors Actually Use">
 <meta property="og:description" content="Seven areas, the red flags that actually kill deals, what DD costs, and the AI-generated-code question every investor now asks.">
 <meta property="og:image" content="https://souravchandra.com/assets/picture.png">
 <meta property="og:url" content="https://souravchandra.com/blog/technical-due-diligence-checklist.html">
@@ -17,8 +17,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "The Technical Due Diligence Checklist Investors Actually Use",
-  "description": "The technical due diligence checklist investors actually use: team, architecture, code quality, security, IP, unit economics, and the 2026 AI-generated-code layer.",
+  "headline": "The 7-Area Technical Due Diligence Checklist Investors Actually Use",
+  "description": "The 7-area technical due diligence checklist investors actually use: team, architecture, code quality, security, IP, unit economics, and the 2026 AI-generated-code layer. Plus what investors do not look at.",
   "author": {
     "@type": "Person",
     "name": "Sourav Chandra",
@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-13",
+  "dateModified": "2026-07-21",
   "mainEntityOfPage": "https://souravchandra.com/blog/technical-due-diligence-checklist.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -60,6 +60,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A bus factor of one (the system lives in a departed contractor's head), fear of deploys (shipping less than weekly at seed stage), copyleft license contamination inside the proprietary core, secrets or PII in the repository history, AI products with great demos but no evals and unknown failure rates, and founders with no answer to what breaks at 10x load. Ugly code by itself does not kill deals; ugly ownership does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do investors not look at in technical due diligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Test coverage percentages (gameable in an afternoon), code style, framework choices like React vs Vue, how current dependency versions are, and monolith-vs-microservices as a scorecard item. Reviewers price seven things: ownership, architecture fit for the roadmap, delivery cadence, security and data handling, IP, unit economics, and supervision of the AI layer. They read the team through the code, not the code itself."
       }
     },
     {
@@ -96,7 +104,7 @@
 <div class="wrap">
   <header class="article-head">
     <div class="eyebrow">Technical DD · Investors</div>
-    <h1>The technical due diligence checklist investors actually use</h1>
+    <h1>The 7-area technical due diligence checklist investors actually use</h1>
     <div class="meta">
       <span>Sourav Chandra</span>
       <span>July 6, 2026</span>
@@ -150,6 +158,9 @@
       <li><strong>Founders who cannot answer "what breaks at 10× load?"</strong> The answer can be wrong; having no answer is the flag.</li>
     </ul>
     <p>Equally important is what does not kill deals: ugly code, honest tech debt with a plan, a boring stack, a monolith. I have never written "pass" over ugly code. I have written it over ugly ownership.</p>
+
+    <h2>What do investors NOT look at?</h2>
+    <p>Half the anxiety founders bring into DD is spent on things no serious reviewer weighs. Nobody prices your test coverage percentage (gameable in an afternoon), your code style, whether you picked React or Vue, how current your framework versions are, or the fact that you run a monolith out of one repo. The 50-point checklists floating around grade exactly those items, because line items justify invoices. Seven areas is the whole game: ownership, architecture fit, delivery cadence, security, IP, unit economics, and supervision of the AI layer. How VCs actually read a codebase deserves its own post, but the compressed version is this: they read the team through the code, not the code itself.</p>
 
     <h2>How long does technical due diligence take, and what does it cost?</h2>
     <p>For a seed-stage company: three to five working days of actual work, spread over one to two weeks — repo and infrastructure access, two or three hours of interviews with the founders and senior engineers, an architecture walkthrough, and a written report with a clear recommendation. Series A, with more surface area and compliance questions, runs two to three weeks. Anyone quoting six weeks for a seed-stage DD is billing, not diligencing.</p>

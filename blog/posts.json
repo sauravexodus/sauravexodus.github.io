@@ -2,6 +2,14 @@
   "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
   "posts": [
     {
+      "slug": "cto-as-a-service-dubai",
+      "title": "CTO as a service in Dubai: engagement models, AED pricing, and how to choose",
+      "date": "2026-07-21",
+      "theme": "fractional-cto-uae",
+      "primary_keyword": "CTO as a service Dubai",
+      "secondary_keywords": ["CTO as a service UAE", "CaaS vs fractional CTO vs full-time", "CTO as a service cost", "part-time CTO Dubai"]
+    },
+    {
       "slug": "non-technical-founder-building-an-app",
       "title": "Non-technical founder building an app? How to keep a dev agency honest",
       "date": "2026-07-13",
@@ -11,7 +19,7 @@
     },
     {
       "slug": "technical-due-diligence-checklist",
-      "title": "The technical due diligence checklist investors actually use",
+      "title": "The 7-area technical due diligence checklist investors actually use",
       "date": "2026-07-06",
       "theme": "tech-dd",
       "primary_keyword": "technical due diligence checklist",
