@@ -24,7 +24,7 @@
 | 2026-07-27 | 30d | nonbrand_query_count | Non-brand queries with impressions | n/a | 12 | 30 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
 | 2026-07-27 | 30d | technical_route_coverage | Live sitemap routes HTTP 200 | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes HTTP 200 | Protect and compound |
 | 2026-07-27 | 30d | metadata_coverage | Pages with title/meta/canonical/JSON-LD/no noindex | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes metadata OK | Protect and compound |
-| 2026-07-27 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 89 | 90 | 95 | Watch | -1 | OK | Nudge with targeted optimization |
+| 2026-07-27 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 88 | 90 | 95 | Watch | -2 | OK | Nudge with targeted optimization |
 | 2026-07-27 | 30d | pagespeed_seo | PageSpeed SEO score | 100 | 100 | 100 | Stretch | 0 | Minimum across tracked URLs | Protect and compound |
 | 2026-07-27 | 30d | pagespeed_accessibility | PageSpeed accessibility score | 83 | 95 | 100 | Watch | -12 | Minimum across tracked URLs | Nudge with targeted optimization |
 | 2026-07-27 | 30d | ai_mention_rate | AI/GEO mention rate across tracked prompts | n/a | 5% | 10% | Blocked | n/a | No AI/GEO run recorded yet | Need source data before benchmarking |
