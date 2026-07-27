@@ -17,3 +17,18 @@
 | 2026-07-26 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-07-26 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-07-26 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |
+| 2026-07-27 | 30d | gsc_impressions_7d | Google impressions / trailing 7d | n/a | 300 | 750 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-27 | 30d | gsc_clicks_7d | Google clicks / trailing 7d | n/a | 8 | 20 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-27 | 30d | gsc_ctr | Google CTR | n/a | 1.5% | 3.0% | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-27 | 30d | gsc_avg_position | Google average position | n/a | 50 | 30 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-27 | 30d | nonbrand_query_count | Non-brand queries with impressions | n/a | 12 | 30 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-27 | 30d | technical_route_coverage | Live sitemap routes HTTP 200 | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes HTTP 200 | Protect and compound |
+| 2026-07-27 | 30d | metadata_coverage | Pages with title/meta/canonical/JSON-LD/no noindex | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes metadata OK | Protect and compound |
+| 2026-07-27 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 89 | 90 | 95 | Watch | -1 | OK | Nudge with targeted optimization |
+| 2026-07-27 | 30d | pagespeed_seo | PageSpeed SEO score | 100 | 100 | 100 | Stretch | 0 | Minimum across tracked URLs | Protect and compound |
+| 2026-07-27 | 30d | pagespeed_accessibility | PageSpeed accessibility score | 83 | 95 | 100 | Watch | -12 | Minimum across tracked URLs | Nudge with targeted optimization |
+| 2026-07-27 | 30d | ai_mention_rate | AI/GEO mention rate across tracked prompts | n/a | 5% | 10% | Blocked | n/a | No AI/GEO run recorded yet | Need source data before benchmarking |
+| 2026-07-27 | 30d | ai_citation_rate | AI/GEO citation rate across tracked prompts | n/a | 2% | 5% | Blocked | n/a | No AI/GEO run recorded yet | Need source data before benchmarking |
+| 2026-07-27 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
+| 2026-07-27 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
+| 2026-07-27 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |
