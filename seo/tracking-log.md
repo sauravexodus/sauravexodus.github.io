@@ -24,6 +24,19 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-07-27 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
+
+- Metrics refresh: routes remain healthy (7/7 sitemap URLs HTTP 200; 7/7 metadata OK), robots.txt and sitemap.xml live. GSC remains `BLOCKED_SITE_ACCESS`, so Sourav still needs to verify `souravchandra.com` in Search Console and submit/request indexing; this is site access, not OAuth token scope, so the cron should not ask for OAuth.
+- PageSpeed refresh: homepage mobile performance slipped to 88; /blog/ to 86; fractional guide 89; CaaS page 88. SEO remains 100 and accessibility minimum remains 83. Treat as watch-level; not the primary blocker while the site is unverified/unindexed.
+- Monday research pass: Brave returned a usable result page for `fractional CTO Dubai` before rate-limiting follow-up queries. That page contained competitor domains fractional-dubai.com, hirefractional.io, digitalreference.co, golosnichenko.com, and boardman.com, and did not contain souravchandra.com. No exact rank claimed because follow-up SERP collection was throttled. Direct page fetches confirmed: fractional-dubai.com targets fractional executives across Dubai/UAE and links a readiness-assessment funnel; HireFractional has a programmatic `fractional-cto/non-profit/dubai` vertical-location page; golosnichenko.com has a practitioner `Fractional CTO in Dubai` page with AED full-time CTO cost and UAE Data Protection Law references; boardman.com has a Dubai fractional CTO service page with pricing/booking emphasis. Techuz's previously observed fractional-CTO-cost URL returned a 404 today.
+- GEO/AI visibility: still 0 verified mentions/citations for Sourav in the bounded Monday research. Search-source throttling means this is a proxy finding, not a full rank report.
+- Safe actions applied in this run: added root `llms.txt` (missing until now) with Sourav's services, proof, important URLs, and AI citation guidance; expanded robots.txt explicit allowlist to include Perplexity-User, Applebot-Extended, and Bingbot in addition to the already-allowed AI crawlers. Updated `ai-visibility-weekly.md`, `competitor-tracking.md`, `trend-opportunities.md`, `recurring-actions.md`, and refreshed benchmark/PageSpeed/raw metrics.
+- Actions for next publish/optimization run:
+  1. Keep GSC + Bing verification as the top blocker. Submit `https://souravchandra.com/sitemap.xml` and request indexing for all 7 URLs after verification.
+  2. Do not publish thin vertical/location pages until current pages are indexed. If/when building one, choose a differentiated page such as "fractional CTO for AI/fintech startups in Dubai" with proof, local compliance/data-residency angle, and founder/investor buyer intent.
+  3. Consider a lightweight "Do you need a fractional CTO?" checklist/tool only after discovery unblocks; fractional-dubai.com's readiness funnel suggests tools are a competitor format, but a new tool is currently invisible if Google/Bing have not crawled the site.
+  4. Keep the RAG-vs-fine-tuning post ahead of trending AI in the queue until crawling improves.
+
 ## 2026-07-27 — Week 3 tracking run
 
 - Indexation: REGRESSION SIGNAL — `site:souravchandra.com` now returns ZERO pages from our domain (previous runs: 1, the homepage with the stale pre-relaunch snapshot). `site:souravchandra.com/blog` also returns nothing, and even a brand query (`"Sourav Chandra" fractional CTO`) surfaces LinkedIn/GitHub/Scholar profiles but NOT souravchandra.com. Could partly be search-backend variance, but combined with 21 days of zero blog crawling, treat as a possible homepage index drop until GSC can confirm. sitemap.xml live and well-formed (application/xml, 7 URLs: /, /blog/, all 5 posts — matches posts.json). robots.txt live, all AI crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, PerplexityBot, Google-Extended) allowed, sitemap declared.
