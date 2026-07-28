@@ -66,9 +66,23 @@ def api_json(url, token=None, method='GET', payload=None, timeout=45):
         return None,f'HTTP {e.code}: {msg}'
     except Exception as e: return None,str(e)
 
+def prior_gsc_site_access_blocked():
+    """Preserve the known Search Console site-verification blocker across cron auth gaps.
+
+    This cron previously reached GSC and received a site-access 403. If today's
+    environment lacks a gcloud token, reporting BLOCKED_AUTH would incorrectly
+    suggest Sourav needs to repeat OAuth rather than verify the property in GSC.
+    """
+    search=REPORT_DIR/'search-visibility-daily.md'
+    if not search.exists(): return False
+    return 'BLOCKED_SITE_ACCESS' in search.read_text(encoding='utf-8')
+
 def collect_gsc():
     token=gcloud_token()
-    if not token: return {'status':'BLOCKED_AUTH','error':'No gcloud access token available'}
+    if not token:
+        if prior_gsc_site_access_blocked():
+            return {'status':'BLOCKED_SITE_ACCESS','error':'Previously verified GSC site-access blocker persists; no gcloud token available in this cron run, so not requesting OAuth.'}
+        return {'status':'BLOCKED_AUTH','error':'No gcloud access token available'}
     end=dt.date.today()-dt.timedelta(days=1); start=end-dt.timedelta(days=6)
     payload={'startDate':start.isoformat(),'endDate':end.isoformat(),'dimensions':['query','page','country','device'],'rowLimit':50,'startRow':0}
     last=None
