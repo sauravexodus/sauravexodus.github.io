@@ -24,6 +24,20 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-07-29 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
+
+- Metrics refresh: sitemap routes remain healthy (7/7 HTTP 200; 7/7 metadata OK), robots.txt and sitemap.xml live. The collector now preserves the most specific known GSC blocker: earlier authenticated runs proved `BLOCKED_SITE_ACCESS`, so today’s missing local token no longer downgrades the report to generic `BLOCKED_AUTH`. Sourav still needs to verify/add access for `souravchandra.com` in Google Search Console, submit `https://souravchandra.com/sitemap.xml`, and request indexing; this remains site/property access, not an OAuth-scope ask.
+- PageSpeed refresh: homepage mobile performance 88, /blog/ 89, fractional guide 89, CaaS page 89; SEO remains 100 and accessibility minimum remains 83. This is watch-level only; discovery/indexing is still the binding constraint.
+- Wednesday research pass: bounded Bing source fetches for `RAG vs fine-tuning startup MVP`, `AI MVP development cost 2026`, and `how to build an AI MVP in 30 days` contained no `souravchandra.com`/`Sourav Chandra` match. DuckDuckGo returned an anomaly challenge, and one Bing parse produced only Bing-owned navigation links, so no exact rank claims were recorded. Direct source fetches confirmed accessible authoritative pages from IBM (RAG vs fine-tuning), Pinecone (RAG explainer and fine-tuning explainer), Databricks (LoRA fine-tuning guide), and Anthropic (building effective agents).
+- GEO/AI visibility: still 0 verified mentions/citations for Sourav across the bounded Wednesday AI-cluster prompts. Generic definitions are already covered by high-authority sources; Sourav’s winnable angle is a founder-stage decision guide with cost, eval readiness, data freshness, lock-in, latency, and when to revisit fine-tuning after real usage data exists.
+- Safe actions applied in this run: fixed `scripts/collect_visibility_metrics.py` so future cron reports preserve `BLOCKED_SITE_ACCESS` across auth gaps; updated `ai-visibility-weekly.md`, `competitor-tracking.md`, new `industry-trends.md`, `trend-opportunities.md`, `recurring-actions.md`, benchmark/PageSpeed/search reports, and raw metrics.
+- Actions for next publish/optimization run:
+  1. Keep queue item 7 (`RAG vs fine-tuning: what your startup actually needs, and what each costs`) ahead of trending AI. Make it a decision page, not a glossary.
+  2. Include a concrete comparison table: setup effort, monthly run cost, required examples, data freshness, failure modes, eval burden, latency, lock-in, and “revisit at month six” conditions.
+  3. Cross-link from the existing AI MVP post’s `RAG or fine-tuning for a startup MVP?` H2 to the new post in the same commit, and link the new post back to the AI MVP Sprint, technical DD checklist, CaaS page, fractional CTO guide, and founder agency guide.
+  4. Add a short “agentic scope creep” section: one measurable workflow first; agents only after evals, permissions, logging, and cost controls are boring.
+  5. Critical manual blocker remains unchanged: verify `souravchandra.com` in GSC/Bing Webmaster Tools, submit sitemap, and request indexing for all 7 current URLs before expecting visibility movement.
+
 ## 2026-07-27 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
 
 - Metrics refresh: routes remain healthy (7/7 sitemap URLs HTTP 200; 7/7 metadata OK), robots.txt and sitemap.xml live. GSC remains `BLOCKED_SITE_ACCESS`, so Sourav still needs to verify `souravchandra.com` in Search Console and submit/request indexing; this is site access, not OAuth token scope, so the cron should not ask for OAuth.

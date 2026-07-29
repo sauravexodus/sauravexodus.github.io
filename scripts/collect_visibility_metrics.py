@@ -66,9 +66,34 @@ def api_json(url, token=None, method='GET', payload=None, timeout=45):
         return None,f'HTTP {e.code}: {msg}'
     except Exception as e: return None,str(e)
 
+def previous_gsc_blocker():
+    """Preserve the most specific known Search Console blocker across auth gaps.
+
+    In unattended cron, a local gcloud token can disappear after a prior run already
+    proved that the Google account lacked access to the Search Console property.
+    Reporting BLOCKED_AUTH after that is less useful than continuing to tell the
+    owner to verify/add access for the site property.
+    """
+    search=REPORT_DIR/'search-visibility-daily.md'
+    if search.exists() and 'BLOCKED_SITE_ACCESS' in search.read_text(encoding='utf-8'):
+        return 'BLOCKED_SITE_ACCESS'
+    raw=RAW_DIR/'visibility-metrics.jsonl'
+    if raw.exists():
+        for line in raw.read_text(encoding='utf-8').splitlines():
+            try:
+                if json.loads(line).get('gsc',{}).get('status')=='BLOCKED_SITE_ACCESS':
+                    return 'BLOCKED_SITE_ACCESS'
+            except Exception:
+                continue
+    return None
+
 def collect_gsc():
     token=gcloud_token()
-    if not token: return {'status':'BLOCKED_AUTH','error':'No gcloud access token available'}
+    if not token:
+        prior=previous_gsc_blocker()
+        if prior=='BLOCKED_SITE_ACCESS':
+            return {'status':'BLOCKED_SITE_ACCESS','error':'Previous authenticated GSC call returned site-access/verification failure; no fresh token today, preserving the specific blocker.'}
+        return {'status':'BLOCKED_AUTH','error':'No gcloud access token available'}
     end=dt.date.today()-dt.timedelta(days=1); start=end-dt.timedelta(days=6)
     payload={'startDate':start.isoformat(),'endDate':end.isoformat(),'dimensions':['query','page','country','device'],'rowLimit':50,'startRow':0}
     last=None
