@@ -52,7 +52,13 @@ def gcloud_token():
 def api_json(url, token=None, method='GET', payload=None, timeout=45):
     data=None if payload is None else json.dumps(payload).encode()
     headers={'User-Agent':UA,'Accept':'application/json'}
-    qp=os.environ.get('GOOGLE_CLOUD_QUOTA_PROJECT') or os.environ.get('GOOGLE_CLOUD_PROJECT') or 'langdata-production'
+    qp=os.environ.get('GOOGLE_CLOUD_QUOTA_PROJECT') or os.environ.get('GOOGLE_CLOUD_PROJECT')
+    if not qp:
+        adc=Path.home()/'.config'/'gcloud'/'application_default_credentials.json'
+        try:
+            qp=json.loads(adc.read_text(encoding='utf-8')).get('quota_project_id')
+        except Exception:
+            qp=None
     if qp and token and 'key=' not in url: headers['X-Goog-User-Project']=qp
     if token: headers['Authorization']='Bearer '+token
     if data: headers['Content-Type']='application/json'

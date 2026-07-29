@@ -5,4 +5,4 @@
 | 2026-07-26 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | HTTP 403: User does not have sufficient permission for site 'https://souravchandra.com/'. See also: https://support.google.com/webmasters/answer/2451999. |
 | 2026-07-27 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | HTTP 403: User does not have sufficient permission for site 'https://souravchandra.com/'. See also: https://support.google.com/webmasters/answer/2451999. |
 | 2026-07-28 | BLOCKED_AUTH |  |  |  |  |  |  | No gcloud access token available |
-| 2026-07-29 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | Previous authenticated GSC call returned site-access/verification failure; no fresh token today, preserving the specific blocker. |
+| 2026-07-29 | OK | 0 | 15 | 0.00% | 9.9 | saurabh chandra | https://souravchandra.com/ | 2026-07-22→2026-07-28 via sc-domain:souravchandra.com |
