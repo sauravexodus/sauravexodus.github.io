@@ -47,11 +47,11 @@
 | 2026-07-28 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-07-28 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-07-28 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |
-| 2026-07-29 | 30d | gsc_impressions_7d | Google impressions / trailing 7d | n/a | 300 | 750 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
-| 2026-07-29 | 30d | gsc_clicks_7d | Google clicks / trailing 7d | n/a | 8 | 20 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
-| 2026-07-29 | 30d | gsc_ctr | Google CTR | n/a | 1.5% | 3.0% | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
-| 2026-07-29 | 30d | gsc_avg_position | Google average position | n/a | 50 | 30 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
-| 2026-07-29 | 30d | nonbrand_query_count | Non-brand queries with impressions | n/a | 12 | 30 | Blocked | n/a | BLOCKED_SITE_ACCESS | Need source data before benchmarking |
+| 2026-07-29 | 30d | gsc_impressions_7d | Google impressions / trailing 7d | 15 | 300 | 750 | Behind | -285 | 2026-07-22→2026-07-28 | Prioritize growth action |
+| 2026-07-29 | 30d | gsc_clicks_7d | Google clicks / trailing 7d | 0 | 8 | 20 | Behind | -8 | 2026-07-22→2026-07-28 | Prioritize growth action |
+| 2026-07-29 | 30d | gsc_ctr | Google CTR | 0.0% | 1.5% | 3.0% | Behind | -1.5% | Weighted by impressions | Prioritize growth action |
+| 2026-07-29 | 30d | gsc_avg_position | Google average position | 9.93 | 50 | 30 | Stretch | 40.07 | Weighted by impressions | Protect and compound |
+| 2026-07-29 | 30d | nonbrand_query_count | Non-brand queries with impressions | 2 | 12 | 30 | Behind | -10 | From sampled GSC rows | Prioritize growth action |
 | 2026-07-29 | 30d | technical_route_coverage | Live sitemap routes HTTP 200 | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes HTTP 200 | Protect and compound |
 | 2026-07-29 | 30d | metadata_coverage | Pages with title/meta/canonical/JSON-LD/no noindex | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes metadata OK | Protect and compound |
 | 2026-07-29 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 88 | 90 | 95 | Watch | -2 | OK | Nudge with targeted optimization |
