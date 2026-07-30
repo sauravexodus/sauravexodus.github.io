@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-07-30",
   "mainEntityOfPage": "https://souravchandra.com/blog/technical-due-diligence-checklist.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -77,6 +77,14 @@
         "@type": "Answer",
         "text": "The share matters less than the supervision. Roughly a quarter of Y Combinator's Winter 2025 batch reported codebases about 95% AI-generated, while Veracode's research found 45% of AI-generated code contains security flaws. A heavily AI-written codebase with strong evals, review discipline, and founders who can defend the architecture is investable. The same codebase where the honest answer is 'it works, we're not sure why' is not."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Should investors use a 50-point technical due diligence checklist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A long checklist is useful for data-room completeness, but it should not be the investment decision engine. In early-stage technical DD, investors need a short risk-pricing pass across ownership, architecture, delivery cadence, security and data, IP, infrastructure economics, and AI supervision. Extra checklist items should support those seven judgments, not replace them."
+      }
     }
   ]
 }
@@ -122,6 +130,10 @@
 
     <h2>What does the checklist actually cover?</h2>
     <p>Seven areas. Weight them by stage — at pre-seed, the team section is 60% of the answer; by Series A, security and unit economics carry far more.</p>
+
+    <h2>How is this different from a 50-point technical due diligence checklist?</h2>
+    <p>The current SERP is full of exhaustive documents: Papermark advertises a 25-document investment diligence list, ZTABS has a 54-item technical DD checklist, and several agency pages split the work into architecture, code quality, security, team, process, and compliance sub-items. Those lists are useful for making sure the data room is complete. They are not how an investor should price risk.</p>
+    <p>For a seed or Series A deal, I compress the long list into seven decisions: who owns the system, whether the architecture fits the next 18 months, whether the team can ship safely, what security/data liability exists, whether IP is clean, what one customer costs to serve, and whether the AI layer is supervised. If an extra checklist item does not change one of those seven answers, it belongs in the appendix, not the partner memo.</p>
 
     <h3>1. Team before code: who actually built this?</h3>
     <p>The first thing I establish is bus factor. Who wrote the core system, are they still around, and can the people who remain explain the decisions? A codebase built entirely by a departed contractor or an agency, with no in-house engineer who understands it, is the single most common fatal finding at seed. I ask founders to walk me through one architectural trade-off they made and one they regret. Strong teams answer in seconds; teams that outsourced their thinking cannot.</p>
