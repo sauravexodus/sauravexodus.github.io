@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-13",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-07-31",
   "mainEntityOfPage": "https://souravchandra.com/blog/non-technical-founder-building-an-app.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -68,6 +68,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A simple MVP runs $10k-25k, moderate complexity with custom APIs, logins, and payments runs $25k-75k, and the realistic floor for a production-ready build from a US agency is $50k-150k. Meaningful AI features add $10k-50k. Hidden costs (cloud, third-party APIs, app store, maintenance) reliably add another 15-30% to the headline quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a founder evaluate a dev shop quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask the agency to split the quote by user flows, integrations, non-functional work, and post-launch support. A serious quote names the assumptions, acceptance criteria, account ownership, testing scope, staging cadence, support window, and change-order trigger for each milestone. If the quote is only a feature list and a total price, it is not ready to sign."
       }
     }
   ]
@@ -117,6 +125,18 @@
     <p>You cannot negotiate a number you have no anchor for, so here are the 2026 market ranges. A simple MVP runs $10k-25k. Moderate complexity, meaning custom APIs, accounts, and payments, runs $25k-75k. The realistic floor for a production-ready build from a US agency is $50k-150k. Meaningful AI features add $10k-50k on top. And hidden costs, meaning cloud bills, third-party API fees, app store accounts, and post-launch maintenance, reliably add another 15-30% to whatever headline number you signed. Budget them up front or meet them as "surprises" later.</p>
     <p>Rates vary by region: Eastern European teams typically charge $35-70/hour, Latin America $30-60, India $15-45. Two caveats from experience. First, the loaded cost of offshore work lands at 1.4-1.8× the sticker rate once management overhead, rework, and communication lag are priced in. Second, the cheapest rate is routinely the most expensive project: a $25/hour team that takes eight months to deliver buggy code is not cheaper than a $60/hour team that ships clean code in three.</p>
     <p>In the UAE I keep reviewing quotes of AED 250k-400k over four to six months for products a disciplined team ships in six weeks. The fix is almost never negotiating a percentage off the quote. It is cutting scope: pay for the one workflow that proves the business, the way I scope an <a href="/blog/ai-mvp-development.html">AI MVP that ships in 30 days</a>, and let revenue argue for version two.</p>
+
+    <h2>How should you evaluate a dev shop quote line by line?</h2>
+    <p>A dev shop quote is not ready to sign until it is more than a feature list and a total price. Ask for the number to be split by user flow, integration, non-functional work, and post-launch support. If the quote says "admin dashboard" but does not say who can log in, what they can change, what happens when a payment fails, what gets logged, and what you can test on staging, it is not a milestone. It is a placeholder that will become a change order.</p>
+    <p>Use this quick quote review before you pay a deposit:</p>
+    <ul>
+      <li><strong>Assumptions:</strong> which screens, APIs, third-party tools, app-store steps, data imports, and AI/model providers are included — and which are explicitly excluded?</li>
+      <li><strong>Acceptance criteria:</strong> what can you personally click on staging to approve the milestone?</li>
+      <li><strong>Ownership:</strong> are GitHub, cloud, domain, analytics, email, and app-store accounts in your name before work starts?</li>
+      <li><strong>Quality scope:</strong> are tests, security review, error monitoring, backups, performance budgets, and handover documentation included or silently optional?</li>
+      <li><strong>Change orders:</strong> what counts as a paid change versus a bug fix against the original acceptance criteria?</li>
+    </ul>
+    <p>The pattern I saw again in this week's founder-guide SERP pass is that most competing pages teach hiring a CTO or outsourcing in general. The winnable gap is narrower: quote due diligence for a non-technical founder before the agency owns the process. That is where one hour of independent review can save months of rework.</p>
 
     <h2>Which contract terms actually keep an agency honest?</h2>
     <p>Five, in order of how often I see their absence hurt founders:</p>
