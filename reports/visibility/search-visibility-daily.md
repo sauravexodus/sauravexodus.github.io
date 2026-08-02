@@ -2,9 +2,9 @@
 
 | Date UTC | GSC Status | Clicks | Impressions | CTR | Avg Position | Top Query | Top Page | Notes |
 |---|---|---:|---:|---:|---:|---|---|---|
-| 2026-07-26 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | HTTP 403: User does not have sufficient permission for site 'https://souravchandra.com/'. See also: https://support.google.com/webmasters/answer/2451999. |
-| 2026-07-27 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | HTTP 403: User does not have sufficient permission for site 'https://souravchandra.com/'. See also: https://support.google.com/webmasters/answer/2451999. |
-| 2026-07-28 | BLOCKED_SITE_ACCESS |  |  |  |  |  |  | Previously verified GSC site-access blocker persists; no gcloud token available in this cron run, so not requesting OAuth. |
+| 2026-07-26 | OK | 0 | 14 | 0.00% | 13.4 | saurabh chandra | https://souravchandra.com/ | 2026-07-19→2026-07-25 via sc-domain:souravchandra.com |
+| 2026-07-27 | OK | 0 | 12 | 0.00% | 11.3 | saurabh chandra | https://souravchandra.com/ | 2026-07-20→2026-07-26 via sc-domain:souravchandra.com |
+| 2026-07-28 | OK | 0 | 15 | 0.00% | 9.9 | saurabh chandra | https://souravchandra.com/ | 2026-07-21→2026-07-27 via sc-domain:souravchandra.com |
 | 2026-07-29 | OK | 0 | 15 | 0.00% | 9.9 | saurabh chandra | https://souravchandra.com/ | 2026-07-22→2026-07-28 via sc-domain:souravchandra.com |
 | 2026-07-30 | OK | 0 | 20 | 0.00% | 9.3 | saurabh chandra | https://souravchandra.com/ | 2026-07-23→2026-07-29 via sc-domain:souravchandra.com |
 | 2026-07-31 | OK | 0 | 22 | 0.00% | 9.2 | saurabh chandra | https://souravchandra.com/ | 2026-07-24→2026-07-30 via sc-domain:souravchandra.com |

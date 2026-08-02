@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Score souravchandra.com visibility metrics against expected outcomes."""
 from __future__ import annotations
-import datetime as dt, json, re
+import datetime as dt, json, os, re
 from pathlib import Path
 from typing import Any
 REPO=Path(__file__).resolve().parents[1]; REPORT_DIR=REPO/'reports'/'visibility'; RAW=REPORT_DIR/'raw'/'visibility-metrics.jsonl'; EXPECTED=REPORT_DIR/'expected-outcomes.md'; SCORE=REPORT_DIR/'benchmark-scorecard.md'; BASE='https://souravchandra.com'
@@ -80,10 +80,15 @@ def status(value,t):
         if value<=1.2*tgt: return 'Watch','Nudge with targeted optimization'
         return 'Behind','Prioritize growth action'
     return 'No target','Unsupported direction'
+def report_date() -> dt.date:
+    raw=os.environ.get('SOURAV_VISIBILITY_REPORT_DATE')
+    return dt.date.fromisoformat(raw) if raw else dt.date.today()
+
+
 def main():
     REPORT_DIR.mkdir(parents=True,exist_ok=True); rec=latest()
     if not rec: print('No metrics found'); return 2
-    today=dt.date.today().isoformat(); ts=targets(); cur=current(rec)
+    today=report_date().isoformat(); ts=targets(); cur=current(rec)
     mids=['gsc_impressions_7d','gsc_clicks_7d','gsc_ctr','gsc_avg_position','nonbrand_query_count','technical_route_coverage','metadata_coverage','pagespeed_mobile_home','pagespeed_seo','pagespeed_accessibility','ai_mention_rate','ai_citation_rate','serp_top20_coverage','serp_top10_coverage','source_gap_closure']
     rows=[]; counts={}
     for mid in mids:
