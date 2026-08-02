@@ -4,7 +4,7 @@
 Stdlib-only for Hermes cron. Writes human Markdown reports and raw JSONL records.
 """
 from __future__ import annotations
-import datetime as dt, json, os, re, subprocess, time, urllib.error, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import datetime as dt, json, os, re, subprocess, tempfile, time, urllib.error, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from pathlib import Path
 
 BASE='https://souravchandra.com'
@@ -41,13 +41,31 @@ def checks(body):
     low=body.lower(); head=low[:low.find('</head>')] if '</head>' in low else low[:9000]
     return {'title':'<title' in head,'description':'name="description"' in head or "name='description'" in head,'canonical':'rel="canonical"' in head or "rel='canonical'" in head,'jsonld':'application/ld+json' in low,'og':'property="og:' in head or "property='og:" in head,'noindex':'noindex' in head,'bytes':len(body.encode('utf-8'))}
 
-def gcloud_token():
-    for cmd in [['/home/hermes/google-cloud-sdk/bin/gcloud','auth','application-default','print-access-token'],['/home/hermes/google-cloud-sdk/bin/gcloud','auth','print-access-token']]:
+def service_account_token():
+    key=os.environ.get('SOURAV_GSC_SERVICE_ACCOUNT_KEY') or os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
+    if not key or not Path(key).exists(): return None
+    project=os.environ.get('GOOGLE_CLOUD_PROJECT') or 'pyza-website'
+    with tempfile.TemporaryDirectory(prefix='sourav-gsc-sa-') as cfg:
+        env=os.environ.copy(); env['CLOUDSDK_CONFIG']=cfg
+        activate=subprocess.run(['/home/hermes/google-cloud-sdk/bin/gcloud','auth','activate-service-account',f'--key-file={key}',f'--project={project}'],text=True,capture_output=True,timeout=45,env=env)
+        if activate.returncode!=0: return None
+        cp=subprocess.run(['/home/hermes/google-cloud-sdk/bin/gcloud','auth','print-access-token','--scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform'],text=True,capture_output=True,timeout=30,env=env)
+        return cp.stdout.strip() if cp.returncode==0 and cp.stdout.strip() else None
+
+def gcloud_tokens():
+    tokens=[]; seen=set()
+    sa=service_account_token()
+    if sa:
+        tokens.append(('service-account',sa)); seen.add(sa[-24:])
+    for label,cmd in [('adc',['/home/hermes/google-cloud-sdk/bin/gcloud','auth','application-default','print-access-token']),('gcloud',['/home/hermes/google-cloud-sdk/bin/gcloud','auth','print-access-token'])]:
         try:
             cp=subprocess.run(cmd,text=True,capture_output=True,timeout=20)
-            if cp.returncode==0 and cp.stdout.strip(): return cp.stdout.strip()
+            token=cp.stdout.strip()
+            fp=token[-24:]
+            if cp.returncode==0 and token and fp not in seen:
+                tokens.append((label,token)); seen.add(fp)
         except Exception: pass
-    return None
+    return tokens
 
 def api_json(url, token=None, method='GET', payload=None, timeout=45):
     data=None if payload is None else json.dumps(payload).encode()
@@ -99,8 +117,8 @@ def report_date() -> dt.date:
 
 
 def collect_gsc():
-    token=gcloud_token()
-    if not token:
+    tokens=gcloud_tokens()
+    if not tokens:
         prior=previous_gsc_blocker()
         if prior=='BLOCKED_SITE_ACCESS':
             return {'status':'BLOCKED_SITE_ACCESS','error':'Previous authenticated GSC call returned site-access/verification failure; no fresh token today, preserving the specific blocker.'}
@@ -108,18 +126,19 @@ def collect_gsc():
     end=report_date()-dt.timedelta(days=1); start=end-dt.timedelta(days=6)
     payload={'startDate':start.isoformat(),'endDate':end.isoformat(),'dimensions':['query','page','country','device'],'rowLimit':50,'startRow':0}
     last=None
-    for site in GSC_SITE_CANDIDATES:
-        url='https://www.googleapis.com/webmasters/v3/sites/'+urllib.parse.quote(site,safe='')+'/searchAnalytics/query'
-        data,err=api_json(url,token=token,method='POST',payload=payload)
-        if data is not None:
-            rows=data.get('rows',[]); totals={'clicks':0,'impressions':0,'ctr_weighted':0,'position_weighted':0}
-            for r in rows:
-                imp=float(r.get('impressions',0)); clicks=float(r.get('clicks',0))
-                totals['clicks']+=clicks; totals['impressions']+=imp; totals['ctr_weighted']+=float(r.get('ctr',0))*imp; totals['position_weighted']+=float(r.get('position',0))*imp
-            totals['ctr']=(totals['ctr_weighted']/totals['impressions']) if totals['impressions'] else 0
-            totals['position']=(totals['position_weighted']/totals['impressions']) if totals['impressions'] else 0
-            return {'status':'OK','site':site,'startDate':payload['startDate'],'endDate':payload['endDate'],'totals':totals,'rows':rows}
-        last=err
+    for token_source, token in tokens:
+        for site in GSC_SITE_CANDIDATES:
+            url='https://www.googleapis.com/webmasters/v3/sites/'+urllib.parse.quote(site,safe='')+'/searchAnalytics/query'
+            data,err=api_json(url,token=token,method='POST',payload=payload)
+            if data is not None:
+                rows=data.get('rows',[]); totals={'clicks':0,'impressions':0,'ctr_weighted':0,'position_weighted':0}
+                for r in rows:
+                    imp=float(r.get('impressions',0)); clicks=float(r.get('clicks',0))
+                    totals['clicks']+=clicks; totals['impressions']+=imp; totals['ctr_weighted']+=float(r.get('ctr',0))*imp; totals['position_weighted']+=float(r.get('position',0))*imp
+                totals['ctr']=(totals['ctr_weighted']/totals['impressions']) if totals['impressions'] else 0
+                totals['position']=(totals['position_weighted']/totals['impressions']) if totals['impressions'] else 0
+                return {'status':'OK','site':site,'tokenSource':token_source,'startDate':payload['startDate'],'endDate':payload['endDate'],'totals':totals,'rows':rows}
+            last=err
     markers=('not a verified Search Console site','sufficient permission for site')
     status='BLOCKED_SITE_ACCESS' if last and any(m in last for m in markers) else ('BLOCKED_AUTH' if last and ('403' in last or 'Permission' in last or 'Insufficient' in last) else 'ERROR')
     return {'status':status,'error':last}
@@ -166,7 +185,7 @@ def main():
     search=REPORT_DIR/'search-visibility-daily.md'; ensure(search,'Search Visibility Daily Metrics','| Date UTC | GSC Status | Clicks | Impressions | CTR | Avg Position | Top Query | Top Page | Notes |\n|---|---|---:|---:|---:|---:|---|---|---|')
     if gsc.get('status')=='OK':
         rows=gsc.get('rows') or []; top=rows[0] if rows else {}; keys=top.get('keys') or ['n/a','n/a']; t=gsc['totals']
-        row=f"| {today} | OK | {int(t['clicks'])} | {int(t['impressions'])} | {t['ctr']*100:.2f}% | {t['position']:.1f} | {keys[0]} | {keys[1] if len(keys)>1 else 'n/a'} | {gsc['startDate']}→{gsc['endDate']} via {gsc['site']} |"
+        row=f"| {today} | OK | {int(t['clicks'])} | {int(t['impressions'])} | {t['ctr']*100:.2f}% | {t['position']:.1f} | {keys[0]} | {keys[1] if len(keys)>1 else 'n/a'} | {gsc['startDate']}→{gsc['endDate']} via {gsc['site']} ({gsc.get('tokenSource','unknown')}) |"
     else: row=f"| {today} | {gsc.get('status')} |  |  |  |  |  |  | {str(gsc.get('error','')).replace('|','/')[:180]} |"
     replace_key(search,row)
     psf=REPORT_DIR/'pagespeed-weekly.md'; ensure(psf,'PageSpeed / UX Metrics','| Date UTC | URL | Status | Mobile Perf | LCP | CLS | TBT | SEO | Accessibility | Action |\n|---|---|---|---:|---|---:|---|---:|---:|---|')
