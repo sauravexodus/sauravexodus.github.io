@@ -19,6 +19,6 @@ This directory tracks whether souravchandra.com is becoming more discoverable fo
 
 ## Current caveats
 
-- Search Console access is verified through `sc-domain:souravchandra.com`; Sourav ADC uses `/home/hermes/.config/gcloud-sourav` with quota project `pyza-website`.
+- Search Console access is verified through `sc-domain:souravchandra.com`; daily automation prefers service account `sourav-gsc-visibility@pyza-website.iam.gserviceaccount.com` with user ADC only as fallback.
 - PageSpeed requires the local `PAGESPEED_API_KEY` environment variable loaded by Hermes cron.
 - Do not invent claims, client logos, testimonials, search-volume numbers, or credentials.

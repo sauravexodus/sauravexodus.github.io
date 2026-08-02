@@ -22,7 +22,7 @@ The main visibility signal improved from an early Search Console access blocker 
 | 2026-07-31 | OK | 22 | 0 | 0.00% | 9.2 | Non-brand query count still 2 vs 30-day target of 12. |
 | 2026-08-01 | OK | 18 | 0 | 0.00% | 7.2 | Top query `saurav chandra`; top page `/`. |
 
-**Blocker status:** GSC data is now reachable from automation via `sc-domain:souravchandra.com`; the earlier 2026-07-26→2026-07-28 blocker rows were backfilled after configuring Sourav ADC with quota project `pyza-website`. Bing Webmaster completion and ongoing indexing checks remain useful because the current impressions are not yet commercial-topic discovery.
+**Blocker status:** GSC data is now reachable from automation via `sc-domain:souravchandra.com`; the earlier 2026-07-26→2026-07-28 blocker rows were backfilled after configuring the `sourav-gsc-visibility@pyza-website.iam.gserviceaccount.com` service account as Search Console owner. Bing Webmaster completion and ongoing indexing checks remain useful because the current impressions are not yet commercial-topic discovery.
 
 ## PageSpeed, performance, accessibility, and technical health
 
