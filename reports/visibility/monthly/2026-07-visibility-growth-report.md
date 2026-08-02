@@ -14,15 +14,15 @@ The main visibility signal improved from an early Search Console access blocker 
 
 | Date | Status | Trailing-7d impressions | Clicks | CTR | Avg position | Notes |
 |---|---|---:|---:|---:|---:|---|
-| 2026-07-26 | BLOCKED_SITE_ACCESS | n/a | n/a | n/a | n/a | Search Console returned insufficient site permission. |
-| 2026-07-27 | BLOCKED_SITE_ACCESS | n/a | n/a | n/a | n/a | Site/property access still blocked. |
-| 2026-07-28 | BLOCKED_SITE_ACCESS | n/a | n/a | n/a | n/a | Cron preserved the known site-access blocker across auth gaps. |
+| 2026-07-26 | OK | 14 | 0 | 0.00% | 13.4 | Backfilled via `sc-domain:souravchandra.com` after Sourav ADC quota project was fixed. |
+| 2026-07-27 | OK | 12 | 0 | 0.00% | 11.3 | Backfilled via `sc-domain:souravchandra.com` after Sourav ADC quota project was fixed. |
+| 2026-07-28 | OK | 15 | 0 | 0.00% | 9.9 | Backfilled via `sc-domain:souravchandra.com` after Sourav ADC quota project was fixed. |
 | 2026-07-29 | OK | 15 | 0 | 0.00% | 9.9 | First usable GSC domain-property sample. |
 | 2026-07-30 | OK | 20 | 0 | 0.00% | 9.3 | Still mostly branded/misspelled discovery. |
 | 2026-07-31 | OK | 22 | 0 | 0.00% | 9.2 | Non-brand query count still 2 vs 30-day target of 12. |
 | 2026-08-01 | OK | 18 | 0 | 0.00% | 7.2 | Top query `saurav chandra`; top page `/`. |
 
-**Blocker status:** GSC data is now reachable from the automation, but the strategy checklist still needs manual Search Console and Bing Webmaster completion: verify/confirm the property, submit `https://souravchandra.com/sitemap.xml`, and request indexing for all current URLs. This remains the highest-leverage manual action because the current impressions are not yet commercial-topic discovery.
+**Blocker status:** GSC data is now reachable from automation via `sc-domain:souravchandra.com`; the earlier 2026-07-26→2026-07-28 blocker rows were backfilled after configuring Sourav ADC with quota project `pyza-website`. Bing Webmaster completion and ongoing indexing checks remain useful because the current impressions are not yet commercial-topic discovery.
 
 ## PageSpeed, performance, accessibility, and technical health
 

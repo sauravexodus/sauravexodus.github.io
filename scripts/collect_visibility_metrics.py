@@ -93,6 +93,11 @@ def previous_gsc_blocker():
                 continue
     return None
 
+def report_date() -> dt.date:
+    raw=os.environ.get('SOURAV_VISIBILITY_REPORT_DATE')
+    return dt.date.fromisoformat(raw) if raw else dt.date.today()
+
+
 def collect_gsc():
     token=gcloud_token()
     if not token:
@@ -100,7 +105,7 @@ def collect_gsc():
         if prior=='BLOCKED_SITE_ACCESS':
             return {'status':'BLOCKED_SITE_ACCESS','error':'Previous authenticated GSC call returned site-access/verification failure; no fresh token today, preserving the specific blocker.'}
         return {'status':'BLOCKED_AUTH','error':'No gcloud access token available'}
-    end=dt.date.today()-dt.timedelta(days=1); start=end-dt.timedelta(days=6)
+    end=report_date()-dt.timedelta(days=1); start=end-dt.timedelta(days=6)
     payload={'startDate':start.isoformat(),'endDate':end.isoformat(),'dimensions':['query','page','country','device'],'rowLimit':50,'startRow':0}
     last=None
     for site in GSC_SITE_CANDIDATES:
@@ -149,7 +154,7 @@ def replace_key(path,row):
     path.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
 
 def main():
-    REPORT_DIR.mkdir(parents=True,exist_ok=True); RAW_DIR.mkdir(parents=True,exist_ok=True); today=dt.date.today().isoformat()
+    REPORT_DIR.mkdir(parents=True,exist_ok=True); RAW_DIR.mkdir(parents=True,exist_ok=True); today=report_date().isoformat()
     urls=sitemap_urls(); items=[]; ok=meta=0
     for u in urls:
         s,h,b,e=fetch(u); c=checks(b); m=s==200 and c['title'] and c['description'] and c['canonical'] and c['jsonld'] and not c['noindex']
