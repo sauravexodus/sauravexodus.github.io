@@ -41,6 +41,17 @@ def fmt(v,unit=''):
     if unit=='%': return f'{v:.1f}%'
     return str(int(round(v))) if abs(v-round(v))<.001 else f'{v:.2f}'
 def cell(x): return str(x).replace('|','/').replace('\n',' ')[:200]
+def is_brand_or_person_name_query(query):
+    """Exclude Sourav-name variants and misrouted person-name queries.
+
+    The scorecard's non-brand metric is meant to measure topical discovery. GSC
+    currently surfaces misspellings such as ``saurabh chandra`` and unrelated
+    names such as ``rishab chandra``; counting those as commercial non-brand
+    discovery overstates progress.
+    """
+    normalized=re.sub(r'\s+',' ',str(query).strip().lower())
+    if re.search(r'\b(?:sourav|saurav|saurabh)\b',normalized): return True
+    return bool(re.fullmatch(r"[a-z][a-z .'-]{1,40} chandra",normalized))
 def ai_rates():
     p=REPORT_DIR/'ai-visibility-weekly.md'
     if not p.exists(): return None,None,'No AI/GEO run recorded yet'
@@ -52,8 +63,8 @@ def current(rec):
     out={}; g=rec.get('gsc',{}); t=g.get('totals',{}) if isinstance(g,dict) else {}
     if g.get('status')=='OK':
         out['gsc_impressions_7d']=(float(t.get('impressions',0) or 0),'',f"{g.get('startDate')}→{g.get('endDate')}"); out['gsc_clicks_7d']=(float(t.get('clicks',0) or 0),'',f"{g.get('startDate')}→{g.get('endDate')}"); out['gsc_ctr']=(float(t.get('ctr',0) or 0)*100,'%','Weighted by impressions'); pos=float(t.get('position',0) or 0); out['gsc_avg_position']=(pos if pos else None,'','No rank yet' if not pos else 'Weighted by impressions')
-        qs={((r.get('keys') or [''])[0]) for r in g.get('rows',[]) if (r.get('keys') or [''])[0] and 'sourav' not in (r.get('keys') or [''])[0].lower()}
-        out['nonbrand_query_count']=(float(len(qs)),'','From sampled GSC rows')
+        qs={((r.get('keys') or [''])[0]) for r in g.get('rows',[]) if (r.get('keys') or [''])[0] and not is_brand_or_person_name_query((r.get('keys') or [''])[0])}
+        out['nonbrand_query_count']=(float(len(qs)),'','Excludes Sourav/name-navigation variants from sampled GSC rows')
     else:
         for m in ['gsc_impressions_7d','gsc_clicks_7d','gsc_ctr','gsc_avg_position','nonbrand_query_count']: out[m]=(None,'',g.get('status','MISSING'))
     r=rec.get('routes',{}); total=float(r.get('total',0) or 0); out['technical_route_coverage']=(pct(r.get('ok',0),total),'%',f"{r.get('ok',0)}/{int(total)} routes HTTP 200"); out['metadata_coverage']=(pct(r.get('metadata_ok',0),total),'%',f"{r.get('metadata_ok',0)}/{int(total)} routes metadata OK")
