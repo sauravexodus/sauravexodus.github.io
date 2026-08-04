@@ -24,6 +24,19 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-08-04 — Weekday visibility loop (Tuesday CTO-as-a-service Dubai/pricing)
+
+- Metrics refresh: trailing 7-day GSC is OK via `sc-domain:souravchandra.com`: 19 impressions, 0 clicks, 0.00% CTR, average position 13.5, top query `rishab chandra`, top page `/`. The previous scorecard classified three name/misspelling queries as non-brand because it only excluded the exact spelling `sourav`; after fixing the classifier, the sampled rows contain 0 topical non-brand queries versus the 30-day target of 12. Sitemap routes remain healthy (7/7 HTTP 200; 7/7 metadata OK); homepage mobile PageSpeed is 89, SEO is 100, and the minimum accessibility score remains 83.
+- Tuesday research pass: Brave returned usable visible-result sets for `CTO as a service Dubai` and `fractional CTO vs CTO as a service Dubai pricing`; neither contained `souravchandra.com` or Sourav Chandra. DuckDuckGo challenged all five prompts, Bing RSS/Google returned noisy or rate-limited pages, and Brave rate-limited three follow-ups, so no exact rank is claimed and the remaining prompt-presence checks are indeterminate rather than negative.
+- Competitor/source evidence: the exact CaaS query surfaced Kuchoriya TechSoft, Evotik, Skynetcorp, GrowExx, Fractional Dubai, Ignyte, TechnologyVerse, Fractional CTO Experts, and Boardman. The comparison query surfaced Fractional Dubai, Boardman, Empat, Solidmatics, DigitalReference, Techuz, Golosnichenko, TechnologyVerse, and Codpal. Direct fetches verified that Fractional Dubai publishes AED 15k–25k/month fractional oversight against AED 50k–80k/month full-time before wider overhead; Empat's May 2026 benchmark structures CaaS as $79–$300/hour, $5k–$50k/project, or $5k–$15k/month; TechnologyVerse offers advisory, project-based, and 1–3 day/week models but no public rate card.
+- GEO/AI visibility: 0 verified mentions/citations for Sourav in the bounded Tuesday pass. The recurring format signal is now stronger than the headline price signal: useful pages explain engagement model, named-person accountability, scope, and local/full-time comparison, then attach a dated price range.
+- Safe actions applied in this run: added a dated, directly linked market cross-check to the existing CaaS article without changing Sourav's own rates; refreshed Article `dateModified` and sitemap lastmod; fixed the scorecard's non-brand query classifier; and updated visibility/intelligence reports.
+- Actions for next publish/optimization run:
+  1. Keep the CaaS page's AED 15k–40k/month positioning unchanged; today's directly fetched sources fit the page's broader model and show why scope/model matters more than one blended market average.
+  2. Watch GSC specifically for `cto as a service`, `fractional cto`, `pricing`, and `cost` impressions. Current 19 impressions are still name-navigation noise, not commercial discovery.
+  3. Keep queue item 7 (RAG vs fine-tuning for startups) ahead of generic trending-AI content; the CaaS page already covers the recurring pricing/comparison format and now has direct source links.
+  4. Complete Bing Webmaster Tools verification and submit the sitemap if still pending; GSC collection is working, so this is no longer an OAuth or Search Console site-access blocker.
+
 ## 2026-07-31 — Weekday visibility loop (Friday non-technical founder/dev agency/competitor-source synthesis)
 
 - Metrics refresh: trailing 7-day GSC is OK via `sc-domain:souravchandra.com`: 22 impressions, 0 clicks, 0.00% CTR, average position 9.2, top query still the branded/misspelled `saurabh chandra`, top page `/`. Non-brand query count remains 2 vs the 30-day target of 12. Sitemap routes remain healthy (7/7 HTTP 200; 7/7 metadata OK), robots.txt and sitemap.xml are live. PageSpeed refresh: homepage mobile 89, `/blog/` 89, fractional guide 87, CaaS page 89; SEO remains 100 and minimum accessibility remains 83.
