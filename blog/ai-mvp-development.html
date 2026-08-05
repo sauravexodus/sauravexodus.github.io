@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-13",
+  "dateModified": "2026-08-05",
   "mainEntityOfPage": "https://souravchandra.com/blog/ai-mvp-development.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -59,7 +59,15 @@
       "name": "Should a startup use RAG or fine-tuning for an MVP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RAG, almost always. Retrieval keeps your data fresh and auditable, lets you swap models in an afternoon, and fails in ways you can debug. Fine-tuning at MVP stage locks this quarter's model into your product right before the next generation ships. It earns its place around month six, for narrow jobs with stable inputs, once real usage data exists."
+        "text": "RAG, almost always. RAG retrieves current external knowledge at query time, while fine-tuning changes model weights to produce more consistent domain behavior. RAG is the normal startup-MVP default when documents change, answers need citations, and labelled production examples are limited. Fine-tuning earns its place later for narrow, stable jobs once usage data and a measured failure mode exist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a startup evaluate RAG before fine-tuning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evaluate retrieval and generation separately on real user questions. Check whether the correct source appears in the retrieved context, then whether the answer is faithful to that context, correct, and useful. Track latency, token cost, and no-answer behavior in production. Fix ingestion, chunking, and search before fine-tuning; consider fine-tuning only when retrieval works and the remaining failure is stable output behavior."
       }
     },
     {
@@ -126,8 +134,17 @@
     </ul>
 
     <h2>RAG or fine-tuning for a startup MVP?</h2>
-    <p>RAG, almost always. Retrieval keeps your data fresh, auditable, and out of the model weights; you can swap models in an afternoon; and it fails in ways you can debug. Fine-tuning at MVP stage locks this quarter's model into your product right before the next generation ships, and in 2026 the generations are arriving every few months. The honest test: if you cannot first write down 500 excellent training examples, you have no business fine-tuning — and if you can, RAG with good retrieval over those examples usually gets you 90% of the value with none of the lock-in.</p>
-    <p>Fine-tuning earns its place later, for narrow jobs with stable inputs — classification, extraction, a house style — once usage data exists. That is a month-six optimization, not a month-one architecture.</p>
+    <p>RAG, almost always. The useful distinction is that RAG retrieves current external knowledge at query time, while fine-tuning changes model weights to produce more consistent domain behavior. <a href="https://www.ibm.com/think/topics/rag-vs-fine-tuning">IBM's comparison</a> describes RAG as the route to current, private data. <a href="https://www.databricks.com/blog/rag-vs-fine-tuning">Databricks' decision guide</a> recommends it when information changes, answers need citations, or labelled training data is unavailable. That is the normal startup-MVP situation: changing documents, a small eval set, and no stable corpus of production examples yet.</p>
+    <p>Fine-tuning earns its place later, for narrow jobs with stable inputs — classification, extraction, a house style — once usage data exists. Start from a measured failure mode, not the hope that training will repair weak retrieval. That is usually a month-six optimization, not a month-one architecture.</p>
+
+    <h2>How should a startup evaluate RAG before fine-tuning?</h2>
+    <p>Test retrieval and generation separately on real user questions. A single end-to-end score can tell you that the answer failed, but not whether search missed the source or the model ignored good context. <a href="https://www.evidentlyai.com/llm-guide/rag-evaluation">Evidently's RAG evaluation guide</a> makes the same split and recommends realistic test sets during development plus production monitoring after launch.</p>
+    <ul>
+      <li><strong>Retrieval:</strong> did the correct source appear in the top results? Use recall-at-k when you have labelled questions, or a documented human/LLM relevance check when you do not.</li>
+      <li><strong>Generation:</strong> is the answer faithful to the retrieved context, correct for the question, and complete enough to act on?</li>
+      <li><strong>Production:</strong> track latency, token cost, errors, and no-answer behaviour per workflow, not just a demo-wide average.</li>
+    </ul>
+    <p>If retrieval fails, fix ingestion, chunking, metadata, or search first. If the right context arrives and the model still fails in the same narrow output behaviour, fine-tuning becomes a candidate. <a href="https://qdrant.tech/blog/rag-evaluation-guide/">Qdrant's evaluation guide</a> similarly separates search precision and recall, contextual relevance, and response accuracy. Fine-tuning is not a substitute for a broken retrieval pipeline.</p>
 
     <h2>Why do AI MVPs die in month two?</h2>
     <p>Four failure modes account for nearly every post-launch collapse I get called in to fix:</p>
@@ -140,6 +157,7 @@
 
     <h2>What should you cut from the scope?</h2>
     <p>Cut multi-model orchestration, agents that "do everything," mobile apps alongside web, admin dashboards, and every second persona. Keep the eval set, cost tracking, streaming, and billing. Founders consistently cut in exactly the wrong direction — they keep the second feature and drop the instrumentation, which is how you end up with two workflows you cannot measure instead of one you can.</p>
+    <p>That restraint is not just my preference. <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic's production guidance on agents</a> says its most successful implementations use simple, composable patterns, and that agentic systems trade latency and cost for task performance. For many MVPs, one model call with retrieval and good in-context examples is enough.</p>
 
     <h2>The bottom line</h2>
     <p>Scoping an AI MVP is not a technology problem in 2026 — the models are commoditized down to $0.10 per million tokens at the low end. It is a discipline problem: one workflow, one model behind an abstraction, RAG over fine-tuning, evals before UI, and instrumentation before launch. Teams that hold that line ship in 30 days for a fraction of the $140k+ agency quote and are still standing in month two, with data instead of anecdotes. Teams that do not, join the demo graveyard.</p>
