@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-07-30",
+  "dateModified": "2026-08-06",
   "mainEntityOfPage": "https://souravchandra.com/blog/technical-due-diligence-checklist.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -76,6 +76,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The share matters less than the supervision. Roughly a quarter of Y Combinator's Winter 2025 batch reported codebases about 95% AI-generated, while Veracode's research found 45% of AI-generated code contains security flaws. A heavily AI-written codebase with strong evals, review discipline, and founders who can defend the architecture is investable. The same codebase where the honest answer is 'it works, we're not sure why' is not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should investors evaluate an AI-generated codebase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not score the percentage of AI-written code. Ask for five kinds of control evidence: a named human owner who can defend the architecture; review, test, deploy, and rollback history for critical paths; dependency, licence, and software-supply-chain records; model, data-provenance, evaluation, cost, and failure evidence when AI is part of the product; and prompt-injection, tool-permission, and human-approval tests for agents. NIST's Generative AI Profile, OpenSSF Scorecard, and the current OWASP GenAI LLM Top 10 provide useful baselines, but none replaces practitioner judgment."
       }
     },
     {
@@ -159,6 +167,17 @@
     <h2>What changed in 2026: the AI-generated code question</h2>
     <p>Andrej Karpathy coined "vibe coding" in February 2025. Within a year it stopped being a meme and became a diligence workstream. Roughly a quarter of Y Combinator's Winter 2025 batch reported codebases that were about 95% AI-generated, and by 2026 close to half of new code industry-wide is machine-written. Meanwhile Veracode's 2025 GenAI code security research found 45% of AI-generated code contains security flaws.</p>
     <p>So the question investors now ask is not "did you use AI to write this?" — everyone does, including me. The question is: how much of this codebase can your team explain? What review process sits between the model and production? Where are the tests that would catch a confidently wrong function? A 95%-AI-generated codebase with strong evals, review discipline, and an architecture the founders can defend on a whiteboard is fine. The same codebase where the honest answer is "it works, we're not sure why" is uninvestable at any meaningful valuation.</p>
+
+    <h2>How should investors evaluate an AI-generated codebase?</h2>
+    <p>Do not turn the percentage of AI-written code into a score. Treat it as a prompt to demand evidence that a human team still owns the system. For an investor data room, I ask for five control packets:</p>
+    <ol>
+      <li><strong>Human ownership.</strong> Name the engineer accountable for each critical service. Have that person explain one AI-assisted change from issue to architecture decision, review, test, deploy, and rollback. If nobody can defend the trade-offs without reopening the coding assistant, the company does not yet own the implementation.</li>
+      <li><strong>Critical-path assurance.</strong> Show review history, automated tests, deployment records, rollback evidence, and production incidents for auth, billing, data writes, and any workflow that can act on a customer's behalf. Generated tests that only restate generated code are not independent evidence.</li>
+      <li><strong>Dependency, licence, and supply-chain controls.</strong> Provide lockfiles, a dependency and licence inventory, update policy, branch protection, and release provenance. <a href="https://github.com/ossf/scorecard" rel="noopener">OpenSSF Scorecard</a> is a useful automated baseline for open-source security practices, but its own documentation warns that the checks are heuristics, not a one-size-fits-all verdict.</li>
+      <li><strong>Model, data, and evaluation evidence.</strong> If AI is part of the product—not only the coding workflow—include the model/provider inventory, training or retrieval-data rights, evaluation set and results, known failure modes, latency, and cost per core workflow. <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener">NIST's Generative AI Profile</a> is a cross-sector baseline for bringing trustworthiness into design, development, use, and evaluation.</li>
+      <li><strong>Agent boundaries.</strong> For systems that call tools or touch customer data, show prompt-injection tests, least-privilege tool permissions, secret isolation, audit logs, spending limits, and where a human must approve an action. Use the <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/" rel="noopener">current OWASP GenAI LLM Top 10 2026</a> as a threat checklist, not as a security certificate.</li>
+    </ol>
+    <p>That packet lets an investor separate fast teams using AI responsibly from products whose apparent velocity is borrowed from controls they have not built. It also makes remediation estimable: missing evidence becomes a named workstream, owner, and cost rather than a vague "AI risk" discount.</p>
 
     <h2>What red flags actually kill deals?</h2>
     <ul>
