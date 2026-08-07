@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-13",
-  "dateModified": "2026-07-31",
+  "dateModified": "2026-08-07",
   "mainEntityOfPage": "https://souravchandra.com/blog/non-technical-founder-building-an-app.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -76,6 +76,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Ask the agency to split the quote by user flows, integrations, non-functional work, and post-launch support. A serious quote names the assumptions, acceptance criteria, account ownership, testing scope, staging cadence, support window, and change-order trigger for each milestone. If the quote is only a feature list and a total price, it is not ready to sign."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should a dev agency disclose about AI-assisted code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Require a written AI-use schedule that names the tools and account tiers, prohibits client secrets and production data from unapproved prompts, assigns a human reviewer to every accepted change, records public-code and licence matches, and includes a dependency or SBOM inventory at handover. AI assistance is not itself a red flag; undisclosed provenance, no human ownership, and no evidence trail are. Have counsel adapt the IP language to your jurisdiction."
       }
     }
   ]
@@ -147,6 +155,17 @@
       <li><strong>Weekly deploys to a staging URL.</strong> Not a screen-share demo from the agency's laptop. A link you can open yourself, any Friday, on your own phone. Demos can be theater. A URL cannot.</li>
       <li><strong>An exit clause with handover.</strong> Two weeks' notice, all code, credentials, and a written handover document, with the final payment contingent on delivery of exactly that. You will probably never invoke it. Its existence changes behavior from day one.</li>
     </ol>
+
+    <h2>What should your agency disclose about AI-assisted code?</h2>
+    <p>AI-assisted coding is not a reason to reject an agency. Undisclosed AI use is a reason to stop and rewrite the contract. Add a one-page AI-use schedule before kickoff: which coding assistants or agents are allowed, which paid account tiers they run under, what data may enter them, who reviews their output, and what provenance evidence arrives at handover. You are not banning tools. You are making sure faster code still has a named human owner.</p>
+    <ul>
+      <li><strong>Tool and data disclosure:</strong> list every approved coding assistant, agent, model provider, and account tier. State that client secrets, production data, customer records, and proprietary code do not go into unapproved prompts or personal accounts.</li>
+      <li><strong>Human authorship and review:</strong> name the engineer accountable for reviewing each accepted change, its tests, and its architecture. The <a href="https://www.copyright.gov/newsnet/2025/1060.html">U.S. Copyright Office's AI copyrightability report</a> says AI-assisted work can remain protected when sufficient expressive elements come from a human, while prompts alone are not enough. That is a useful U.S. baseline, not UAE or global legal advice.</li>
+      <li><strong>Public-code and licence references:</strong> require the agency to preserve any matches its tools surface and resolve the applicable licence before merging. <a href="https://docs.github.com/en/copilot/concepts/completions/code-referencing">GitHub documents that Copilot code referencing</a> can log matched public files and their licences, but also says altered suggestions are not checked. A green tool setting is evidence, not a complete provenance audit.</li>
+      <li><strong>Component inventory:</strong> make a locked dependency list or software bill of materials part of every release and the final handover. <a href="https://www.cisa.gov/sbom">CISA defines an SBOM</a> as the nested inventory of ingredients in software components and treats it as a building block for supply-chain risk management.</li>
+      <li><strong>Contract chain:</strong> have counsel cover AI-assisted output, pre-existing agency code, open-source obligations, subcontractors, provider terms, and assignment at each paid milestone. The exit package should include source, commit history, tests, deployment instructions, dependency/SBOM output, and the AI-tool inventory—not just a zip file.</li>
+    </ul>
+    <p>The commercial rule is simple: AI may change how quickly the agency types code; it does not reduce the evidence you should own. If the vendor cannot name the human reviewer, show the provenance trail, or explain the handover package before signing, the speed claim is not yet an advantage.</p>
 
     <h2>How do you verify work you cannot read?</h2>
     <p>You do not verify code. You verify behavior and cadence, both of which a non-engineer can check.</p>
