@@ -55,10 +55,28 @@ def is_brand_or_person_name_query(query):
 def ai_rates():
     p=REPORT_DIR/'ai-visibility-weekly.md'
     if not p.exists(): return None,None,'No AI/GEO run recorded yet'
-    rows=[l for l in p.read_text().splitlines() if l.startswith('|') and '---' not in l and 'Date' not in l and 'Week' not in l]
+    rows=[]
+    for line in p.read_text().splitlines():
+        if not line.startswith('|') or '---' in line or 'Date' in line or 'Week' in line:
+            continue
+        cells=[cell.strip() for cell in line.strip('|').split('|')]
+        if len(cells)>=5:
+            rows.append((cells[3],cells[4]))
     if not rows: return None,None,'No AI/GEO run recorded yet'
-    total=len(rows[-40:]); men=sum('yes' in r.lower() or 'mentioned' in r.lower() for r in rows[-40:]); cit=sum('cited' in r.lower() and 'not cited' not in r.lower() for r in rows[-40:])
-    return pct(men,total),pct(cit,total),f'Estimated from {total} AI/GEO rows'
+    window=rows[:40]
+    scored=[]
+    for mention,citation in window:
+        mention_state=mention.strip().lower(); citation_state=citation.strip().lower()
+        if 'indeterminate' in mention_state or 'not scored' in mention_state or 'indeterminate' in citation_state or 'not scored' in citation_state:
+            continue
+        if not (mention_state.startswith(('yes','no')) and citation_state.startswith(('yes','no'))):
+            continue
+        scored.append((mention_state.startswith('yes'),citation_state.startswith('yes')))
+    excluded=len(window)-len(scored)
+    if not scored:
+        return None,None,f'No determinate AI/GEO rows; {excluded} indeterminate excluded from newest {len(window)} rows'
+    note=f'Scored {len(scored)} determinate rows; {excluded} indeterminate excluded from newest {len(window)} rows'
+    return pct(sum(m for m,_ in scored),len(scored)),pct(sum(c for _,c in scored),len(scored)),note
 def current(rec):
     out={}; g=rec.get('gsc',{}); t=g.get('totals',{}) if isinstance(g,dict) else {}
     if g.get('status')=='OK':
