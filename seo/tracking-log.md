@@ -24,6 +24,21 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-08-17 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
+
+- Metrics were already fresh for 2026-08-17, so the collector was not rerun and no duplicate raw JSONL sample was appended. Authenticated GSC reports 16 impressions, 0 clicks, 0.00% CTR, and 0 topical non-brand queries for 2026-08-10→2026-08-16. The sampled top query is the person-name mismatch `saurabh chandra`, the homepage is still the sampled top page, and average position 17.6 is not evidence of fractional-CTO discovery. All 7 sitemap routes return HTTP 200 with complete metadata; homepage mobile PageSpeed is 89, tracked SEO is 100, and the tracked accessibility floor remains 83.
+- A bounded Brave pass returned HTTP 200 usable visible-result sets for `fractional CTO Dubai` and `fractional CTO Dubai engagement deliverables`; neither set contained Sourav Chandra or souravchandra.com. Exact-location providers and practitioner pages still dominate, including Fractional Dubai, Boardman, Anton Golosnichenko, DigitalReference, Angel in Dubai, SAIA Digital, GrowthAccess, and location-template pages. These are visible-set observations, not exact rank claims.
+- Three follow-up prompts were not scored. DuckDuckGo returned HTTP 202 challenge pages, Brave returned HTTP 429 for the UAE/AI-startup and hire-timing prompts, and Bing RSS drifted to unrelated results. Brave returned a broad fractional-CTO set for the senior-engineer comparison, but it did not preserve the exact comparison intent well enough for a clean negative.
+- Direct HTTP 200 source checks sharpened the buyer question. Fractional Dubai publishes trigger moments, a readiness assessment, one named leader, and one-month notice; Angel in Dubai recommends defining 90-day deliverables; KORE1 says the first month should produce a prioritized picture of what works and what does not; and FractionalCXO.to packages a first-30-day audit, risk register, roadmap, and team assessment. These are provider/practitioner recommendations, not independent standards or proof of outcomes.
+- Sourav's existing UAE guide remains the right canonical page: it already covers cost, fit/non-fit, role boundaries, evaluation questions, UAE working overlap, and links to CaaS, AI-MVP, DD, and founder guides. The narrower information-gain hypothesis is a review-only **30-day engagement acceptance card**: starting evidence, decisions owned, first-month outputs, a ranked 90-day roadmap, exclusions, weekly cadence, and an exit/transition test. No public copy, route, metadata, pricing, or runtime-site change was made; substantive copy still requires preview and named human approval.
+
+### Actions for the next publish/review cycle
+
+1. Keep `/blog/fractional-cto-dubai-uae-guide.html` as the single regional canonical; do not add Dubai, Abu Dhabi, AI-startup, readiness, or annual near-duplicates without first-party query evidence, a distinct buyer/offer, and verified proof.
+2. Prepare the 30-day acceptance card for human review as a buyer-side artifact, not a promise that every engagement must use one vendor's audit format or timeline.
+3. Keep first-party discovery as the gate: watch GSC for the first topical fractional-CTO/CaaS query and do not interpret person-name average position as commercial progress.
+4. Preserve current pricing and credential claims; today's provider pages are competitor evidence, not independent UAE market averages.
+
 ## 2026-08-14 — Weekday visibility loop (Friday non-technical founder/dev agency/competitor-source synthesis)
 
 - Metrics were already fresh on `master`, so the collector was inspected rather than rerun: authenticated `sc-domain:souravchandra.com` data shows 17 trailing-7-day impressions, 0 clicks, 0.00% CTR, average position 11.4, and 0 topical non-brand queries. Every sampled query is Sourav/name-navigation noise or another person's name, and `/` remains the only sampled top page. All 7 sitemap routes return HTTP 200 with complete metadata; mobile PageSpeed is 89 for `/`, 89 for `/blog/`, 88 for the fractional guide, and 86 for CaaS; SEO remains 100 and minimum accessibility remains 83.
