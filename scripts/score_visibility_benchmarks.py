@@ -86,11 +86,14 @@ def current(rec):
     else:
         for m in ['gsc_impressions_7d','gsc_clicks_7d','gsc_ctr','gsc_avg_position','nonbrand_query_count']: out[m]=(None,'',g.get('status','MISSING'))
     r=rec.get('routes',{}); total=float(r.get('total',0) or 0); out['technical_route_coverage']=(pct(r.get('ok',0),total),'%',f"{r.get('ok',0)}/{int(total)} routes HTTP 200"); out['metadata_coverage']=(pct(r.get('metadata_ok',0),total),'%',f"{r.get('metadata_ok',0)}/{int(total)} routes metadata OK")
-    all_ps=rec.get('pagespeed',[]); ps=[p for p in all_ps if p.get('status')=='OK']; home=next((p for p in all_ps if p.get('url')==BASE+'/'), {})
+    all_ps=rec.get('pagespeed',[])
+    ps=[p for p in all_ps if p.get('status')=='OK']
+    home=next((p for p in all_ps if p.get('url')==BASE+'/'), {})
     if home.get('status')=='OK' and home.get('performance') is not None:
         out['pagespeed_mobile_home']=(float(home['performance']),'','OK')
     elif home:
-        page_status=home.get('pagespeed_status','ERROR'); sample_status=home.get('status','UNKNOWN')
+        page_status=home.get('pagespeed_status','ERROR')
+        sample_status=home.get('status','UNKNOWN')
         evidence=page_status if page_status==sample_status else f'{page_status}+{sample_status}'
         out['pagespeed_mobile_home']=(None,'',evidence)
     else:
