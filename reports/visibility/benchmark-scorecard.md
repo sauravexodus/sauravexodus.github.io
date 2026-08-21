@@ -399,11 +399,11 @@
 | 2026-08-21 | 30d | nonbrand_query_count | Non-brand queries with impressions | 0 | 12 | 30 | Behind | -12 | Excludes Sourav/name-navigation variants from sampled GSC rows | Prioritize growth action |
 | 2026-08-21 | 30d | technical_route_coverage | Live sitemap routes HTTP 200 | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes HTTP 200 | Protect and compound |
 | 2026-08-21 | 30d | metadata_coverage | Pages with title/meta/canonical/JSON-LD/no noindex | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes metadata OK | Protect and compound |
-| 2026-08-21 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 89 | 90 | 95 | Watch | -1 | OK | Nudge with targeted optimization |
+| 2026-08-21 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | n/a | 90 | 95 | Blocked | n/a | ERROR+SYNTHETIC | Need source data before benchmarking |
 | 2026-08-21 | 30d | pagespeed_seo | PageSpeed SEO score | 100 | 100 | 100 | Stretch | 0 | Minimum across tracked URLs | Protect and compound |
 | 2026-08-21 | 30d | pagespeed_accessibility | PageSpeed accessibility score | 83 | 95 | 100 | Watch | -12 | Minimum across tracked URLs | Nudge with targeted optimization |
-| 2026-08-21 | 30d | ai_mention_rate | AI/GEO mention rate across tracked prompts | 0.0% | 5% | 10% | Behind | -5.0% | Scored 23 determinate rows; 17 indeterminate excluded from newest 40 rows | Prioritize growth action |
-| 2026-08-21 | 30d | ai_citation_rate | AI/GEO citation rate across tracked prompts | 0.0% | 2% | 5% | Behind | -2.0% | Scored 23 determinate rows; 17 indeterminate excluded from newest 40 rows | Prioritize growth action |
+| 2026-08-21 | 30d | ai_mention_rate | AI/GEO mention rate across tracked prompts | 0.0% | 5% | 10% | Behind | -5.0% | Scored 20 determinate rows; 20 indeterminate excluded from newest 40 rows | Prioritize growth action |
+| 2026-08-21 | 30d | ai_citation_rate | AI/GEO citation rate across tracked prompts | 0.0% | 2% | 5% | Behind | -2.0% | Scored 20 determinate rows; 20 indeterminate excluded from newest 40 rows | Prioritize growth action |
 | 2026-08-21 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-08-21 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-08-21 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |

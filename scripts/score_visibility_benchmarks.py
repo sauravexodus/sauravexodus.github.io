@@ -86,8 +86,18 @@ def current(rec):
     else:
         for m in ['gsc_impressions_7d','gsc_clicks_7d','gsc_ctr','gsc_avg_position','nonbrand_query_count']: out[m]=(None,'',g.get('status','MISSING'))
     r=rec.get('routes',{}); total=float(r.get('total',0) or 0); out['technical_route_coverage']=(pct(r.get('ok',0),total),'%',f"{r.get('ok',0)}/{int(total)} routes HTTP 200"); out['metadata_coverage']=(pct(r.get('metadata_ok',0),total),'%',f"{r.get('metadata_ok',0)}/{int(total)} routes metadata OK")
-    ps=[p for p in rec.get('pagespeed',[]) if p.get('status')=='OK']; home=next((p for p in ps if p.get('url')==BASE+'/'), ps[0] if ps else {})
-    out['pagespeed_mobile_home']=(float(home.get('performance')) if home.get('performance') is not None else None,'',home.get('status','PageSpeed not OK') if home else 'PageSpeed not OK')
+    all_ps=rec.get('pagespeed',[])
+    ps=[p for p in all_ps if p.get('status')=='OK']
+    home=next((p for p in all_ps if p.get('url')==BASE+'/'), {})
+    if home.get('status')=='OK' and home.get('performance') is not None:
+        out['pagespeed_mobile_home']=(float(home['performance']),'','OK')
+    elif home:
+        page_status=home.get('pagespeed_status','ERROR')
+        sample_status=home.get('status','UNKNOWN')
+        evidence=page_status if page_status==sample_status else f'{page_status}+{sample_status}'
+        out['pagespeed_mobile_home']=(None,'',evidence)
+    else:
+        out['pagespeed_mobile_home']=(None,'','Homepage PageSpeed missing')
     out['pagespeed_seo']=(min(float(p.get('seo',0) or 0) for p in ps),'','Minimum across tracked URLs') if ps else (None,'','PageSpeed not OK')
     out['pagespeed_accessibility']=(min(float(p.get('accessibility',0) or 0) for p in ps),'','Minimum across tracked URLs') if ps else (None,'','PageSpeed not OK')
     men,cit,note=ai_rates(); out['ai_mention_rate']=(men,'%',note); out['ai_citation_rate']=(cit,'%',note)

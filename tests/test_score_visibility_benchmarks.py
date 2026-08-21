@@ -68,5 +68,37 @@ class AiRatesTests(unittest.TestCase):
         )
 
 
+class CurrentMetricsTests(unittest.TestCase):
+    def test_missing_home_pagespeed_does_not_use_another_route(self) -> None:
+        rec = {
+            "gsc": {"status": "BLOCKED_AUTH"},
+            "routes": {"total": 2, "ok": 2, "metadata_ok": 2},
+            "pagespeed": [
+                {
+                    "url": scorer.BASE + "/",
+                    "status": "SYNTHETIC",
+                    "pagespeed_status": "ERROR",
+                    "performance": None,
+                },
+                {
+                    "url": scorer.BASE + "/blog/",
+                    "status": "OK",
+                    "performance": 89,
+                    "seo": 100,
+                    "accessibility": 83,
+                },
+            ],
+        }
+
+        metrics = scorer.current(rec)
+
+        self.assertEqual(
+            metrics["pagespeed_mobile_home"],
+            (None, "", "ERROR+SYNTHETIC"),
+        )
+        self.assertEqual(metrics["pagespeed_seo"], (100.0, "", "Minimum across tracked URLs"))
+        self.assertEqual(metrics["pagespeed_accessibility"], (83.0, "", "Minimum across tracked URLs"))
+
+
 if __name__ == "__main__":
     unittest.main()
