@@ -437,3 +437,18 @@
 | 2026-08-23 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-08-23 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
 | 2026-08-23 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |
+| 2026-08-24 | 30d | gsc_impressions_7d | Google impressions / trailing 7d | 12 | 300 | 750 | Behind | -288 | 2026-08-17→2026-08-23 | Prioritize growth action |
+| 2026-08-24 | 30d | gsc_clicks_7d | Google clicks / trailing 7d | 1 | 8 | 20 | Behind | -7 | 2026-08-17→2026-08-23 | Prioritize growth action |
+| 2026-08-24 | 30d | gsc_ctr | Google CTR | 8.3% | 1.5% | 3.0% | Stretch | 6.8% | Weighted by impressions | Protect and compound |
+| 2026-08-24 | 30d | gsc_avg_position | Google average position | 17.92 | 50 | 30 | Stretch | 32.08 | Weighted by impressions | Protect and compound |
+| 2026-08-24 | 30d | nonbrand_query_count | Non-brand queries with impressions | 0 | 12 | 30 | Behind | -12 | Excludes Sourav/name-navigation variants from sampled GSC rows | Prioritize growth action |
+| 2026-08-24 | 30d | technical_route_coverage | Live sitemap routes HTTP 200 | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes HTTP 200 | Protect and compound |
+| 2026-08-24 | 30d | metadata_coverage | Pages with title/meta/canonical/JSON-LD/no noindex | 100.0% | 100% | 100% | Stretch | 0.0% | 7/7 routes metadata OK | Protect and compound |
+| 2026-08-24 | 30d | pagespeed_mobile_home | Homepage mobile PageSpeed performance | 89 | 90 | 95 | Watch | -1 | OK | Nudge with targeted optimization |
+| 2026-08-24 | 30d | pagespeed_seo | PageSpeed SEO score | 100 | 100 | 100 | Stretch | 0 | Minimum across tracked URLs | Protect and compound |
+| 2026-08-24 | 30d | pagespeed_accessibility | PageSpeed accessibility score | 83 | 95 | 100 | Watch | -12 | Minimum across tracked URLs | Nudge with targeted optimization |
+| 2026-08-24 | 30d | ai_mention_rate | AI/GEO mention rate across tracked prompts | 0.0% | 5% | 10% | Behind | -5.0% | Scored 20 determinate rows; 20 indeterminate excluded from newest 40 rows | Prioritize growth action |
+| 2026-08-24 | 30d | ai_citation_rate | AI/GEO citation rate across tracked prompts | 0.0% | 2% | 5% | Behind | -2.0% | Scored 20 determinate rows; 20 indeterminate excluded from newest 40 rows | Prioritize growth action |
+| 2026-08-24 | 30d | serp_top20_coverage | Tracked SERP queries with Sourav in top 20 | n/a | 5% | 12% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
+| 2026-08-24 | 90d | serp_top10_coverage | Tracked SERP queries with Sourav in top 10 | n/a | 6% | 15% | Blocked | n/a | Competitor/SERP scan not yet recorded | Need source data before benchmarking |
+| 2026-08-24 | 30d | source_gap_closure | Repeated competitor/source gaps closed | n/a | 3 | 6 | Blocked | n/a | Trend/source-gap action tracker not yet recorded | Need source data before benchmarking |
