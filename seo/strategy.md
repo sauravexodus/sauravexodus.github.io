@@ -53,8 +53,8 @@ are gaining impressions or AI-engine citations, deprioritize ones that are not.
 
 ## Google Search Console (one-time manual step for Sourav)
 
-- [ ] Go to https://search.google.com/search-console, add property `souravchandra.com` (Domain property, verify via DNS TXT record at your domain registrar).
+- [x] Domain property `sc-domain:souravchandra.com` is verified and accessible to the visibility collector's service account (confirmed 2026-07-30; still returning authenticated data on 2026-09-01).
 - [ ] Submit sitemap: `https://souravchandra.com/sitemap.xml`.
-- [ ] Optional: connect the GSC connector in Claude so the Friday tracking automation can pull real impressions/clicks instead of proxy checks.
+- [x] The daily visibility collector pulls authenticated impressions/clicks through the dedicated service account; no interactive GSC connector is required for cron.
 
-Until GSC is verified, the tracking automation uses proxy signals (see tracking-log.md).
+Authenticated GSC collection is working. Sitemap submission/request-indexing completion is not recorded, so keep that separate from property access and continue using bounded proxy surfaces only for external SERP/AI visibility checks (see tracking-log.md).
