@@ -41,7 +41,7 @@ The real search blocker is topical discovery: rolling impressions are low, the h
 - **Performance:** stable but below the homepage target of 90; the latest 2026-09-01 homepage score is 88.
 - **Reliability:** homepage PageSpeed returned API/Lighthouse errors on 2026-08-21 and 2026-08-26. The scorer now correctly marks the exact homepage sample blocked instead of borrowing another route's score; subsequent samples recovered.
 - **Accessibility:** unchanged and still the main UX deficit. `/blog/` remains 83, below the 95 target; tracked articles remain 85–86.
-- **Raw-data note:** the JSONL archive retains five 2026-08-02 auth-repair transition samples (`BLOCKED_SITE_ACCESS`, `BLOCKED_AUTH`, and three `OK` samples). The final service-account `OK` row is authoritative for that date; raw-row aggregations must deduplicate by date/state rather than treating all five as separate days.
+- **Raw-data note:** the JSONL archive retains five 2026-08-02 auth-repair transition samples (`BLOCKED_SITE_ACCESS`, `BLOCKED_AUTH`, and three `OK` samples). For each date, the authoritative sample is the **last appended `OK` row with `gsc.tokenSource: service-account`**; earlier transition and duplicate rows are excluded. Raw-row aggregations must preserve append order rather than deduplicating only by date or status.
 
 ## Benchmark target status
 
