@@ -162,3 +162,7 @@
 | 2026-09-03 | /blog/ | OK | 86 | 3.0 s | 0 | 0 ms | 100 | 83 | Fix perf |
 | 2026-09-03 | /blog/fractional-cto-dubai-uae-guide.html | OK | 89 | 3.0 s | 0 | 0 ms | 100 | 85 | Fix perf |
 | 2026-09-03 | /blog/cto-as-a-service-dubai.html | OK | 86 | 3.1 s | 0 | 0 ms | 100 | 86 | Fix perf |
+| 2026-09-04 | / | ERROR+SYNTHETIC |  | fetch 69ms |  | bytes 46056 |  |  | Enable PageSpeed API quota; monitor synthetic fetch trend |
+| 2026-09-04 | /blog/ | OK | 87 | 3.0 s | 0 | 0 ms | 100 | 83 | Fix perf |
+| 2026-09-04 | /blog/fractional-cto-dubai-uae-guide.html | OK | 89 | 3.0 s | 0.001 | 0 ms | 100 | 85 | Fix perf |
+| 2026-09-04 | /blog/cto-as-a-service-dubai.html | ERROR+SYNTHETIC |  | fetch 246ms |  | bytes 18709 |  |  | Enable PageSpeed API quota; monitor synthetic fetch trend |
