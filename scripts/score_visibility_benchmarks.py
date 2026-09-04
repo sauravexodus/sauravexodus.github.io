@@ -57,9 +57,11 @@ def ai_rates():
     if not p.exists(): return None,None,'No AI/GEO run recorded yet'
     rows=[]
     for line in p.read_text().splitlines():
-        if not line.startswith('|') or '---' in line or 'Date' in line or 'Week' in line:
+        if not line.startswith('|'):
             continue
         cells=[cell.strip() for cell in line.strip('|').split('|')]
+        if not cells or cells[0]=='Date UTC' or all(re.fullmatch(r':?-{3,}:?', cell) for cell in cells):
+            continue
         if len(cells)>=5:
             rows.append((cells[3],cells[4]))
     if not rows: return None,None,'No AI/GEO run recorded yet'

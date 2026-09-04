@@ -67,6 +67,36 @@ class AiRatesTests(unittest.TestCase):
             "Scored 2 determinate rows; 1 indeterminate excluded from newest 3 rows",
         )
 
+    def test_ai_rates_do_not_skip_data_rows_containing_header_words(self) -> None:
+        dated_row = row("2026-09-03", "No", "No").replace(
+            "Evidence", "Dated Weekly evidence"
+        )
+        self.write_rows([dated_row])
+
+        mention_rate, citation_rate, note = scorer.ai_rates()
+
+        self.assertEqual(mention_rate, 0.0)
+        self.assertEqual(citation_rate, 0.0)
+        self.assertEqual(
+            note,
+            "Scored 1 determinate rows; 0 indeterminate excluded from newest 1 rows",
+        )
+
+    def test_ai_rates_do_not_skip_data_rows_containing_separator_text(self) -> None:
+        separator_text_row = row("2026-09-03", "No", "No").replace(
+            "Evidence", "A---B evidence boundary"
+        )
+        self.write_rows([separator_text_row])
+
+        mention_rate, citation_rate, note = scorer.ai_rates()
+
+        self.assertEqual(mention_rate, 0.0)
+        self.assertEqual(citation_rate, 0.0)
+        self.assertEqual(
+            note,
+            "Scored 1 determinate rows; 0 indeterminate excluded from newest 1 rows",
+        )
+
 
 class CurrentMetricsTests(unittest.TestCase):
     def test_missing_home_pagespeed_does_not_use_another_route(self) -> None:
