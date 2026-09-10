@@ -40,7 +40,7 @@ CTA box linking to the free 30-min call.
 | 4 | PUBLISHED 2026-07-13 | founder-guides | Non-technical founder building an app? How to keep a dev agency honest | non-technical founder building an app |
 | 5 | QUEUED | trending-ai | (auto-discover: pick the week's most relevant AI development and give the CTO take) | (derive from topic) |
 | 6 | PUBLISHED 2026-07-21 | fractional-cto-uae | CTO as a service in Dubai: engagement models, an explicit AED pricing table, and how to choose (published ahead of item 5 per 2026-07-19 tracking action 1) | CTO as a service Dubai |
-| 7 | QUEUED | ai-mvp | RAG vs fine-tuning: what your startup actually needs (and what each costs) | RAG vs fine-tuning for startups |
+| 7 | DRAFT PR PENDING | ai-mvp | RAG vs fine-tuning: what your startup actually needs (and what each costs) | RAG vs fine-tuning for startups |
 | 8 | QUEUED | tech-dd | How VCs evaluate a codebase (and what they never look at) | how VCs evaluate a codebase |
 | 9 | QUEUED | founder-guides | How to evaluate a dev shop quote (the AED 300k question): line items that should be there, padding that should not, and the questions that shrink the number | how to evaluate a dev shop quote |
 

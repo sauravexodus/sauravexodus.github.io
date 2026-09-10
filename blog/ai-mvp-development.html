@@ -135,6 +135,7 @@
 
     <h2>RAG or fine-tuning for a startup MVP?</h2>
     <p>RAG, almost always. The useful distinction is that RAG retrieves current external knowledge at query time, while fine-tuning changes model weights to produce more consistent domain behavior. <a href="https://www.ibm.com/think/topics/rag-vs-fine-tuning">IBM's comparison</a> describes RAG as the route to current, private data. <a href="https://www.databricks.com/blog/rag-vs-fine-tuning">Databricks' decision guide</a> recommends it when information changes, answers need citations, or labelled training data is unavailable. That is the normal startup-MVP situation: changing documents, a small eval set, and no stable corpus of production examples yet.</p>
+    <p>If that choice is now an active architecture decision, use the <a href="/blog/rag-vs-fine-tuning-for-startups.html">RAG vs fine-tuning startup framework</a> to identify which component owns the failure, compare build/run/change costs, and test the four gates before training.</p>
     <p>Fine-tuning earns its place later, for narrow jobs with stable inputs — classification, extraction, a house style — once usage data exists. Start from a measured failure mode, not the hope that training will repair weak retrieval. That is usually a month-six optimization, not a month-one architecture.</p>
 
     <h2>How should a startup evaluate RAG before fine-tuning?</h2>
