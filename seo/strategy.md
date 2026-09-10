@@ -1,8 +1,16 @@
 # SEO/GEO Content Strategy — souravchandra.com
 
-This file is the single source of truth for the automated weekly blog pipeline.
-The Monday publish automation reads this file and `seo/tracking-log.md` before
-writing anything. It updates the queue below after each publish.
+This file is the single source of truth for the evidence-backed editorial
+pipeline. The weekday automation reads this file and `seo/tracking-log.md`
+before drafting anything. It may prepare a complete draft pull request, but it
+must not publish substantive editorial copy without Sourav's explicit approval.
+
+Queue states are:
+
+- `QUEUED` — eligible for the next editorial drafting slot.
+- `DRAFT PR #N` — one integrated preview candidate exists; do not create a duplicate.
+- `DEFERRED YYYY-MM-DD: reason` — a specific quality/evidence gate failed; advance to the next item rather than rediscovering it every week.
+- `PUBLISHED YYYY-MM-DD` — merged and verified on the canonical site.
 
 ## Positioning (do not drift from this)
 
@@ -22,7 +30,7 @@ CTA box linking to the free 30-min call.
 4. founder-guides — "how to hire a CTO", "non-technical founder building an app", "dev agency vs in-house team", "how to evaluate a dev shop quote"
 5. trending-ai — auto-discovered each week via web search: current AI industry news, model releases, and debates where a fractional-CTO perspective adds value. Must still tie back to the audience above.
 
-## Content queue (publish automation: take the top unpublished item, then rotate themes)
+## Content queue (draft automation: take the top eligible item, then rotate themes)
 
 | # | Status | Theme | Working title | Primary keyword |
 |---|--------|-------|---------------|-----------------|
@@ -37,19 +45,24 @@ CTA box linking to the free 30-min call.
 | 9 | QUEUED | founder-guides | How to evaluate a dev shop quote (the AED 300k question): line items that should be there, padding that should not, and the questions that shrink the number | how to evaluate a dev shop quote |
 
 After item 6, continue rotating themes 1→5. Generate new working titles informed
-by `seo/tracking-log.md` performance data: double down on themes/keywords that
-are gaining impressions or AI-engine citations, deprioritize ones that are not.
+by `seo/tracking-log.md` performance data, direct source research, and distinct
+buyer questions. Absence of topical Search Console queries is a measurement
+signal, not a permanent veto on drafting an already approved strategic topic.
 
-## Publishing rules (automation must follow exactly)
+## Drafting and publishing rules (automation must follow exactly)
 
-1. One post per run. 1,200–1,800 words. Written in Sourav's voice (see homepage FAQ answers for tone reference).
-2. Create `blog/<slug>.html` by copying the structure of an existing post (nav, blog.css, Article JSON-LD, meta/OG tags, canonical URL, CTA box). Slug: kebab-case from primary keyword.
-3. Add a post card to `blog/index.html` immediately after the `<!-- POSTS:START` marker (newest first).
-4. Append the post to `blog/posts.json` (top of the posts array).
-5. Add a `<url>` entry to `sitemap.xml` and bump `<lastmod>` on `/` and `/blog/`.
-6. Update the queue table above (mark PUBLISHED with date, ensure at least 3 QUEUED items remain — generate more if needed).
-7. Commit with message `Publish: <title>` and push to origin master. Git must be run ON THE MAC (not the sandbox) so SSH keys are available.
-8. GEO requirements per post: direct answer to the primary question within the first two paragraphs, descriptive H2/H3 headings phrased as questions where natural, concrete numbers and named entities, Article JSON-LD.
+1. Keep at most one open editorial candidate. Before drafting, inspect open PRs for `editorial/*` or a title prefixed `Editorial review:`. Update that candidate when required; never create a duplicate.
+2. On an editorial slot, take the highest eligible queued item and prepare one complete 1,200–1,800-word post in Sourav's voice (see homepage FAQ answers for tone reference).
+3. A draft must add a distinct buyer decision, operating model, or useful artifact beyond existing canonical pages. Repeated definitions, country-name swaps, annual-title churn, and unsupported market numbers fail the gate.
+4. Use current direct sources and map claims to inline links. Never invent clients, testimonials, credentials, addresses, search volume, prices, outcomes, legal/compliance claims, or universal thresholds.
+5. Create `blog/<slug>.html` using the established article structure: nav, blog.css, Article/FAQ JSON-LD where truthful, meta/OG tags, canonical URL, internal links, and CTA box. Slugs are kebab-case.
+6. Integrate the candidate on the same branch: add the newest card to `blog/index.html`, prepend the record in `blog/posts.json`, add the sitemap URL, and update the queue state to `DRAFT PR #N` once the PR number exists.
+7. Use branch `editorial/<slug>` and open a **draft pull request** titled `Editorial review: <title>`. Verify JSON-LD, JSON, XML, local route mappings, duplicate registry entries, links, tests/scripts, `git diff --check`, and added-line secret/unsafe-markup scans.
+8. Automation must stop at `REVIEW REQUIRED`. It must not infer approval from CI, CodeRabbit, elapsed time, or silence, and it must not merge substantive public copy. Only an interactive session acting on Sourav's explicit approval may mark the PR ready, merge it, wait for GitHub Pages, and verify the canonical URL.
+9. Report-only changes and narrowly mechanical technical fixes may follow the established low-risk auto-merge policy. New articles, material article sections, service/price/credential claims, and source interpretation may not.
+10. If a queue item fails, record `DEFERRED YYYY-MM-DD: <exact reason>` and advance next cycle. Do not repeat `NO_PUBLISH` for the same frozen proposal without a changed evidence condition.
+11. After an approved article is live, mark it `PUBLISHED YYYY-MM-DD`, keep at least three eligible queued items, and generate evidence-backed replacements when needed.
+12. GEO requirements per post: answer the primary question within the first two paragraphs, use descriptive question-led H2/H3 headings where natural, include concrete decision criteria and named sources, and emit truthful Article structured data.
 
 ## Google Search Console (one-time manual step for Sourav)
 
