@@ -91,25 +91,39 @@ def api_json(url, token=None, method='GET', payload=None, timeout=45):
     except Exception as e: return None,str(e)
 
 def previous_gsc_blocker():
-    """Preserve the most specific known Search Console blocker across auth gaps.
+    """Preserve only the latest still-applicable site-access blocker.
 
-    In unattended cron, a local gcloud token can disappear after a prior run already
-    proved that the Google account lacked access to the Search Console property.
-    Reporting BLOCKED_AUTH after that is less useful than continuing to tell the
-    owner to verify/add access for the site property.
+    A later authenticated ``OK`` state clears older property-access failures.
+    Compare dated raw and Markdown states together; raw wins only when both
+    sources describe the same date.
     """
-    search=REPORT_DIR/'search-visibility-daily.md'
-    if search.exists() and 'BLOCKED_SITE_ACCESS' in search.read_text(encoding='utf-8'):
-        return 'BLOCKED_SITE_ACCESS'
+    states=[]
     raw=RAW_DIR/'visibility-metrics.jsonl'
     if raw.exists():
         for line in raw.read_text(encoding='utf-8').splitlines():
             try:
-                if json.loads(line).get('gsc',{}).get('status')=='BLOCKED_SITE_ACCESS':
-                    return 'BLOCKED_SITE_ACCESS'
+                row=json.loads(line); status=row.get('gsc',{}).get('status')
+                date=dt.date.fromisoformat(str(row.get('date','')))
             except Exception:
                 continue
-    return None
+            if status in {'OK','BLOCKED_SITE_ACCESS'}:
+                states.append((date,1,status))
+    search=REPORT_DIR/'search-visibility-daily.md'
+    if search.exists():
+        for line in search.read_text(encoding='utf-8').splitlines():
+            if not line.startswith('|'):
+                continue
+            cells=[part.strip() for part in line.strip('|').split('|')]
+            if len(cells)<2 or cells[0]=='Date UTC' or cells[1] not in {'OK','BLOCKED_SITE_ACCESS'}:
+                continue
+            try:
+                date=dt.date.fromisoformat(cells[0])
+            except ValueError:
+                continue
+            states.append((date,0,cells[1]))
+    if not states:
+        return None
+    return 'BLOCKED_SITE_ACCESS' if max(states)[2]=='BLOCKED_SITE_ACCESS' else None
 
 def report_date() -> dt.date:
     raw=os.environ.get('SOURAV_VISIBILITY_REPORT_DATE')
