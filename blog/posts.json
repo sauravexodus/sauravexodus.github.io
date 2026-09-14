@@ -1,6 +1,14 @@
 {
-  "note": "Machine-readable post registry. The weekly publish automation appends new posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml.",
+  "note": "Machine-readable post registry. Editorial draft automation adds candidate posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml. Public editorial changes require explicit human approval before merge to master.",
   "posts": [
+    {
+      "slug": "rag-vs-fine-tuning-for-startups",
+      "title": "RAG vs fine-tuning for startups: the evidence gates before you train",
+      "date": "2026-09-10",
+      "theme": "ai-mvp",
+      "primary_keyword": "RAG vs fine-tuning for startups",
+      "secondary_keywords": ["when should a startup fine-tune", "RAG or fine-tuning", "RAG fine-tuning decision framework", "AI startup architecture"]
+    },
     {
       "slug": "cto-as-a-service-dubai",
       "title": "CTO as a service in Dubai: engagement models, AED pricing, and how to choose",
