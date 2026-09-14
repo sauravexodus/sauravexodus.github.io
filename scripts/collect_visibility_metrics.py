@@ -93,34 +93,37 @@ def api_json(url, token=None, method='GET', payload=None, timeout=45):
 def previous_gsc_blocker():
     """Preserve only the latest still-applicable site-access blocker.
 
-    A later authenticated ``OK`` row clears older property-access failures. Scan
-    raw history newest-first and stop at the first definitive state so a temporary
-    credential gap cannot resurrect a stale blocker.
+    A later authenticated ``OK`` state clears older property-access failures.
+    Compare dated raw and Markdown states together; raw wins only when both
+    sources describe the same date.
     """
+    states=[]
     raw=RAW_DIR/'visibility-metrics.jsonl'
     if raw.exists():
-        for line in reversed(raw.read_text(encoding='utf-8').splitlines()):
+        for line in raw.read_text(encoding='utf-8').splitlines():
             try:
-                status=json.loads(line).get('gsc',{}).get('status')
+                row=json.loads(line); status=row.get('gsc',{}).get('status')
+                date=dt.date.fromisoformat(str(row.get('date','')))
             except Exception:
                 continue
-            if status=='OK':
-                return None
-            if status=='BLOCKED_SITE_ACCESS':
-                return 'BLOCKED_SITE_ACCESS'
+            if status in {'OK','BLOCKED_SITE_ACCESS'}:
+                states.append((date,1,status))
     search=REPORT_DIR/'search-visibility-daily.md'
     if search.exists():
-        for line in reversed(search.read_text(encoding='utf-8').splitlines()):
+        for line in search.read_text(encoding='utf-8').splitlines():
             if not line.startswith('|'):
                 continue
             cells=[part.strip() for part in line.strip('|').split('|')]
-            if len(cells)<2 or cells[0]=='Date UTC':
+            if len(cells)<2 or cells[0]=='Date UTC' or cells[1] not in {'OK','BLOCKED_SITE_ACCESS'}:
                 continue
-            if cells[1]=='OK':
-                return None
-            if cells[1]=='BLOCKED_SITE_ACCESS':
-                return 'BLOCKED_SITE_ACCESS'
-    return None
+            try:
+                date=dt.date.fromisoformat(cells[0])
+            except ValueError:
+                continue
+            states.append((date,0,cells[1]))
+    if not states:
+        return None
+    return 'BLOCKED_SITE_ACCESS' if max(states)[2]=='BLOCKED_SITE_ACCESS' else None
 
 def report_date() -> dt.date:
     raw=os.environ.get('SOURAV_VISIBILITY_REPORT_DATE')

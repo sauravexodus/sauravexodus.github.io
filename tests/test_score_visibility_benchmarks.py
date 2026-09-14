@@ -169,6 +169,25 @@ class PreviousGscBlockerTests(unittest.TestCase):
             "BLOCKED_SITE_ACCESS",
         )
 
+    def test_newer_markdown_ok_clears_an_older_raw_blocker(self) -> None:
+        self.write_raw_statuses("BLOCKED_SITE_ACCESS")
+        (collector.REPORT_DIR / "search-visibility-daily.md").write_text(
+            "| 2026-09-02 | OK |\n", encoding="utf-8"
+        )
+
+        self.assertIsNone(collector.previous_gsc_blocker())
+
+    def test_newer_raw_blocker_overrides_an_older_markdown_ok(self) -> None:
+        self.write_raw_statuses("OK", "BLOCKED_SITE_ACCESS")
+        (collector.REPORT_DIR / "search-visibility-daily.md").write_text(
+            "| 2026-09-01 | OK |\n", encoding="utf-8"
+        )
+
+        self.assertEqual(
+            collector.previous_gsc_blocker(),
+            "BLOCKED_SITE_ACCESS",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
