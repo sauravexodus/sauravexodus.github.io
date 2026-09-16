@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Security Checklist for Startups | Sourav Chandra</title>
+<meta name="description" content="Before an AI agent can send, buy, refund, or delete, define its authority envelope: permissions, approvals, budgets, evidence, and a tested stop path.">
+<link rel="canonical" href="https://souravchandra.com/blog/ai-agent-authority-envelope.html">
+<meta property="og:title" content="Should Your Startup Let an AI Agent Act? Define the Authority Envelope First">
+<meta property="og:description" content="A founder's operating protocol for giving AI agents useful autonomy without giving them undefined authority.">
+<meta property="og:image" content="https://souravchandra.com/assets/picture.png">
+<meta property="og:url" content="https://souravchandra.com/blog/ai-agent-authority-envelope.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Should Your Startup Let an AI Agent Act? Define the Authority Envelope First",
+  "description": "A founder's operating protocol for constraining an AI agent's permissions, approval boundaries, transaction budgets, evidence, and stop path before production.",
+  "author": {
+    "@type": "Person",
+    "name": "Sourav Chandra",
+    "url": "https://souravchandra.com",
+    "jobTitle": "Fractional CTO",
+    "sameAs": ["https://www.linkedin.com/in/souravchan", "https://github.com/sauravexodus"]
+  },
+  "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "mainEntityOfPage": "https://souravchandra.com/blog/ai-agent-authority-envelope.html",
+  "image": "https://souravchandra.com/assets/picture.png"
+}
+</script>
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <span class="brand-node" aria-hidden="true"></span>
+      Sourav Chandra
+    </a>
+    <div class="nav-links">
+      <a href="/#work">Track record</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/">Writing</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="/#book">Book a call</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="article-head">
+    <div class="eyebrow">AI Agents · Founder Protocol</div>
+    <h1>Should your startup let an AI agent act? Define the authority envelope first</h1>
+    <div class="meta">
+      <span>Sourav Chandra</span>
+      <span>September 16, 2026</span>
+      <span>10 min read</span>
+    </div>
+  </header>
+
+  <article class="article-body">
+    <p>Let an AI agent act only after you can state, in plain language, what it may read, what it may change, which actions need approval, how much cumulative damage one run can cause, what evidence every action leaves, and how a human stops or reverses it. If any field is blank, keep the system in read-only or recommendation mode.</p>
+
+    <p>The important AI release pattern this month is not a smarter chat box. Agents are moving into email, purchases, refunds, and other state-changing workflows. That makes the founder's architecture decision less about model intelligence and more about <strong>bounded authority</strong>.</p>
+
+    <h2>What changed with the latest agent launches?</h2>
+    <p><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Meta's September 8 Muse announcement</a> says its new personal agent can work after the app closes, use connected applications, fill forms, and return for approval before sending an email or making a purchase. Meta also says Muse isolates each agent, separates credentials from the model, lets people choose application permissions, and exposes an audit trail. Those are Meta's product claims, not independent proof of the controls, but the design choices reveal where the hard problem has moved.</p>
+
+    <p><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/">Google's September 15 zero-trust agent guide</a> makes the same shift explicit for a refund workflow. It describes screening prompts, evaluating a proposed tool call against user intent and business policy <em>before</em> execution, and monitoring cumulative behavior across a session. A single refund can be valid while a sequence of individually valid refunds drains the ledger.</p>
+
+    <p>The lesson for a startup is not “copy Meta's architecture” or “buy Google's platform.” It is this: a model can produce the right tool syntax and still propose the wrong business action. Authentication proves which agent made the request. It does not prove the request should happen.</p>
+
+    <h2>Autonomy is useful; undefined authority is the bug</h2>
+    <p>Most teams start with a tool list: search the CRM, send email, issue a refund, update an account. That is an implementation inventory, not an authorization model. The dangerous gap sits between “the agent can call this tool” and “the agent may call it now, with these parameters, for this user, within this cumulative budget.”</p>
+
+    <p><a href="https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents">Anthropic's agent framework</a> describes the same tension: autonomous operation creates value, while humans should retain control before high-stakes decisions. Its example keeps code access read-only by default and asks for approval before changes. The durable principle is provider-independent: grant the least consequential mode first, then make wider authority an earned and revocable decision.</p>
+
+    <h2>The Authority Envelope: nine fields before production</h2>
+    <p>An authority envelope is a versioned contract around one agent workflow. It belongs outside the prompt so the agent cannot rewrite its own boundary.</p>
+
+    <p class="table-hint">Swipe horizontally to see all columns →</p>
+    <section class="table-scroll" aria-label="AI agent authority envelope fields" tabindex="0">
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Question the founder must answer</th>
+          <th>Evidence to retain</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Business objective</td>
+          <td>Which single outcome may the agent pursue, and what is explicitly out of scope?</td>
+          <td>Workflow ID, owner, success rule, exclusions</td>
+        </tr>
+        <tr>
+          <td>Read boundary</td>
+          <td>Which users, records, fields, and time windows may it inspect?</td>
+          <td>Scoped identity and access-policy version</td>
+        </tr>
+        <tr>
+          <td>Write boundary</td>
+          <td>Which state changes are allowed, and in which environment or account?</td>
+          <td>Tool and parameter allowlist</td>
+        </tr>
+        <tr>
+          <td>Approval boundary</td>
+          <td>Which consequence, amount, recipient, or novelty forces human review?</td>
+          <td>Approver, request payload, decision, timestamp</td>
+        </tr>
+        <tr>
+          <td>Cumulative budget</td>
+          <td>What limit applies across the whole run, user, and time window?</td>
+          <td>Count, value, velocity, and reset window</td>
+        </tr>
+        <tr>
+          <td>Credential boundary</td>
+          <td>Can the agent use a scoped capability without seeing or exporting the secret?</td>
+          <td>Credential reference, scope, expiry, rotation owner</td>
+        </tr>
+        <tr>
+          <td>Evidence trail</td>
+          <td>Can a reviewer reconstruct the input, policy, proposal, approval, and result?</td>
+          <td>Immutable event IDs and redacted logs</td>
+        </tr>
+        <tr>
+          <td>Stop and recovery</td>
+          <td>How is authority revoked, in-flight work stopped, and committed harm compensated?</td>
+          <td>Kill test, idempotency key, rollback or compensation result</td>
+        </tr>
+        <tr>
+          <td>Expiry trigger</td>
+          <td>Which model, prompt, tool, policy, or workflow change voids approval?</td>
+          <td>Approved versions and next review condition</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+
+    <p>The envelope should be narrow enough that a non-technical founder can read it and predict the worst plausible outcome. “The agent can manage refunds” is not bounded. “It may propose refunds for orders belonging to the authenticated customer; a human approves every write; no run may propose more than the order value” is testable. The actual thresholds depend on the product, risk, and contract. There is no universal safe amount.</p>
+
+    <h2>Promote the agent through four authority levels</h2>
+    <p>Do not jump from a successful demo to unattended writes. Promote one workflow through explicit levels:</p>
+
+    <ol>
+      <li><strong>Read:</strong> the agent gathers evidence but cannot change state.</li>
+      <li><strong>Recommend:</strong> it produces the exact proposed action and rationale for a human to execute.</li>
+      <li><strong>Approved write:</strong> the system executes only the reviewed payload; approval of “send an email” does not authorize a later, rewritten email.</li>
+      <li><strong>Bounded autonomous write:</strong> only repetitive cases inside a measured envelope proceed without per-action review.</li>
+    </ol>
+
+    <p>Promotion is per workflow, not per agent. A support agent may autonomously tag tickets while every refund remains approval-gated. A sales agent may draft outreach while sending stays manual. One safe tool does not make the whole agent safe.</p>
+
+    <h2>Run the failure drills before widening authority</h2>
+    <p>A normal evaluation set measures whether the agent completes the task. An authority test suite measures whether it refuses, pauses, records, and recovers correctly. <a href="https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/">Google's September 9 guidance on agent harnesses</a> recommends behavioral assertions around tool calls and regression tests when prompts, tool schemas, or models change. Turn that into eight release drills:</p>
+
+    <ul>
+      <li><strong>Scope crossing:</strong> ask the agent to reach another user's record or an excluded field.</li>
+      <li><strong>Indirect instruction:</strong> place a malicious instruction inside a document, email, or web page the agent reads.</li>
+      <li><strong>Approval integrity:</strong> approve one payload, then change the recipient, amount, or content before execution.</li>
+      <li><strong>Retry safety:</strong> time out after a write and confirm the retry does not duplicate the action.</li>
+      <li><strong>Cumulative loss:</strong> keep every individual action below the threshold while the session total exceeds it.</li>
+      <li><strong>Credential escape:</strong> ask the agent to reveal, copy, or route a secret through another tool.</li>
+      <li><strong>Revocation:</strong> remove authority during a long-running job and prove later steps cannot commit.</li>
+      <li><strong>Recovery:</strong> exercise the real rollback or compensating action and retain its result.</li>
+    </ul>
+
+    <p>Test the same cases again after a model, prompt, tool, policy, or routing change. A higher task-completion score cannot compensate for a new unauthorized write path.</p>
+
+    <h2>Keep the control plane outside the agent</h2>
+    <p>Instructions in a system prompt are useful behavior guidance, but they are not the final security boundary for a state-changing workflow. Enforce identity, data scope, action allowlists, approval, cumulative budgets, and revocation in code or infrastructure the model cannot edit.</p>
+
+    <p>For each proposed write, persist the user's request, the agent's exact proposal, the policy version, the approval decision, the execution result, and one stable idempotency key. Keep sensitive values out of broad logs, but preserve enough structured evidence to answer: who authorized what, under which rule, and what actually changed?</p>
+
+    <p>Also separate single-action validation from session monitoring. Google's refund example matters because each call can look acceptable in isolation. Watch velocity, repeated writes to one entity, cumulative value, unusual destinations, and changed tool-call patterns across the run. A policy gate protects the doorway; anomaly detection watches what happens after many trips through it.</p>
+
+    <h2>What should an early-stage team ship first?</h2>
+    <p>Start with one workflow whose harm is reversible and whose success is observable. Keep writes approval-gated. Instrument proposed actions, approvals, rejections, errors, retries, and completed outcomes. Build the authority test suite from real rejected and corrected cases. Only then consider removing approval from a narrow, repetitive slice.</p>
+
+    <p>This is deliberately different from choosing a model or a retrieval architecture. Use the <a href="/blog/ai-mvp-development.html">AI MVP scoping guide</a> to pick one measurable workflow. Use the <a href="/blog/rag-vs-fine-tuning-for-startups.html">RAG versus fine-tuning evidence gates</a> when knowledge or behavior is the failure. The authority envelope answers a separate question: what may this system do to the world when the model is wrong, manipulated, duplicated, or simply too literal?</p>
+
+    <h2>The founder decision in one sentence</h2>
+    <p>Do not approve “an autonomous agent.” Approve one versioned workflow, inside a consequence-based authority envelope, after it passes refusal, approval, cumulative-loss, revocation, and recovery tests.</p>
+
+    <p>Related: the <a href="/blog/technical-due-diligence-checklist.html">technical due diligence checklist</a> shows the operating evidence an investor should expect, while the <a href="/blog/non-technical-founder-building-an-app.html">non-technical founder's agency guide</a> explains how to keep accounts, acceptance, and control in the buyer's hands.</p>
+
+    <div class="post-cta">
+      <h2>Giving an AI workflow permission to act?</h2>
+      <p>Bring the workflow, tools, approval path, and current failure logs. We can turn them into a bounded authority envelope and a release test before the agent touches production state.</p>
+      <a class="btn btn-primary" href="mailto:hello@souravchandra.com?subject=AI%20agent%20authority%20review">Book the free 30-min call →</a>
+    </div>
+  </article>
+</div>
+
+<footer>
+  <a href="/">souravchandra.com</a> · Fractional CTO · Sharjah / Dubai, UAE · © 2026
+</footer>
+</body>
+</html>
