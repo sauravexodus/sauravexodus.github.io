@@ -28,7 +28,7 @@
   },
   "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
   "datePublished": "2026-07-06",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-09-16",
   "mainEntityOfPage": "https://souravchandra.com/blog/ai-mvp-development.html",
   "image": "https://souravchandra.com/assets/picture.png"
 }
@@ -158,6 +158,7 @@
 
     <h2>What should you cut from the scope?</h2>
     <p>Cut multi-model orchestration, agents that "do everything," mobile apps alongside web, admin dashboards, and every second persona. Keep the eval set, cost tracking, streaming, and billing. Founders consistently cut in exactly the wrong direction — they keep the second feature and drop the instrumentation, which is how you end up with two workflows you cannot measure instead of one you can.</p>
+    <p>If the workflow can send, buy, refund, delete, or change customer state, use the <a href="/blog/ai-agent-authority-envelope.html">AI agent authority-envelope protocol</a> before widening autonomy. It separates task quality from the permissions, approvals, cumulative budgets, evidence, and recovery path that constrain production action.</p>
     <p>That restraint is not just my preference. <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic's production guidance on agents</a> says its most successful implementations use simple, composable patterns, and that agentic systems trade latency and cost for task performance. For many MVPs, one model call with retrieval and good in-context examples is enough.</p>
 
     <h2>The bottom line</h2>
