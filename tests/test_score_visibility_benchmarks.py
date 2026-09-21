@@ -14,10 +14,10 @@ HEADER = """# AI / GEO Visibility Weekly
 """
 
 
-def row(date: str, mention: str, citation: str) -> str:
+def row(date: str, mention: str, citation: str, evidence: str = "Evidence") -> str:
     return (
         f"| {date} | Theme | Prompt | {mention} | {citation} | Sources | "
-        "Evidence | Action |"
+        f"{evidence} | Action |"
     )
 
 
@@ -48,7 +48,7 @@ class AiRatesTests(unittest.TestCase):
         self.assertEqual(citation_rate, 2.5)
         self.assertEqual(
             note,
-            "Scored 40 determinate rows; 0 indeterminate excluded from newest 40 rows",
+            "Scored 40 AI-answer rows; 0 non-AI-answer/indeterminate excluded from newest 40 rows",
         )
 
     def test_ai_rates_exclude_indeterminate_rows_and_report_denominator(self) -> None:
@@ -66,7 +66,29 @@ class AiRatesTests(unittest.TestCase):
         self.assertEqual(citation_rate, 50.0)
         self.assertEqual(
             note,
-            "Scored 2 determinate rows; 1 indeterminate excluded from newest 3 rows",
+            "Scored 2 AI-answer rows; 1 non-AI-answer/indeterminate excluded from newest 3 rows",
+        )
+
+    def test_ai_rates_exclude_search_visible_rows(self) -> None:
+        self.write_rows(
+            [
+                row(
+                    "2026-08-10",
+                    "No in usable result set",
+                    "No in usable result set",
+                    "Bounded search-visible evidence, not an AI-answer result.",
+                ),
+                row("2026-08-09", "Yes", "Yes", "Verified AI-answer response."),
+            ]
+        )
+
+        mention_rate, citation_rate, note = scorer.ai_rates()
+
+        self.assertEqual(mention_rate, 100.0)
+        self.assertEqual(citation_rate, 100.0)
+        self.assertEqual(
+            note,
+            "Scored 1 AI-answer rows; 1 non-AI-answer/indeterminate excluded from newest 2 rows",
         )
 
     def test_ai_rates_do_not_skip_data_rows_containing_header_words(self) -> None:
@@ -81,7 +103,7 @@ class AiRatesTests(unittest.TestCase):
         self.assertEqual(citation_rate, 0.0)
         self.assertEqual(
             note,
-            "Scored 1 determinate rows; 0 indeterminate excluded from newest 1 rows",
+            "Scored 1 AI-answer rows; 0 non-AI-answer/indeterminate excluded from newest 1 rows",
         )
 
     def test_ai_rates_do_not_skip_data_rows_containing_separator_text(self) -> None:
@@ -96,7 +118,7 @@ class AiRatesTests(unittest.TestCase):
         self.assertEqual(citation_rate, 0.0)
         self.assertEqual(
             note,
-            "Scored 1 determinate rows; 0 indeterminate excluded from newest 1 rows",
+            "Scored 1 AI-answer rows; 0 non-AI-answer/indeterminate excluded from newest 1 rows",
         )
 
 
