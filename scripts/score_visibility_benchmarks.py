@@ -62,22 +62,24 @@ def ai_rates():
         cells=[cell.strip() for cell in line.strip('|').split('|')]
         if not cells or cells[0]=='Date UTC' or all(re.fullmatch(r':?-{3,}:?', cell) for cell in cells):
             continue
-        if len(cells)>=5:
-            rows.append((cells[3],cells[4]))
+        if len(cells)>=7:
+            rows.append((cells[3],cells[4],cells[6]))
     if not rows: return None,None,'No AI/GEO run recorded yet'
     window=rows[:40]
     scored=[]
-    for mention,citation in window:
-        mention_state=mention.strip().lower(); citation_state=citation.strip().lower()
+    for mention,citation,evidence in window:
+        mention_state=mention.strip().lower(); citation_state=citation.strip().lower(); evidence_state=evidence.strip().lower()
         if 'indeterminate' in mention_state or 'not scored' in mention_state or 'indeterminate' in citation_state or 'not scored' in citation_state:
+            continue
+        if 'usable result set' in mention_state or 'usable result set' in citation_state or re.search(r'\bnot (?:an? )?(?:verified )?ai[- ]answer',evidence_state):
             continue
         if not (mention_state.startswith(('yes','no')) and citation_state.startswith(('yes','no'))):
             continue
         scored.append((mention_state.startswith('yes'),citation_state.startswith('yes')))
     excluded=len(window)-len(scored)
     if not scored:
-        return None,None,f'No determinate AI/GEO rows; {excluded} indeterminate excluded from newest {len(window)} rows'
-    note=f'Scored {len(scored)} determinate rows; {excluded} indeterminate excluded from newest {len(window)} rows'
+        return None,None,f'No determinate AI-answer rows; {excluded} non-AI-answer/indeterminate excluded from newest {len(window)} rows'
+    note=f'Scored {len(scored)} AI-answer rows; {excluded} non-AI-answer/indeterminate excluded from newest {len(window)} rows'
     return pct(sum(m for m,_ in scored),len(scored)),pct(sum(c for _,c in scored),len(scored)),note
 def current(rec):
     out={}; g=rec.get('gsc',{}); t=g.get('totals',{}) if isinstance(g,dict) else {}
