@@ -246,3 +246,7 @@
 | 2026-09-24 | /blog/ | OK | 88 | 3.0 s | 0 | 0 ms | 100 | 83 | Fix perf |
 | 2026-09-24 | /blog/fractional-cto-dubai-uae-guide.html | OK | 89 | 3.0 s | 0 | 0 ms | 100 | 85 | Fix perf |
 | 2026-09-24 | /blog/cto-as-a-service-dubai.html | OK | 87 | 3.0 s | 0 | 0 ms | 100 | 86 | Fix perf |
+| 2026-09-25 | / | OK | 88 | 3.0 s | 0.004 | 0 ms | 100 | 96 | Fix perf |
+| 2026-09-25 | /blog/ | OK | 89 | 3.0 s | 0 | 0 ms | 100 | 83 | Fix perf |
+| 2026-09-25 | /blog/fractional-cto-dubai-uae-guide.html | OK | 88 | 3.0 s | 0 | 0 ms | 100 | 85 | Fix perf |
+| 2026-09-25 | /blog/cto-as-a-service-dubai.html | OK | 86 | 3.0 s | 0 | 0 ms | 100 | 86 | Fix perf |
