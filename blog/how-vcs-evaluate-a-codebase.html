@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How VCs Evaluate a Codebase: Evidence vs Noise</title>
+<meta name="description" content="How VCs evaluate a startup codebase: evidence that changes an investment decision, what belongs in the appendix, and how findings map to a partner memo.">
+<link rel="canonical" href="https://souravchandra.com/blog/how-vcs-evaluate-a-codebase.html">
+<meta property="og:title" content="How VCs Evaluate a Codebase: Evidence vs Noise">
+<meta property="og:description" content="A partner-memo view of technical due diligence: which codebase findings change the thesis, timing, or terms—and which signals investors should ignore.">
+<meta property="og:image" content="https://souravchandra.com/assets/picture.png">
+<meta property="og:url" content="https://souravchandra.com/blog/how-vcs-evaluate-a-codebase.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How VCs Evaluate a Codebase: Evidence vs Noise">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How VCs Evaluate a Codebase: Evidence vs Noise",
+  "description": "How VCs evaluate a startup codebase: the evidence that changes an investment decision, what belongs in the appendix, and a finding-to-decision register founders can prepare before technical due diligence.",
+  "author": {
+    "@type": "Person",
+    "name": "Sourav Chandra",
+    "url": "https://souravchandra.com",
+    "jobTitle": "Fractional CTO",
+    "sameAs": ["https://www.linkedin.com/in/souravchan", "https://github.com/sauravexodus"]
+  },
+  "publisher": {"@type": "Person", "name": "Sourav Chandra", "url": "https://souravchandra.com"},
+  "datePublished": "2026-10-13",
+  "dateModified": "2026-10-13",
+  "mainEntityOfPage": "https://souravchandra.com/blog/how-vcs-evaluate-a-codebase.html",
+  "image": "https://souravchandra.com/assets/picture.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do VCs read every line of a startup's code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Technical DD samples the code and operating evidence needed to test the investment thesis. Reviewers focus on ownership, delivery, critical-path assurance, architecture fit, security and data exposure, IP, and the cost and timing of remediation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What codebase signals do investors usually ignore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Framework preference, formatting style, raw commit counts, repository size, headline test-coverage percentages, monolith-versus-microservices labels, and the percentage of AI-written code are weak signals by themselves. They matter only when they expose an ownership, delivery, security, cost, or roadmap risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should founders prepare a codebase for VC technical due diligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prepare a guided architecture and release walkthrough, named owners for critical systems, evidence for tests and rollback on money and data paths, dependency and licence records, current incident and remediation registers, infrastructure economics, and model, data, evaluation, and agent-control evidence for AI products."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <span class="brand-node" aria-hidden="true"></span>
+      Sourav Chandra
+    </a>
+    <div class="nav-links">
+      <a href="/#work">Track record</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/">Writing</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="/#book">Book a call</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="article-head">
+    <div class="eyebrow">Technical DD · Partner Memo</div>
+    <h1>How VCs Evaluate a Codebase: Evidence vs Noise</h1>
+    <div class="meta">
+      <span>Sourav Chandra</span>
+      <span>October 13, 2026</span>
+      <span>9 min read</span>
+    </div>
+  </header>
+
+  <article class="article-body">
+    <p>This investor-behavior framework reflects the diligence work I have observed and run; it is not a universal account of how every VC evaluates code. In that practice, the useful question is whether the technology changes the investment thesis, the time needed to reach the next milestone, the cash required after the round, or the conditions attached to the deal. The reviewer samples code, systems, and operating evidence only far enough to answer those questions.</p>
+    <p>That means a messy monolith can pass while a beautifully organised repository fails. The monolith may have clear owners, safe releases, known debt, and economics that support the plan. The tidy repository may hide a departed contractor, unlicensed dependencies, no rollback path, or an AI product whose team cannot reproduce its own quality claims. Investors are not buying the repository. They are buying the company's ability to keep delivering through it.</p>
+
+    <h2>How is this different from a technical due diligence checklist?</h2>
+    <p>My <a href="/blog/technical-due-diligence-checklist.html">technical due diligence checklist</a> explains the areas to inspect: team, architecture, delivery, security and data, IP, infrastructure economics, and the AI layer. This article starts one step later. Once you have findings, which ones deserve space in the investment committee memo?</p>
+    <p>A scanner result is not yet a deal finding. A deal finding connects evidence to a business promise. “Several dependencies are old” belongs in an appendix. “The unsupported identity library sits on the only enterprise authentication path, has no replacement owner, and blocks the roadmap promised for the next fundraise” belongs in the memo.</p>
+    <p>That translation is an analytical step, not a standard. <a href="https://www.elbantli.com/insights/translating-tech-due-diligence-findings-into-investment-thesis/" rel="noopener">Naoufal El Bantli's tech-to-thesis method</a> is M&amp;A guidance for acquisitions, not a universal description of early-stage VC practice. I adapt it here by analogy for VC diligence: connect a technical observation to the affected assumption, economic or timing effect, owner, and possible protection. The exact investment decision remains specific to the company and transaction.</p>
+
+    <h2>What codebase evidence actually changes a VC decision?</h2>
+
+    <h3>1. Ownership: can the team explain and change the critical system?</h3>
+    <p>I start with a live walkthrough, not a repository export. Pick one customer-critical path and follow it from request to data write, failure handling, deployment, and rollback. The point is not to catch a founder forgetting a class name. It is to learn whether someone can explain why the system is shaped this way, which compromises were deliberate, and what happens when the roadmap changes.</p>
+    <p>A bus factor of one is not automatically fatal. The decision changes when that person is leaving, unavailable, or the only one who can safely deploy. The investable response is a bounded transfer plan: named successor, missing documentation, paired changes, and evidence that the successor can operate the path without the original owner.</p>
+
+    <h3>2. Delivery: does the release system support the growth plan?</h3>
+    <p>Commit volume and sprint velocity are poor proxies. I want the operating trace for one meaningful change: requirement, design decision, review, tests, deployment, monitoring, incident response, and rollback. If the deck depends on shipping enterprise controls in two quarters, the current release system must make that schedule believable.</p>
+    <p><a href="https://csrc.nist.gov/pubs/sp/800/218/final" rel="noopener">NIST's Secure Software Development Framework</a> is useful here as a common vocabulary for secure-development expectations among producers, purchasers, and suppliers. It is a baseline, not proof that a company is secure. The diligence evidence is the target's actual behaviour: protected branches, accountable review, tested recovery, managed vulnerabilities, and repeatable releases.</p>
+
+    <h3>3. Failure containment: what happens when the software is wrong?</h3>
+    <p>Every startup has defects. The investment question is whether a defect becomes a support ticket, a lost customer, a reportable data incident, or a week-long outage. Review auth, billing, permissions, data writes, deletion, and customer-facing automations at a higher standard than low-risk interface code.</p>
+    <p>For AI systems, add model and data provenance, evaluation versions, known failure modes, tool permissions, spending limits, and human approval boundaries. The <a href="https://airc.nist.gov/airmf-resources/playbook/measure/" rel="noopener">NIST AI RMF Measure playbook</a> explicitly calls for documented data provenance, selected metrics, independent assessment, and production monitoring. The <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/" rel="noopener">OWASP GenAI LLM Top 10 2026</a> is a useful threat checklist. Neither is a certification or an investment verdict.</p>
+
+    <h3>4. Provenance: can the company show what it is shipping?</h3>
+    <p>Ask for the dependency and licence inventory, build inputs, release record, and the link from reviewed source to production artifact. <a href="https://slsa.dev/spec/v1.2/provenance" rel="noopener">SLSA provenance</a> defines provenance as verifiable information about where, when, and how an artifact was produced. That is narrower than data lineage and does not prove code quality, but it gives a reviewer a precise way to ask whether releases are traceable.</p>
+    <p><a href="https://github.com/ossf/scorecard" rel="noopener">OpenSSF Scorecard</a> can surface open-source security-practice signals, but its own documentation warns that the checks are heuristics and not one-size-fits-all. Use automated findings to choose questions. Do not let a score replace inspection of the product's actual risk.</p>
+
+    <h3>5. Remediation economics: can the risk be priced and sequenced?</h3>
+    <p>“There is technical debt” is not decision-ready. Name the affected promise, the failure mode, the minimum safe action, the owner, the closure evidence, and what can wait until after the round. Separate one-time remediation from recurring run-rate cost and from delivery delay. If the team cannot estimate a fix yet, record the uncertainty and the smallest investigation that would narrow it.</p>
+    <p>This is where technical DD becomes useful to an investor instead of merely descriptive. A high-severity finding with a credible owner, bounded fix, and acceptance test may be easier to underwrite than a lower-severity issue nobody owns. The memo should make that distinction visible.</p>
+
+    <h2>What do VCs never look at as standalone scores?</h2>
+    <p>These signals may trigger questions, but they should not determine the investment on their own:</p>
+    <ul>
+      <li><strong>Framework preference.</strong> React versus Vue, Python versus Go, and monolith versus microservices matter only relative to hiring, roadmap, reliability, and operating constraints.</li>
+      <li><strong>Formatting and style.</strong> Consistency can improve maintainability; prettier code is not a business control.</li>
+      <li><strong>Repository size or commit count.</strong> Generated files, monorepos, rebases, and team habits make these numbers easy to misread.</li>
+      <li><strong>Headline test coverage.</strong> Coverage can be high while the money paths, permissions, migrations, and recovery procedures remain untested.</li>
+      <li><strong>Dependency freshness.</strong> An older supported dependency may be lower risk than a rushed upgrade. Unsupported critical dependencies are different because they change exposure and roadmap options.</li>
+      <li><strong>The percentage of AI-written code.</strong> Score human ownership, review, tests, provenance, permissions, and recovery instead. AI use is a risk multiplier only where controls are weak.</li>
+    </ul>
+    <p>The rule is simple: if a signal cannot be connected to a customer promise, material risk, cash requirement, or milestone date, it belongs in supporting evidence rather than the partner decision.</p>
+
+    <h2>What should the partner memo contain?</h2>
+    <p>The artifact below is the smallest useful bridge from repository evidence to an investment decision. It prevents two common failures: dumping scanner output on partners, and converting every technical imperfection into a dramatic red flag.</p>
+    <p class="table-hint" aria-hidden="true">Swipe horizontally to see all columns →</p>
+    <section class="table-scroll" aria-label="Finding-to-decision register" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th>Evidence</th>
+            <th>Observed finding</th>
+            <th>Affected thesis promise</th>
+            <th>Confidence / unknowns</th>
+            <th>Decision gate</th>
+            <th>Owner and closure evidence</th>
+            <th>Deal treatment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Walkthrough, deploy history, access map</td>
+            <td>Only a departing contractor can deploy the billing service</td>
+            <td>Enterprise launch and revenue continuity</td>
+            <td>High confidence; successor capability untested</td>
+            <td>Successor completes an observed release and rollback</td>
+            <td>Engineering lead; runbook, paired release, recovery result</td>
+            <td>Pre-close condition or explicitly accepted timing risk</td>
+          </tr>
+          <tr>
+            <td>Model inventory, eval set, incident log</td>
+            <td>Core AI workflow has no versioned evaluation baseline</td>
+            <td>Quality claim and support-cost assumption</td>
+            <td>Medium confidence until representative failures are sampled</td>
+            <td>Baseline agreed, run recorded, known failures documented</td>
+            <td>Product and ML owner; eval report plus monitoring link</td>
+            <td>Milestone plan and budget input, not an automatic pass</td>
+          </tr>
+          <tr>
+            <td>Lockfile, licence inventory, build record</td>
+            <td>Critical release cannot be traced to reviewed source</td>
+            <td>IP ownership and reliable customer delivery</td>
+            <td>High confidence for current release; history incomplete</td>
+            <td>Reproducible signed release with retained provenance</td>
+            <td>Platform owner; source-to-artifact attestation</td>
+            <td>Closing condition, accepted risk, or no impact depending on scope</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <p>“Deal treatment” is intentionally the last column. Technical reviewers should describe evidence, impact, uncertainty, and closure. Pricing, holdbacks, conditions, and legal language belong to the investor and qualified advisers, not to a generic checklist.</p>
+
+    <h2>How should founders prepare before the walkthrough?</h2>
+    <ol>
+      <li><strong>Choose one critical journey.</strong> Be ready to trace it through architecture, permissions, data, release, monitoring, and recovery.</li>
+      <li><strong>Name owners, including backups.</strong> Do not hide concentration risk. Show the transfer plan.</li>
+      <li><strong>Bring operating evidence.</strong> Pull requests, deployment records, incidents, cost dashboards, dependency and licence records, and closure evidence are stronger than a polished architecture deck.</li>
+      <li><strong>Separate facts from plans.</strong> Mark what works now, what is partly controlled, what is accepted debt, and what the round will fund.</li>
+      <li><strong>Pre-write the register.</strong> If founders connect each real finding to a promise, owner, gate, and evidence before diligence, the investor spends less time guessing at the downside.</li>
+    </ol>
+    <p>If the repository was largely built by an agency, the same preparation starts earlier: the account, source, infrastructure, deployment, and recovery evidence should already be founder-controlled. My guide for a <a href="/blog/non-technical-founder-building-an-app.html">non-technical founder working with a dev agency</a> covers that handover boundary.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Do VCs read every line of a startup's code?</h3>
+    <p>No. Technical DD samples the code and operating evidence needed to test the investment thesis. Reviewers focus on ownership, delivery, critical-path assurance, architecture fit, security and data exposure, IP, and the cost and timing of remediation.</p>
+
+    <h3>What codebase signals do investors usually ignore?</h3>
+    <p>Framework preference, formatting style, raw commit counts, repository size, headline test-coverage percentages, monolith-versus-microservices labels, and the percentage of AI-written code are weak signals by themselves. They matter only when they expose an ownership, delivery, security, cost, or roadmap risk.</p>
+
+    <h3>How should founders prepare a codebase for VC technical due diligence?</h3>
+    <p>Prepare a guided architecture and release walkthrough, named owners for critical systems, evidence for tests and rollback on money and data paths, dependency and licence records, current incident and remediation registers, infrastructure economics, and model, data, evaluation, and agent-control evidence for AI products.</p>
+
+    <h2>The bottom line</h2>
+    <p>A VC does not need a verdict on whether your code is beautiful. The investor needs to know whether the company owns the system, whether the system supports the plan, which risks change cash or timing, and whether the remaining work has an accountable path to closure.</p>
+    <p>That is why the best technical DD output is not a grade. It is a small set of evidence-backed thesis deltas and a register that turns each material finding into a decision, an owner, and a test.</p>
+
+    <div class="post-cta">
+      <h2>Writing the check, or preparing to raise?</h2>
+      <p>I run technical due diligence for investors and DD-readiness reviews for founders. Bring the architecture, the uncomfortable findings, and the milestone the round is meant to fund.</p>
+      <a class="btn btn-primary" href="mailto:hello@souravchandra.com?subject=Technical%20DD%20intro%20call">Book the free 30-min call →</a>
+    </div>
+  </article>
+</div>
+
+<footer>
+  <a href="/">souravchandra.com</a> · Fractional CTO · Sharjah / Dubai, UAE · © 2026
+</footer>
+</body>
+</html>
