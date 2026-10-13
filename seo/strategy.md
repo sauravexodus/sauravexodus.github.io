@@ -41,9 +41,10 @@ CTA box linking to the free 30-min call.
 | 5 | PUBLISHED 2026-09-17 — post-merge approval-gate exception ratified 2026-10-13 | trending-ai | Should your startup let an AI agent act? Define the authority envelope first | AI agent security checklist for startups |
 | 6 | PUBLISHED 2026-07-21 | fractional-cto-uae | CTO as a service in Dubai: engagement models, an explicit AED pricing table, and how to choose (published ahead of item 5 per 2026-07-19 tracking action 1) | CTO as a service Dubai |
 | 7 | PUBLISHED 2026-09-14 | ai-mvp | RAG vs fine-tuning: what your startup actually needs (and what each costs) | RAG vs fine-tuning for startups |
-| 8 | DRAFT PR #121 — WAITING HUMAN APPROVAL | tech-dd | How VCs Evaluate a Codebase: Evidence vs Noise | how VCs evaluate a codebase |
+| 8 | PUBLISHED 2026-10-13 — post-merge release decision confirmed 2026-10-13 | tech-dd | How VCs Evaluate a Codebase: Evidence vs Noise | how VCs evaluate a codebase |
 | 9 | QUEUED | founder-guides | How to evaluate a dev shop quote (the AED 300k question): line items that should be there, padding that should not, and the questions that shrink the number | how to evaluate a dev shop quote |
 | 10 | QUEUED | trending-ai | AI coding agents can write the patch. What evidence should a founder require before merge? | AI coding agent production checklist |
+| 11 | QUEUED | fractional-cto-uae | What should a fractional CTO report to the board each month? A decision, risk, and runway memo | fractional CTO board reporting |
 
 After item 6, continue rotating themes 1→5. Generate new working titles informed
 by `seo/tracking-log.md` performance data, direct source research, and distinct

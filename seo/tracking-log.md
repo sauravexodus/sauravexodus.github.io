@@ -24,6 +24,16 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-10-13 — Interactive Q8 post-merge release reconciliation
+
+- Sourav confirmed the completed merge in this interactive session at `2026-10-13T13:37:27Z`, immediately after the exact-SHA handoff for draft editorial PR #121. GitHub records frozen candidate head `4311e031cb9e8d6f67b509f6ecb85162601393bd`, merged by `sauravexodus` at `2026-10-13T13:37:24Z` as squash commit `98eb0a872cd53ba6766c81c618839171f0ff46fe`. The squash commit's tree is byte-identical to the reviewed candidate tree. This is recorded as interactive post-merge confirmation of the release decision, not as pre-merge approval.
+- Two independent terminal reviews approved the candidate: the editorial/evidence review closed all prior attribution, source-lifecycle, universal-claim, and FAQ-schema blockers; the exact-head release review approved SHA `4311e031cb9e8d6f67b509f6ecb85162601393bd` with 10/10 tests and no blocking findings. CodeRabbit was still processing at merge time, so its status is not represented as a substantive merge gate.
+- GitHub Pages run `38406466677` completed successfully for merge commit `98eb0a872cd53ba6766c81c618839171f0ff46fe`. Cache-bypassed production checks returned HTTP 200 for the article, blog index, post registry, and sitemap. Production serves the expected title, H1, canonical URL, Naoufal El Bantli attribution, current OWASP 2026 source, blog card, registry record, and canonical sitemap entry.
+- A live 390 px browser check found no document-level horizontal overflow (`390/390` CSS px). The finding-to-decision table remains contained in a labelled, keyboard-focusable horizontal scroller.
+- Q8 is reconciled from `DRAFT PR #121 — WAITING HUMAN APPROVAL` to `PUBLISHED 2026-10-13 — post-merge release decision confirmed 2026-10-13`. The factual seven-day substantive-publication cadence lock runs from the merge and remains closed until `2026-10-20T13:37:24Z`; research and review may continue, but no additional substantive editorial candidate may merge before then.
+- Queue item Q11 replenishes the eligible backlog to three items after Q8 publication. It turns the maintained board-reporting, decision-rights, KPI, budget-variance, and risk material into a bounded founder decision artifact, with runway treated as a new research-gated dimension rather than an established prompt. Q11 remains research-gated and must pass source revalidation, offer-truth, canonical-overlap, information-gain, preview, independent review, cadence, and named human-approval gates before publication.
+- This reconciliation changes only operational queue and release records. It does not alter the published Q8 article, metadata, registry, sitemap, claims, sources, CTA, dependencies, workflow, or runtime behavior.
+
 ## 2026-10-13 — Interactive Q5 post-merge approval-gate reconciliation
 
 - Sourav explicitly ratified the publication decision for editorial PR #79 in an interactive session at `2026-10-13T11:05:05Z`. This is recorded as a post-merge approval-gate exception, not as pre-merge authorization: GitHub had already merged frozen candidate head `2341861a1c2b189f1f4c6f42acf50fdf236cae75` on `2026-09-17T06:40:13Z` with merge commit `c79c25ec9dbb38dc9a2477e6d619fcc34ed292d7`. The ratification completes the missing human release trail without changing the factual publication date.
