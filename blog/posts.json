@@ -2,6 +2,14 @@
   "note": "Machine-readable post registry. Editorial draft automation adds candidate posts here (newest first), adds a card to blog/index.html between POSTS:START/POSTS:END, and adds a <url> entry to sitemap.xml. Public editorial changes require explicit human approval before merge to master.",
   "posts": [
     {
+      "slug": "how-vcs-evaluate-a-codebase",
+      "title": "How VCs Evaluate a Codebase: Evidence vs Noise",
+      "date": "2026-10-13",
+      "theme": "tech-dd",
+      "primary_keyword": "how VCs evaluate a codebase",
+      "secondary_keywords": ["startup codebase due diligence", "VC technical due diligence", "codebase red flags investors", "technical due diligence partner memo"]
+    },
+    {
       "slug": "ai-agent-authority-envelope",
       "title": "Should your startup let an AI agent act? Define the authority envelope first",
       "date": "2026-09-16",
