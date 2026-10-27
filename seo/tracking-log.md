@@ -31,11 +31,11 @@ For each tracked keyword, run web searches and record:
 - Queried all six tracked CaaS prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and Google `site:` surfaces. Exact reproducible query URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
 - DuckDuckGo returned HTTP 202 challenge pages for all six prompts. Google returned non-extractable shells for ordinary and `site:` queries. Bing RSS returned empty or unrelated sets. Brave returned one usable close-intent head-term set: 10 cards across 7 distinct domains, eight CaaS-relevant cards, two unrelated Reddit cards, and no Sourav result. The five expansion prompts were mixed or intent-drifted and remain `Indeterminate / not scored`.
 - Direct-source refresh: 18/19 maintained provider/practitioner requests returned HTTP 200 across 18 distinct final URLs and hosts; Nabidios returned an anti-bot 403. Only 6/13 lifecycle requests returned HTTP 200; stale DNS, 404, and redirect-to-homepage endpoints remain excluded from claim support. The exact GrowExx CaaS result URL now resolves to its generic homepage.
-- Decision: no new article or route. The existing `/blog/cto-as-a-service-dubai.html` remains the consolidation target, Q5 keeps its 2026-11-03 objective reactivation date, and this cadence run does not consume a new Q5 evidence attempt.
-- State before: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; Q5 `DEFERRED 2026-11-03`.
+- Decision: no new article or route. The existing `/blog/cto-as-a-service-dubai.html` remains the consolidation target. Queue item 6 remains `PUBLISHED 2026-07-21`; Q5 remains `PUBLISHED 2026-09-17 — post-merge approval-gate exception ratified 2026-10-13`. The date 2026-11-03 is only the next CaaS evidence-review date, not a queue-state transition or evidence attempt.
+- State before: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; queue item 6 `PUBLISHED 2026-07-21`; Q5 `PUBLISHED 2026-09-17 — post-merge approval-gate exception ratified 2026-10-13`.
 - State after: unchanged. No substantive public bytes, queue status, preview, or production state changed.
 - Report-only files updated: `seo/tracking-log.md`, `reports/visibility/ai-visibility-weekly.md`, `reports/visibility/competitor-tracking.md`, `reports/visibility/industry-trends.md`, `reports/visibility/trend-opportunities.md`, and `reports/visibility/recurring-actions.md`.
-- Next action: Sourav must interactively reconcile Q9's release record. On or after 2026-11-03, re-check Q5 against the existing canonical route and either define a non-cannibalizing refresh scope, defer it with an objective trigger, or reject it as duplicate.
+- Next action: Sourav must interactively reconcile Q9's release record. On 2026-11-03, re-check the existing CaaS canonical and evidence packet; any public refresh still requires a distinct non-cannibalizing scope, preview, and explicit human approval.
 
 ---
 
