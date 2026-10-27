@@ -24,6 +24,21 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-10-27 — Weekday visibility loop (Tuesday CTO-as-a-Service Dubai)
+
+- Read the authenticated 2026-10-27 collector record before selecting work: 0 clicks, 11 impressions, average position 17.0, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 89, minimum tracked accessibility 83, and SEO 100.
+- Reconciliation found no open PR and no duplicate editorial candidate. Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE` because PR #123 was merged on 2026-10-22 without an interactive approval transition. Candidate tree `ebee945e72549c9bc4d37b5df0e6f94e07d29add` still matches merge tree `ebee945e72549c9bc4d37b5df0e6f94e07d29add`; the matching Pages run succeeded; and article, blog-index, registry, and sitemap markers remain live.
+- Queried all six tracked CaaS prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and Google `site:` surfaces. Exact reproducible query URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- DuckDuckGo returned HTTP 202 challenge pages for all six prompts. Google returned non-extractable shells for ordinary and `site:` queries. Bing RSS returned empty or unrelated sets. Brave returned one usable close-intent head-term set: 10 cards across 7 distinct domains, eight CaaS-relevant cards, two unrelated Reddit cards, and no Sourav result. The five expansion prompts were mixed or intent-drifted and remain `Indeterminate / not scored`.
+- Direct-source refresh: 18/19 maintained provider/practitioner requests returned HTTP 200 across 18 distinct final URLs and hosts; Nabidios returned an anti-bot 403. Only 6/13 lifecycle requests returned HTTP 200; stale DNS, 404, and redirect-to-homepage endpoints remain excluded from claim support. The exact GrowExx CaaS result URL now resolves to its generic homepage.
+- Decision: no new article or route. The existing `/blog/cto-as-a-service-dubai.html` remains the consolidation target. Queue item 6 remains `PUBLISHED 2026-07-21`; Q5 remains `PUBLISHED 2026-09-17 — post-merge approval-gate exception ratified 2026-10-13`. The date 2026-11-03 is only the next CaaS evidence-review date, not a queue-state transition or evidence attempt.
+- State before: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; queue item 6 `PUBLISHED 2026-07-21`; Q5 `PUBLISHED 2026-09-17 — post-merge approval-gate exception ratified 2026-10-13`.
+- State after: unchanged. No substantive public bytes, queue status, preview, or production state changed.
+- Report-only files updated: `seo/tracking-log.md`, `reports/visibility/ai-visibility-weekly.md`, `reports/visibility/competitor-tracking.md`, `reports/visibility/industry-trends.md`, `reports/visibility/trend-opportunities.md`, and `reports/visibility/recurring-actions.md`.
+- Next action: Sourav must interactively reconcile Q9's release record. On 2026-11-03, re-check the existing CaaS canonical and evidence packet; any public refresh still requires a distinct non-cannibalizing scope, preview, and explicit human approval.
+
+---
+
 ## 2026-10-26 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
 
 - Reconciliation found no open pull request and no second substantive candidate. Every remote `editorial/*` branch maps to a merged editorial PR; Q9's frozen candidate tree remains byte-identical to squash merge `2b71876872b6effcce04fbc03ea075a7d3fa8172`. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so this scheduled run does not infer approval or rewrite the queue transition. Q9 remains `WAITING HUMAN APPROVAL`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. The factual cadence lock expired on `2026-10-21T13:02:46Z`, but expiry cannot repair the missing release decision, and Q10 was not selected.
