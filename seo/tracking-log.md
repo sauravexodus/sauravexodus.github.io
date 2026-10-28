@@ -27,7 +27,7 @@ For each tracked keyword, run web searches and record:
 ## 2026-10-28 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
 
 - Read the authenticated 2026-10-28 collector record before selecting work: 0 clicks, 11 impressions, average position 17.0, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 89, blog 88, fractional guide 89, CaaS 86, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
-- Reconciliation found no open pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen candidate tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to squash merge tree `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and the article, blog index, registry, and sitemap markers remain live. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciliation found no open substantive editorial PR and no duplicate editorial candidate; this run opened report-only PR #141. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen candidate tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to squash merge tree `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and the article, blog index, registry, and sitemap markers remain live. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
 - Queried all five tracked AI-MVP prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
 - All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge pages and Brave returned HTTP 429 verification content throughout. Bing RSS lost intent into 10 generic AI homepages across 10 domains for three prompts, 10 wireless-display cards across two domains for the RAG/fine-tuning matrix prompt, and 10 cricket cards across eight domains for the measured-behavior prompt. Google returned HTTP 200 shells with no extractable external cards.
 - Separate Google `site:souravchandra.com` checks for all five prompts also returned HTTP 200 shells with zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected AI-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
@@ -35,6 +35,21 @@ For each tracked keyword, run web searches and record:
 - Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`; no cited claim was materially invalidated. Provider rates, delivery timelines, savings, universal thresholds, and implementation outcomes remain attributed or excluded.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue status, or runtime byte changed.
 - Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window still has no determinate AI-answer rows, and no duplicate raw metric sample was retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/141`
+- `head_sha`: use PR #141's current `headRefOid`; the immutable final SHA is recorded after merge because a commit cannot self-record its own hash
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete surface-evidence rows; one authoritative 2026-10-28 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; CodeRabbit reviewed head `4cc8a99a3ff6161d1d7ca674f4a7fe76deb27ab3` and requested two report-consistency corrections applied in the next commit
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-04`
 
 ### Actions for the next publish/review cycle
 
