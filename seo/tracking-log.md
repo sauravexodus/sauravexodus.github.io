@@ -38,15 +38,15 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/141`
-- `head_sha`: use PR #141's current `headRefOid`; the immutable final SHA is recorded after merge because a commit cannot self-record its own hash
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete surface-evidence rows; one authoritative 2026-10-28 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; CodeRabbit reviewed head `4cc8a99a3ff6161d1d7ca674f4a7fe76deb27ab3` and requested two report-consistency corrections applied in the next commit
+- `head_sha`: `83633082f5de2017cdbd4c970592e1d8ffb73e0a` (squash merge `eaca3327029c4db5ddb491684827bea8b6f70d8a`)
+- `preview`: `n/a` — report-only change; canonical AI, competitor, industry, recurring-action, trend-opportunity, and tracking report pages were verified after deployment
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete surface-evidence rows; one authoritative 2026-10-28 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; CodeRabbit substantively reviewed head `4cc8a99a3ff6161d1d7ca674f4a7fe76deb27ab3`, both findings were fixed and resolved in final head `83633082f5de2017cdbd4c970592e1d8ffb73e0a`, the incremental final-head review was rate-limited, Pages run `40672402741` succeeded, and six cache-busted canonical report markers returned HTTP 200
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-04`
