@@ -24,6 +24,46 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-10-28 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
+
+- Read the authenticated 2026-10-28 collector record before selecting work: 0 clicks, 11 impressions, average position 17.0, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 89, blog 88, fractional guide 89, CaaS 86, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open substantive editorial PR and no duplicate editorial candidate; this run opened report-only PR #141. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen candidate tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to squash merge tree `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and the article, blog index, registry, and sitemap markers remain live. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Queried all five tracked AI-MVP prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge pages and Brave returned HTTP 429 verification content throughout. Bing RSS lost intent into 10 generic AI homepages across 10 domains for three prompts, 10 wireless-display cards across two domains for the RAG/fine-tuning matrix prompt, and 10 cricket cards across eight domains for the measured-behavior prompt. Google returned HTTP 200 shells with no extractable external cards.
+- Separate Google `site:souravchandra.com` checks for all five prompts also returned HTTP 200 shells with zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected AI-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: all 12 current provider, primary, and canonical requests returned HTTP 200 at the expected titles. Horizon, Pexon, OlloSoft, and Gigabit still expose staged evaluation, human review, rollback, architecture diagnosis, and provider-authored cost packaging. OpenAI's official pages still support representative/task-specific evaluation, list the Evals read-only transition on 2026-10-31 and shutdown on 2026-11-30, record the 2026-10-23 fine-tuned-model shutdown as past, retain 2027-01-06 and 2027-01-14 fine-tuning lifecycle dates, and document the 12-hour prompt-cache option. Google still recommends adaptive rubrics while `EvalTask` remains a backward-compatibility interface; NIST Measure still supports context-specific measurement, human review, limitations, monitoring, and latency/efficiency evaluation.
+- Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`; no cited claim was materially invalidated. Provider rates, delivery timelines, savings, universal thresholds, and implementation outcomes remain attributed or excluded.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue status, or runtime byte changed.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window still has no determinate AI-answer rows, and no duplicate raw metric sample was retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/141`
+- `head_sha`: use PR #141's current `headRefOid`; the immutable final SHA is recorded after merge because a commit cannot self-record its own hash
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete surface-evidence rows; one authoritative 2026-10-28 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; CodeRabbit reviewed head `4cc8a99a3ff6161d1d7ca674f4a7fe76deb27ab3` and requested two report-consistency corrections applied in the next commit
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-04`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Keep `/blog/ai-mvp-development.html` and `/blog/rag-vs-fine-tuning-for-startups.html` as the two AI-cluster canonicals. Do not add an annual guide, second matrix, launch checklist, rollback, evaluation, workflow-cost, latency-budget, prompt-caching, or provider-lifecycle route from this pass.
+4. Recheck OpenAI's 2026-10-31 Evals read-only transition, 2026-11-30 shutdown, and remaining 2027 fine-tuning dates before any approved public edit. Treat the 2026-10-23 shutdown as dated provider lifecycle evidence, not a general conclusion about fine-tuning.
+5. Treat 12-hour prompt caching as a provider-specific workload experiment. Require actual write/read volume, hit rate, accepted-workflow cost, latency, routing, and retention evidence before making a recommendation.
+6. Treat all five prompt ladders and all five Google site checks as indeterminate/unavailable. Do not infer exact rank, demand, complete coverage, search volume, source independence, search absence, indexation, or AI-answer citation.
+7. Monitor GSC for `AI MVP`, `RAG`, `fine tuning`, `evaluation`, `regression`, `rollback`, `cost per workflow`, `latency budget`, and `prompt caching`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83), CaaS mobile performance (86), and `/blog/` mobile performance (88) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-10-27 — Weekday visibility loop (Tuesday CTO-as-a-Service Dubai)
 
 - Read the authenticated 2026-10-27 collector record before selecting work: 0 clicks, 11 impressions, average position 17.0, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 89, minimum tracked accessibility 83, and SEO 100.
