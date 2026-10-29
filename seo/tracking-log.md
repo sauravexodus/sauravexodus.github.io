@@ -46,7 +46,7 @@ For each tracked keyword, run web searches and record:
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/143`
 - `head_sha`: pending until PR #143 merges; a follow-up release-record PR must persist #143's final `headRefOid` before the next cron read because the candidate commit cannot self-record its own OID
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete indeterminate surface-evidence rows with five exact query URLs each; one authoritative 2026-10-29 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; independent automated review pending
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete indeterminate surface-evidence rows with five exact query URLs each; one authoritative 2026-10-29 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan. CodeRabbit substantively reviewed head `0206f896a6a889296381cabc739c3e40f40f070b`, found two report-state consistency issues, and both were fixed or clarified in `d744740cdb2a02b708d6317b71bc6529d9403c32`; both threads are resolved. Its incremental check for the corrected head was skipped and is not counted as substantive final-head approval.
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-05`
