@@ -44,7 +44,7 @@ For each tracked keyword, run web searches and record:
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/143`
-- `head_sha`: use the report PR's final `headRefOid`; the immutable final SHA is recorded after merge because a commit cannot self-record its own hash
+- `head_sha`: pending until PR #143 merges; a follow-up release-record PR must persist #143's final `headRefOid` before the next cron read because the candidate commit cannot self-record its own OID
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
 - `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete indeterminate surface-evidence rows with five exact query URLs each; one authoritative 2026-10-29 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; independent automated review pending
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
