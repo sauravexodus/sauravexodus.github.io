@@ -39,15 +39,15 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/144`
-- `head_sha`: recorded in PR #144's body after the final candidate push; post-merge reconciliation will persist the immutable final head
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; six complete surface-evidence rows with five exact query URLs each; one authoritative 2026-10-30 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; independent review pending
+- `head_sha`: `91b08a3feea98524a6e59a0178e1d3ea2afb67cb` (squash merge `4472df379e59d747ac02cecbbdbd7dc54e609607`)
+- `preview`: `n/a` — report-only change; matching Pages run `41041317661` succeeded and six cache-busted canonical report markers returned HTTP 200
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; six complete surface-evidence rows with five exact query URLs each; one authoritative 2026-10-30 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan. CodeRabbit reviewed exact final head `91b08a3feea98524a6e59a0178e1d3ea2afb67cb`, reported minimal merge risk, and generated no actionable comments; its auxiliary LanguageTool pass was incomplete because its character/request budget was exhausted. Pages run `41041317661` succeeded and cache-busted AI, competitor, industry, recurring-action, trend-opportunity, and tracking markers returned HTTP 200.
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-06`
