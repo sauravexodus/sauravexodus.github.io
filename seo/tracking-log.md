@@ -24,6 +24,47 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-10-30 — Weekday visibility loop (Friday non-technical founder/dev agency)
+
+- Read the authenticated 2026-10-30 collector record before selecting work: 0 clicks, 12 impressions, average position 16.33, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 100, fractional guide 99, CaaS 99, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open substantive editorial pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to squash-merge tree `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and the article, blog index, registry, and sitemap markers remain live. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected. Prior report-only PR #143 is merged and deployed at final head `2dc55553dc6a526bfede4ff7a175dc3476863946`, squash merge `4ad2df2e5fe138390a1b6938bfbb824fc497ebbb`, and Pages run `40871630882`.
+- Queried all six tracked founder/dev-agency prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- Brave produced four usable bounded search sets without a Sourav Chandra or souravchandra.com match: proposal evaluation returned 10 cards across 7 distinct domains, agency versus in-house returned 10 across 6, fractional CTO versus agency returned 10 across 7, and handover acceptance returned 10 across 10. Repeated Reddit and YouTube cards mean card and domain counts do not establish source independence. These are bounded search-visible negatives, not AI-answer results, exact rank, verified demand, complete coverage, search volume, or independent-authority counts.
+- The other two Brave sets are indeterminate. The founder/app checklist query returned 10 cards across 7 domains but mixed five publisher/vendor guides with four Reddit threads and one YouTube result. The AI-code/SBOM/handover query returned 10 cards across 5 domains, including six YouTube cards, and lost the agency-handover intent. DuckDuckGo returned HTTP 202 challenge content throughout; Bing RSS was empty or drifted into Chrome, generic software, gaming, or generic AI cards; Google returned HTTP 200 shells with no extractable external cards.
+- Separate Google `site:souravchandra.com` attempts for all six prompts returned HTTP 200 shells with zero extractable external links and no usable result-count field. Site result, indexed-page count, and target-route presence are all unavailable rather than negative. The route-health collector proves availability and metadata, not Google indexation.
+- All 19 direct source requests returned HTTP 200 after redirects across 17 final hosts. Better Software's old path now resolves to `How to Choose a Software Development Company`; GitHub's code-referencing route resolves to the current Copilot-in-IDEs page; and CISA's short SBOM route resolves to its current canonical. Proposal and team-model pages still expose scope, ownership, continuity, comparison, and technical decision-owner fields. Wavect, DealDigg, Bitecode, KUMO, Tech4LYF, and VeryCreatives still support objective acceptance, repository/history, reproducible setup, buyer-owned accounts, credential control, release/recovery, sign-off, and successor independence. Provider prices, timelines, outcomes, credentials, legal interpretations, payment terms, and contract language remain self-authored or engagement-specific.
+- GitHub artifact attestations, NIST SSDF 1.1, CISA SBOM, SLSA v1.2, and U.S. Copyright Office material remain bounded primary evidence or vocabulary. They are not certification, project-specific legal clearance, proof that an artifact is secure, successful handover, or a universal final-payment rule.
+- Decision: `REPEAT_CONFIRMATION`. Sourav's founder guide and Q9 quote article remain a distinct two-route cluster. Keep the founder guide as the broad team/governance overview and Q9 as the applied quote-to-control ledger. Today's evidence does not justify another annual checklist, proposal, agency-versus-in-house, fractional-CTO comparison, AI-code, SBOM, handover, final-payment, or quote route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, contract/payment term, legal claim, offer claim, queue state, workflow, or runtime-site byte changed.
+- Six new AI-report rows are either bounded search-visible or explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window still has no determinate AI-answer rows, and no duplicate raw metric sample was retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/144`
+- `head_sha`: recorded in PR #144's body after the final candidate push; post-merge reconciliation will persist the immutable final head
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; six complete surface-evidence rows with five exact query URLs each; one authoritative 2026-10-30 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan; independent review pending
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-06`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Protect `/blog/non-technical-founder-building-an-app.html` as the broad founder guide and `/blog/how-to-evaluate-a-dev-shop-quote.html` as the applied quote-to-control canonical. Do not create another annual, proposal, comparison, AI-code, SBOM, handover, final-payment, or quote route from this pass.
+4. Treat the four usable Brave rows as bounded search-visible negatives and exclude them from AI-answer rates. Do not infer exact rank, demand, complete coverage, search volume, source independence, or Google indexation; repeated Reddit and YouTube cards account for multiple results.
+5. Treat the two mixed Brave rows and all six Google site checks as indeterminate/unavailable. Do not turn challenge pages, intent drift, unrelated cards, or non-extractable shells into negative visibility or indexation claims.
+6. Recheck exact final URL, title, lifecycle, relevance, and claim support before any approved update. Keep GitHub attestations, code referencing, NIST SSDF, CISA SBOM, SLSA, and Copyright Office material as bounded evidence rather than certification, legal clearance, security proof, successful handover, or a universal contract/payment rule.
+7. Monitor GSC for `non-technical founder`, `dev agency`, `software proposal`, `quote`, `acceptance criteria`, `agency vs in-house`, `fractional CTO vs agency`, `AI-generated code`, `SBOM`, `handover`, and `final payment`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist; current mobile performance is 99–100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-10-29 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
 - Read the authenticated 2026-10-29 collector record before selecting work: 0 clicks, 13 impressions, average position 15.69, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 89, blog 86, fractional guide 89, CaaS 87, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
@@ -38,15 +79,15 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/143`
-- `head_sha`: pending until PR #143 merges; a follow-up release-record PR must persist #143's final `headRefOid` before the next cron read because the candidate commit cannot self-record its own OID
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete indeterminate surface-evidence rows with five exact query URLs each; one authoritative 2026-10-29 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan. CodeRabbit substantively reviewed head `0206f896a6a889296381cabc739c3e40f40f070b`, found two report-state consistency issues, and both were fixed or clarified in `d744740cdb2a02b708d6317b71bc6529d9403c32`; both threads are resolved. Its incremental check for the corrected head was skipped and is not counted as substantive final-head approval.
+- `head_sha`: `2dc55553dc6a526bfede4ff7a175dc3476863946` (squash merge `4ad2df2e5fe138390a1b6938bfbb824fc497ebbb`)
+- `preview`: `n/a` — report-only change; matching Pages run `40871630882` succeeded and six cache-busted report markers returned HTTP 200
+- `checks`: 10 tests passed; exact six-file allowlist; current and historical table widths valid; five complete indeterminate surface-evidence rows with five exact query URLs each; one authoritative 2026-10-29 raw row; deterministic benchmark regeneration; `git diff --check`; added-line secret/unsafe-markup scan. CodeRabbit substantively reviewed head `0206f896a6a889296381cabc739c3e40f40f070b`, found two report-state consistency issues, and both were fixed or clarified in `d744740cdb2a02b708d6317b71bc6529d9403c32`; both threads are resolved. Its incremental check for the corrected head was skipped and is not counted as substantive final-head approval. Pages run `40871630882` succeeded and cache-busted AI, competitor, industry, recurring-action, trend-opportunity, and tracking markers returned HTTP 200.
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-05`
