@@ -24,6 +24,47 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-02 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
+
+- Read the authenticated 2026-11-02 collector record before selecting work: 0 clicks, 18 impressions, average position 6.78, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 99, fractional guide 100, CaaS 98, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to squash-merge tree `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and cache-busted production requests serve the article, blog index, registry, and sitemap markers. `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Queried all five tracked fractional-CTO prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge pages and Brave returned HTTP 429 verification content throughout. Bing RSS lost intent into Jaguar cards (10 cards across 6 domains), YouTube/OBS help (8/2), WhatsApp (10/4), or Google product/help cards (10/7 hostnames for each of two prompts). Repeated Google and WhatsApp hosts represent publisher ecosystems rather than independent authorities. Google ordinary and `site:` requests returned HTTP 200 shells with no extractable external cards or usable result-count field.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected fractional-guide presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: 19 of 22 maintained fractional-CTO, official, ecosystem, and canonical requests returned HTTP 200 at current titles. Both `fractionalctoexperts.com` URLs now fail normal and IPv4 certificate validation because the certificate is expired; Giant Phoenix timed out in normal and IPv4 retries. The safely reachable pages continue to expose scoped decision ownership, readiness, roadmaps, risks, architecture, hiring/vendor choices, first-period deliverables, reporting, and notice/handover/transition. Provider rates, durations, scorecards, quantified outcomes, credentials, compliance interpretations, affiliations, and delivery claims remain self-authored.
+- All eight board-reporting and first-period packet requests returned HTTP 200. The current packet still supports a future Q11 structure around starting context, product/engineering trends, spend and hiring context, risk and mitigation, requested decisions, and a forward plan. Frog Capital remains dated structural material; provider KPI, ROI, timing, and outcome claims remain self-authored. Today's pass is monitor-only and does not count as a Q11 evidence attempt or change queue priority.
+- Source-lifecycle preflight remains strict. MyCTO redirects to unrelated `zuuk.me`; Fractional CTO Expert returns 404; StartupCTO does not resolve; CTOHub serves a 114-byte shell; and Control Shift returns HTTP 525. Current-looking search discoveries also decayed: Arc and Anadea returned 404, while Qalab's `www` route redirects to invalid `https://blog/...` and its apex route returns 404. Search cards and recent-looking dates are discovery evidence only, not citation readiness or claim support.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/fractional-cto-dubai-uae-guide.html` as the regional canonical and preserve the review-only acceptance card. Today's evidence does not justify a separate city, AI-startup, readiness, first-period, board-reporting, contract, directory, handover, transition, or annual route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, compliance interpretation, credential claim, offer claim, queue state, workflow, or runtime-site byte changed.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; the active AI-answer window is expected to remain blocked with no determinate AI-answer rows, and no duplicate raw metric sample will be retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_PENDING`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: pending
+- `head_sha`: will be recorded in the report PR body after the final candidate push
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: pending local validation and independent review
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-09`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Protect `/blog/fractional-cto-dubai-uae-guide.html` as the regional canonical and keep the acceptance-card scope frozen. Do not create city, AI-startup, readiness, first-period, board-reporting, contract, directory, handover, transition, or annual variants from this pass.
+4. Treat all five prompt ladders and all five Google site checks as indeterminate/unavailable. Do not infer exact rank, demand, complete coverage, search volume, source independence, search absence, Google indexation, or AI-answer citation.
+5. Remove both Fractional CTO Experts endpoints from citation-ready evidence while certificate validation fails. Recheck Giant Phoenix, MyCTO, Fractional CTO Expert, StartupCTO, CTOHub, Control Shift, Arc, Qalab, and Anadea only through exact final-domain, transport, title, lifecycle, relevance, and claim-support checks.
+6. Keep Q11 monitor-only until Q9 is reconciled and Q10 advances in rotation. Any later Q11 evidence attempt must add current neutral/primary governance support and an original `decision → risk → runway → owner → next action` memo rather than copied provider KPI lists or outcome statistics.
+7. Monitor GSC for `fractional CTO Dubai`, `fractional CTO UAE`, `AI startup CTO`, `first 30 days`, `board reporting`, `investor reporting`, `decision rights`, `handover`, and `transition`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist; current mobile performance is 98–100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-10-30 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
 - Read the authenticated 2026-10-30 collector record before selecting work: 0 clicks, 12 impressions, average position 16.33, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 100, fractional guide 99, CaaS 99, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
