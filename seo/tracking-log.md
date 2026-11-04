@@ -37,18 +37,19 @@ For each tracked keyword, run web searches and record:
 - Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`. The page already treats OpenAI links as method evidence rather than an adoption recommendation and says the Evals platform is scheduled to shut down on 2026-11-30. The passed read-only milestone does not materially invalidate the public claim; no frozen/public byte was changed.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, the Architecture Change Docket, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue state, workflow, or runtime byte changed.
 - Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with all newest 40 rows excluded as non-AI-answer or indeterminate, and no duplicate raw metric sample was retained.
+- Report-only release: PR #150 final head `68a19fedb0cb5e84b0538e8344c57337e8ad6df4` was squash-merged as `e85623a10adf54952bdf1b09a810ab518f6877f9`; matching Pages run `41814636571` succeeded; and cache-busted AI, competitor, industry, recurring-action, trend-opportunity, and tracking markers returned HTTP 200. CodeRabbit substantively reviewed head `5ae084f8d99e937c86dddabe1b2d6a06271c24d6`, identified one aggregate-position wording issue, and the exact fix landed in `69871a39b6c4d4afe5fd3de0d7f3d1489c86620f`; final-head incremental review was rate-limited and is not counted as substantive approval. No article, title/meta, schema, CTA, registry, sitemap, offer, price, source interpretation, queue state, workflow, dependency, or runtime file changed.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_AND_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/150`
-- `head_sha`: recorded in PR #150 after the final candidate push
+- `head_sha`: `68a19fedb0cb5e84b0538e8344c57337e8ad6df4`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local gates passed; CodeRabbit substantively reviewed `5ae084f8d99e937c86dddabe1b2d6a06271c24d6`, identified one aggregate-position wording issue, and the exact fix landed in `69871a39b6c4d4afe5fd3de0d7f3d1489c86620f`; its incremental review was rate-limited and is not counted as substantive approval
+- `checks`: local gates passed; CodeRabbit's one actionable wording issue was fixed; PR #150 merged as `e85623a10adf54952bdf1b09a810ab518f6877f9`; Pages run `41814636571` succeeded; six cache-busted production markers returned HTTP 200; final-head incremental review was rate-limited and is not counted as substantive approval
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-11`
