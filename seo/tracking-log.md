@@ -24,6 +24,48 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-04 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
+
+- Read the authenticated 2026-11-04 collector record before selecting work: 0 clicks, 17 impressions, average position 6.71, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 98, fractional guide 100, CaaS 98, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open substantive editorial pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; Pages run `38568562676` succeeded; and `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`. Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`; Q10 was not selected.
+- Reconciled the prior report-only release record: PR #149 final head `644693081d42184d262ed220920d4b755cac5c7f` was squash-merged as `e2cda0d94759e278d123611c7d00fa6fa6035d03`; Pages run `41621188437` succeeded. The current master collector commit `1cefedde944e9139c359999ba3ce400cf30016ef` also has a successful Pages run `41794583715`.
+- Queried all five tracked AI-MVP prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge pages and Brave returned HTTP 429 verification content. Bing RSS returned generic AI homepages across 10 domains for three prompts, 10 unrelated soundboard cards from one domain for the decision-matrix prompt, and 10 unrelated numeric-part/profile cards across 9 domains for the measured-behavior prompt. Google ordinary and `site:` requests returned HTTP 200 shells with zero extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected AI-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: all 12 maintained provider, primary, and canonical requests returned HTTP 200 at current titles. Horizon still exposes staged release, human review, rollback, and incident learning. Pexon and OlloSoft still separate prompt, retrieval, behavior, and evaluation failure modes. Gigabit still publishes provider-authored cost packaging plus eval and human-review controls. Provider prices, delivery windows, savings, sample counts, thresholds, and outcomes remain attributed or excluded.
+- OpenAI lifecycle checkpoint: the official deprecation page still records the Evals read-only transition on 2026-10-31 and dashboard/API shutdown on 2026-11-30. Supervised fine-tuning remains unavailable to new users; eligible existing customers can create jobs until 2027-01-06 unless the base model shuts down earlier, and listed GPT-4.1 fine-tunes shut down 2027-01-14. OpenAI still documents a 12-hour prompt-cache option at a 2.5× write rate with lower cached reads. Google keeps adaptive rubrics current while `EvalTask` remains a backward-compatibility interface; NIST says AI RMF 1.0 and the Playbook are being updated.
+- Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`. The page already treats OpenAI links as method evidence rather than an adoption recommendation and says the Evals platform is scheduled to shut down on 2026-11-30. The passed read-only milestone does not materially invalidate the public claim; no frozen/public byte was changed.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, the Architecture Change Docket, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue state, workflow, or runtime byte changed.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with all newest 40 rows excluded as non-AI-answer or indeterminate, and no duplicate raw metric sample was retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/150`
+- `head_sha`: recorded in PR #150 after the final candidate push
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: local gates passed; CodeRabbit substantively reviewed `5ae084f8d99e937c86dddabe1b2d6a06271c24d6`, identified one aggregate-position wording issue, and the exact fix landed in `69871a39b6c4d4afe5fd3de0d7f3d1489c86620f`; its incremental review was rate-limited and is not counted as substantive approval
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-11`
+
+### Actions for the next publish/review cycle
+
+1. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Do not infer approval, rewrite Q9 as published, or select Q10.
+2. Protect `/blog/ai-mvp-development.html` and `/blog/rag-vs-fine-tuning-for-startups.html` as the two AI canonicals. Do not create another annual guide, matrix, evaluation checklist, rollback page, workflow-cost page, prompt-caching page, or RAG/fine-tuning route from this pass.
+3. Treat all five prompt ladders and all five Google site checks as indeterminate/unavailable. Do not infer exact rank, demand, complete coverage, search volume, source independence, search absence, Google indexation, or AI-answer citation.
+4. Recheck OpenAI's Evals state after 2026-11-30 and revalidate all provider/model lifecycle facts immediately before any approved public update. Keep evaluation methods separate from provider-platform availability.
+5. Preserve the review-only go-live scorecard and Architecture Change Docket. Reopen public copy only when a material source change or first-party query evidence adds distinct buyer information gain.
+6. Keep provider prices, delivery windows, sample sizes, quality thresholds, cache economics, latency budgets, and outcomes attributed and workload-specific.
+7. Monitor GSC for `AI MVP development`, `RAG vs fine-tuning`, `AI evaluation`, `go-live scorecard`, `gold context`, `cost per completed workflow`, `latency budget`, and `rollback`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist; current mobile performance is 98–100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-03 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
 - Read the authenticated 2026-11-03 collector record before selecting work: 0 clicks, 18 impressions, average position 6.78, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 98, blog 99, fractional guide 100, CaaS 99, minimum tracked accessibility 83, and SEO 100. The collector was not rerun; the raw file remains at one authoritative row for today.
