@@ -35,19 +35,21 @@ For each tracked keyword, run web searches and record:
 - Direct-source refresh: 13 of 14 maintained commercial, primary, and canonical requests returned HTTP 200 at expected titles after redirects. `fractionalctoexperts.com` still fails normal and IPv4 certificate validation because its TLS certificate is expired, so it remains outside citation-ready evidence. The seven safely reachable commercial pages still connect source-owned evidence to findings, uncertainty, business or investment-thesis impact, remediation ownership, and decision-ready reporting. Provider rates, timelines, rankings, outcomes, materiality thresholds, and transaction mechanics remain self-authored or engagement-specific.
 - Framework checkpoint: NIST still says AI RMF 1.0 is being revised and that the Playbook will be updated after the revision. NIST SSDF 1.1 and SLSA v1.2 remain the current directly verified secure-development and provenance vocabularies. They are not certifications, universal diligence thresholds, or proof that a target is secure.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Today's evidence does not justify a separate annual checklist, evidence-pack, remediation-register, sample-report, investment-memo, or framework route. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, framework claim, price, credential, offer, queue status, workflow, or runtime byte changed.
-- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; the active AI-answer window is expected to remain blocked with no determinate AI-answer rows, and no duplicate raw metric sample will be retained.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with no determinate AI-answer rows and 40 non-AI-answer/indeterminate rows excluded from the newest 40 rows. No duplicate raw metric sample was retained.
+- Report-only PR #152 final head `2408d483ba3c51c32202212ab272ba4212650c83` was squash-merged as `2ade907dee8c28e3467670713a23f43df4c81c34`; matching Pages run `42010417101` succeeded. Cache-busted rendered checks returned HTTP 200 and verified strict current-date markers on all six AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs. CodeRabbit substantively reviewed head `8e29eac85f616da4695ee457e22dc52ca6bb927a`, identified one report-state wording issue, and marked it addressed by final head `2408d483ba3c51c32202212ab272ba4212650c83`; its final-head check was neutral after the hourly included review was consumed and is not represented as substantive final-head approval.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/152
-- `head_sha`: to be recorded in the PR body after the final candidate push
+- `head_sha`: `2408d483ba3c51c32202212ab272ba4212650c83`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: pending final-head local validation and independent review
+- `checks`: passed — 10 tests, exact six-file allowlist, full historical table widths, five exact-URL indeterminate rows, one authoritative raw row, deterministic benchmark regeneration, diff/secret/unsafe-markup scans, resolved CodeRabbit finding, Pages run `42010417101`, and six rendered production markers
+- `release_record_pr`: pending
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-12`
