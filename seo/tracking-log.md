@@ -49,7 +49,7 @@ For each tracked keyword, run web searches and record:
 - `head_sha`: `2408d483ba3c51c32202212ab272ba4212650c83`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
 - `checks`: passed — 10 tests, exact six-file allowlist, full historical table widths, five exact-URL indeterminate rows, one authoritative raw row, deterministic benchmark regeneration, diff/secret/unsafe-markup scans, resolved CodeRabbit finding, Pages run `42010417101`, and six rendered production markers
-- `release_record_pr`: pending
+- `release_record_pr`: https://github.com/sauravexodus/sauravexodus.github.io/pull/153
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-12`
