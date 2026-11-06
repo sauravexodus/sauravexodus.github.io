@@ -24,6 +24,47 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-06 — Weekday visibility loop (Friday non-technical founder/dev agency)
+
+- Read the authenticated 2026-11-06 collector record before selecting work: 0 clicks, 21 impressions, average position 6.81, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 99, fractional guide 99, CaaS 100, minimum tracked accessibility 83, and SEO 100. Every sampled query row is `sourav chandra`. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate before this report lane was prepared. Every remote `editorial/*` branch maps to one merged editorial PR. Q9's frozen head tree `a906721cae483a2426bb332216c1ce4f015dc712` remains byte-identical to its squash-merge tree; Pages run `38568562676` succeeded; and the article, blog index, registry, and sitemap markers remain live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled the prior report-only release record: PR #153 final head `c19b0ae1f13b650688a5deb8f2b5ae154664563c` was squash-merged as `a0c3f756bac102e6fca7342aa7ca62988d27db48`; Pages run `42011096877` succeeded. The current collector commit `396f7b8b49f50777953c6296b9067fbfe4434673` also has successful Pages run `42183073045`.
+- Queried all six tracked founder/dev-agency prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All six prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout. Bing RSS exposed no cards for the founder checklist; 10 dictionary/evaluation cards across 7 domains for proposal evaluation; 10 generic software cards across 8 domains for agency versus in-house; 4 Google Translate cards from 1 domain for fractional CTO versus agency; 10 generic AI homepages across 10 domains for AI-code handover; and 10 generic software cards across 8 domains for handover acceptance. None preserved a coherent exact-intent set. Google ordinary requests returned HTTP 200 shells with no extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` attempts for all six prompts returned HTTP 200 shells with zero extractable external links and no usable result-count field. Site result, indexed-page count, and target-route presence are all unavailable rather than negative. The route-health collector proves availability and metadata, not Google indexation.
+- All 19 direct source requests returned HTTP 200 after redirects across 17 final hosts. Better Software's old path still resolves to `How to Choose a Software Development Company`; GitHub's old code-referencing path resolves to the current Copilot-in-IDEs page; and CISA's short SBOM URL resolves to its current canonical. Proposal and team-model pages still expose ownership, scope, continuity, comparison, and technical decision-owner fields. Wavect, DealDigg, Bitecode, KUMO, Tech4LYF, and VeryCreatives still support objective acceptance, repository or source access, reproducible setup, buyer-owned accounts, credential control, deployment or recovery, sign-off, and successor independence. Provider prices, timelines, outcomes, credentials, legal interpretations, payment terms, and contract language remain self-authored or engagement-specific.
+- GitHub artifact attestations, current Copilot code-reference guidance, NIST SSDF 1.1, CISA SBOM, SLSA v1.2, and U.S. Copyright Office material remain bounded primary evidence or vocabulary. They are not certification, project-specific legal clearance, proof that an artifact is secure, successful handover, or a universal final-payment rule.
+- Decision: `REPEAT_CONFIRMATION`. Sourav's founder guide and Q9 quote article remain a distinct two-route cluster. Keep the founder guide as the broad team and governance overview and Q9 as the applied quote-to-control ledger. Today's evidence does not justify another annual checklist, proposal, agency-versus-in-house, fractional-CTO comparison, AI-code, SBOM, handover, final-payment, or quote route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, contract or payment term, legal claim, offer claim, queue state, workflow, or runtime-site byte changed.
+- Six new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; the active AI-answer window is expected to remain blocked with no determinate AI-answer rows, and no duplicate raw metric sample will be retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_PREPARED`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: pending
+- `head_sha`: to be recorded in the PR body after the final candidate push
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: pending final-head local validation and independent review
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-13`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Protect `/blog/non-technical-founder-building-an-app.html` as the broad founder guide and `/blog/how-to-evaluate-a-dev-shop-quote.html` as the applied quote-to-control canonical. Do not create another annual, proposal, comparison, AI-code, SBOM, handover, final-payment, or quote route from this pass.
+4. Treat all six prompt ladders and all six Google site checks as indeterminate or unavailable. Do not turn challenge pages, throttling, intent drift, unrelated cards, or non-extractable shells into negative visibility, indexation, demand, rank, completeness, or AI-answer claims.
+5. Recheck exact final URL, title, lifecycle, relevance, and claim support before any approved update. Keep GitHub attestations, code referencing, NIST SSDF, CISA SBOM, SLSA, and Copyright Office material as bounded evidence rather than certification, legal clearance, security proof, successful handover, or a universal contract or payment rule.
+6. Keep provider findings, prices, timelines, quantified outcomes, credentials, legal interpretations, contract terms, payment triggers, and recovery thresholds attributed and engagement-specific.
+7. Monitor GSC for `non-technical founder`, `dev agency`, `software proposal`, `quote`, `acceptance criteria`, `agency vs in-house`, `fractional CTO vs agency`, `AI-generated code`, `SBOM`, `handover`, and `final payment`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility at 83 on the watchlist; current mobile performance is 99 to 100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-05 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
 - Read the authenticated 2026-11-05 collector record before selecting work: 0 clicks, 26 impressions, average position 6.81, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 100, CaaS 99, minimum tracked accessibility 83, and SEO 100. Every sampled query row is `sourav chandra`. The collector was not rerun; the raw file remains at one authoritative row for today.
