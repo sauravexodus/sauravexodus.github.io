@@ -35,19 +35,19 @@ For each tracked keyword, run web searches and record:
 - All 19 direct source requests returned HTTP 200 after redirects across 17 final hosts. Better Software's old path still resolves to `How to Choose a Software Development Company`; GitHub's old code-referencing path resolves to the current Copilot-in-IDEs page; and CISA's short SBOM URL resolves to its current canonical. Proposal and team-model pages still expose ownership, scope, continuity, comparison, and technical decision-owner fields. Wavect, DealDigg, Bitecode, KUMO, Tech4LYF, and VeryCreatives still support objective acceptance, repository or source access, reproducible setup, buyer-owned accounts, credential control, deployment or recovery, sign-off, and successor independence. Provider prices, timelines, outcomes, credentials, legal interpretations, payment terms, and contract language remain self-authored or engagement-specific.
 - GitHub artifact attestations, current Copilot code-reference guidance, NIST SSDF 1.1, CISA SBOM, SLSA v1.2, and U.S. Copyright Office material remain bounded primary evidence or vocabulary. They are not certification, project-specific legal clearance, proof that an artifact is secure, successful handover, or a universal final-payment rule.
 - Decision: `REPEAT_CONFIRMATION`. Sourav's founder guide and Q9 quote article remain a distinct two-route cluster. Keep the founder guide as the broad team and governance overview and Q9 as the applied quote-to-control ledger. Today's evidence does not justify another annual checklist, proposal, agency-versus-in-house, fractional-CTO comparison, AI-code, SBOM, handover, final-payment, or quote route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, contract or payment term, legal claim, offer claim, queue state, workflow, or runtime-site byte changed.
-- Six new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; the active AI-answer window is expected to remain blocked with no determinate AI-answer rows, and no duplicate raw metric sample will be retained.
+- Six new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with no determinate AI-answer rows and 40 non-AI-answer or indeterminate rows excluded from the newest 40 rows. No duplicate raw metric sample was retained.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_PREPARED`
+- `status`: `REPORT_ONLY_PR_OPEN`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/154
 - `head_sha`: to be recorded in the PR body after the final candidate push
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: pending final-head local validation and independent review
+- `checks`: local validation passed; independent final-head review pending
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-13`
