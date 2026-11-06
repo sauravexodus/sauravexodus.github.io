@@ -36,18 +36,19 @@ For each tracked keyword, run web searches and record:
 - GitHub artifact attestations, current Copilot code-reference guidance, NIST SSDF 1.1, CISA SBOM, SLSA v1.2, and U.S. Copyright Office material remain bounded primary evidence or vocabulary. They are not certification, project-specific legal clearance, proof that an artifact is secure, successful handover, or a universal final-payment rule.
 - Decision: `REPEAT_CONFIRMATION`. Sourav's founder guide and Q9 quote article remain a distinct two-route cluster. Keep the founder guide as the broad team and governance overview and Q9 as the applied quote-to-control ledger. Today's evidence does not justify another annual checklist, proposal, agency-versus-in-house, fractional-CTO comparison, AI-code, SBOM, handover, final-payment, or quote route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, contract or payment term, legal claim, offer claim, queue state, workflow, or runtime-site byte changed.
 - Six new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with no determinate AI-answer rows and 40 non-AI-answer or indeterminate rows excluded from the newest 40 rows. No duplicate raw metric sample was retained.
+- Report-only PR #154 final head `dda5d2a2a6bb56e67be4cd8675be6f1289434e73` was squash-merged as `1975adfcc0b5ebacc50632f20c12d157b725b321`; matching Pages run `42202342851` succeeded. Cache-busted rendered markers returned HTTP 200 on the AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs. CodeRabbit substantively reviewed head `f3964db5a2e46d9f68ee248e2e737e22345c6409`, raised two sampled-query wording issues, and both review threads were resolved by the final head. Its final-head incremental review was rate-limited and is not counted as substantive final-head approval.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_PR_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/154
-- `head_sha`: to be recorded in the PR body after the final candidate push
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation passed; independent final-head review pending
+- `head_sha`: `dda5d2a2a6bb56e67be4cd8675be6f1289434e73`
+- `preview`: production report markers verified after Pages run `42202342851`; no separate public-content preview was required
+- `checks`: local validation passed; CodeRabbit's two actionable comments were fixed and resolved; final-head incremental review was rate-limited; PR #154 merged cleanly; matching Pages deployment and six rendered report markers verified
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-13`
