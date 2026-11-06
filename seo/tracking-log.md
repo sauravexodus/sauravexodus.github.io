@@ -46,6 +46,7 @@ For each tracked keyword, run web searches and record:
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/154
+- `release_record_pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/155
 - `head_sha`: `dda5d2a2a6bb56e67be4cd8675be6f1289434e73`
 - `preview`: production report markers verified after Pages run `42202342851`; no separate public-content preview was required
 - `checks`: local validation passed; CodeRabbit's two actionable comments were fixed and resolved; final-head incremental review was rate-limited; PR #154 merged cleanly; matching Pages deployment and six rendered report markers verified
