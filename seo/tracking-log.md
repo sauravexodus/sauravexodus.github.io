@@ -37,18 +37,19 @@ For each tracked keyword, run web searches and record:
 - Source-lifecycle preflight remains strict. MyCTO redirects to unrelated `zuuk.me`; Fractional CTO Expert returns 404; StartupCTO does not resolve; CTOHub remains a non-substantive shell; Control Shift returns HTTP 525; Arc and Anadea return 404; and Qalab redirects to invalid `https://blog/...`. Search cards and recent-looking dates are discovery evidence only, not citation readiness or claim support.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/fractional-cto-dubai-uae-guide.html` as the regional canonical and preserve the review-only acceptance card. Today's evidence does not justify a separate city, AI-startup, readiness, first-period, board-reporting, contract, directory, handover, transition, or annual route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, compliance interpretation, credential claim, offer claim, queue state, workflow, or runtime-site byte changed.
 - Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector and reported `Behind: 4, Blocked: 5, Stretch: 5, Watch: 1`; the active AI-answer window remains blocked with no determinate AI-answer rows, and no duplicate raw metric sample was retained.
+- Report-only PR #156 final head `c8df73dc0cc635698df448fd9a6dc8a8be9beb87` was squash-merged as `68c19889fa59c345ed28f192e04b8a08b7e7c3c5`; matching Pages run `42602031057` succeeded. Cache-busted rendered markers returned HTTP 200 on the AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs. CodeRabbit substantively reviewed head `883190f79ac0e386d75d44202521ce4e02405720` with `SUCCESS` and no actionable comments. The final head added only review-status bookkeeping; a manual incremental-review command produced no check or bot reply within five minutes and is not counted as substantive final-head approval. Release-record PR #157 is open.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_PR_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/156
-- `head_sha`: recorded in the PR body after the final candidate push; the checked-in row links the PR rather than creating a self-referential hash loop
+- `head_sha`: `c8df73dc0cc635698df448fd9a6dc8a8be9beb87`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation passed with 10 tests, benchmark regeneration, exact six-file allowlist, full historical table-width checks, five complete indeterminate rows with all five exact query URLs, one authoritative raw row, JSON/XML/HTML parsing, local HTTP smoke checks, `git diff --check`, and added-line secret/unsafe-markup scans; CodeRabbit substantively reviewed head `883190f79ac0e386d75d44202521ce4e02405720` with `SUCCESS` and no actionable comments, and final-head incremental recheck remains pending after this bookkeeping update
+- `checks`: local gates passed; CodeRabbit substantively reviewed `883190f79ac0e386d75d44202521ce4e02405720` with `SUCCESS` and no actionable comments; final head `c8df73dc0cc635698df448fd9a6dc8a8be9beb87` added only review-status bookkeeping, and its manual incremental-review command produced no check or bot reply within five minutes; PR #156 merged as `68c19889fa59c345ed28f192e04b8a08b7e7c3c5`; Pages run `42602031057` succeeded; six cache-busted production markers returned HTTP 200
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-13`
