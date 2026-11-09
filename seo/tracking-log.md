@@ -48,7 +48,7 @@ For each tracked keyword, run web searches and record:
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/156
 - `head_sha`: recorded in the PR body after the final candidate push; the checked-in row links the PR rather than creating a self-referential hash loop
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation passed with 10 tests, benchmark regeneration, exact six-file allowlist, full historical table-width checks, five complete indeterminate rows with all five exact query URLs, one authoritative raw row, JSON/XML/HTML parsing, local HTTP smoke checks, `git diff --check`, and added-line secret/unsafe-markup scans; independent GitHub review pending
+- `checks`: local validation passed with 10 tests, benchmark regeneration, exact six-file allowlist, full historical table-width checks, five complete indeterminate rows with all five exact query URLs, one authoritative raw row, JSON/XML/HTML parsing, local HTTP smoke checks, `git diff --check`, and added-line secret/unsafe-markup scans; CodeRabbit substantively reviewed head `883190f79ac0e386d75d44202521ce4e02405720` with `SUCCESS` and no actionable comments, and final-head incremental recheck remains pending after this bookkeeping update
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-13`
