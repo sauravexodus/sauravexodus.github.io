@@ -36,19 +36,19 @@ For each tracked keyword, run web searches and record:
 - All eight board-reporting and first-period packet requests returned HTTP 200. The current packet still supports a future Q11 structure around starting context, product and engineering trends, spend and hiring context, risk and mitigation, requested decisions, and a forward plan. Frog Capital remains dated structural material; provider KPI, ROI, timing, and outcome claims remain self-authored. Today's pass is monitor-only and does not count as a Q11 evidence attempt or change queue priority.
 - Source-lifecycle preflight remains strict. MyCTO redirects to unrelated `zuuk.me`; Fractional CTO Expert returns 404; StartupCTO does not resolve; CTOHub remains a non-substantive shell; Control Shift returns HTTP 525; Arc and Anadea return 404; and Qalab redirects to invalid `https://blog/...`. Search cards and recent-looking dates are discovery evidence only, not citation readiness or claim support.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/fractional-cto-dubai-uae-guide.html` as the regional canonical and preserve the review-only acceptance card. Today's evidence does not justify a separate city, AI-startup, readiness, first-period, board-reporting, contract, directory, handover, transition, or annual route. No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, compliance interpretation, credential claim, offer claim, queue state, workflow, or runtime-site byte changed.
-- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; the active AI-answer window is expected to remain blocked with no determinate AI-answer rows, and no duplicate raw metric sample will be retained.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector and reported `Behind: 4, Blocked: 5, Stretch: 5, Watch: 1`; the active AI-answer window remains blocked with no determinate AI-answer rows, and no duplicate raw metric sample was retained.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_PENDING`
+- `status`: `REPORT_ONLY_PR_OPEN`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/156
 - `head_sha`: recorded in the PR body after the final candidate push; the checked-in row links the PR rather than creating a self-referential hash loop
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: pending final validation and independent review
+- `checks`: local validation passed with 10 tests, benchmark regeneration, exact six-file allowlist, full historical table-width checks, five complete indeterminate rows with all five exact query URLs, one authoritative raw row, JSON/XML/HTML parsing, local HTTP smoke checks, `git diff --check`, and added-line secret/unsafe-markup scans; independent GitHub review pending
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-13`
