@@ -38,7 +38,7 @@ For each tracked keyword, run web searches and record:
 - Lifecycle preflight: 7 of 14 historical/discovered requests returned HTTP 200, but only TechGlock UAE, NomadX UAE, Vistoplex's service page, and YaaCode's service page were exact-topic destinations. TechGlock's old article and GrowExx redirected to generic homepages; Bayden's live destination is generic enterprise consulting. Four URLs returned 404 and three hosts failed DNS resolution. The exact-topic set changed since the prior pass, reinforcing the need for immediate final-domain, title, lifecycle, transport, relevance, and claim-support checks before citation.
 - Six new AI-report rows are explicitly `Indeterminate / not scored`. The deterministic benchmark scorer will be rerun without rerunning the collector; the active AI-answer window must remain blocked unless a determinate AI-answer row exists, and no duplicate raw metric sample may be retained.
 - No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, SLA, compliance interpretation, credential claim, offer claim, queue state, workflow, or runtime-site byte changed.
-- Report-only PR #159 final head `236d6fa3ea4b3c97f18c27011e80952d2a7caa0a` was squash-merged as `8297e5368741184ca451e3367f8a3b77408e69a0`; matching Pages run `42799467598` succeeded. Cache-busted rendered markers returned HTTP 200 on the AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs. CodeRabbit substantively reviewed head `e24a5d5fadc7a0ed24b8a8ddde18b2e827108c20`, raised one report-PR timing issue, and confirmed it addressed by the final head with the thread resolved. The final-head incremental check was rate-limited and `NEUTRAL`, not substantive final-head approval. A release-record PR is pending.
+- Report-only PR #159 final head `236d6fa3ea4b3c97f18c27011e80952d2a7caa0a` was squash-merged as `8297e5368741184ca451e3367f8a3b77408e69a0`; matching Pages run `42799467598` succeeded. Cache-busted rendered markers returned HTTP 200 on the AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs. CodeRabbit substantively reviewed head `e24a5d5fadc7a0ed24b8a8ddde18b2e827108c20`, raised one report-PR timing issue, and confirmed it addressed by the final head with the thread resolved. The final-head incremental check was rate-limited and `NEUTRAL`, not substantive final-head approval. Release-record PR #160 records this handoff.
 
 ### Structured run state
 
@@ -48,7 +48,7 @@ For each tracked keyword, run web searches and record:
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/159
-- `release_record_pr_url`: pending
+- `release_record_pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/160
 - `head_sha`: `236d6fa3ea4b3c97f18c27011e80952d2a7caa0a`
 - `preview`: production report markers verified after Pages run `42799467598`; no separate public-content preview was required
 - `checks`: local gates passed; CodeRabbit substantively reviewed `e24a5d5fadc7a0ed24b8a8ddde18b2e827108c20`, raised one report-PR timing issue, and confirmed it addressed by final head `236d6fa3ea4b3c97f18c27011e80952d2a7caa0a` with the thread resolved; the final-head incremental check was rate-limited and `NEUTRAL`; PR #159 merged as `8297e5368741184ca451e3367f8a3b77408e69a0`; Pages run `42799467598` succeeded; six cache-busted production markers returned HTTP 200
