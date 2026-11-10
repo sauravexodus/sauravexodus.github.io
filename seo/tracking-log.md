@@ -46,10 +46,10 @@ For each tracked keyword, run web searches and record:
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/159
 - `head_sha`: pending; the final immutable head will be recorded in the PR body after the last candidate push
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation and independent review pending
+- `checks`: local validation passed; independent review and GitHub checks pending
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-17`
