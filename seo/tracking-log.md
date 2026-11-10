@@ -24,6 +24,49 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-10 — Weekday visibility loop (Tuesday CTO as a service Dubai)
+
+- Read the authenticated 2026-11-10 collector record before selecting work: 0 clicks, 28 impressions, average position 7.57, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 98, fractional guide 99, CaaS 99, minimum tracked accessibility 83, and SEO 100. The sampled query rows contain 0 topical non-brand queries and only Sourav-name variants. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate before this report lane was prepared. Every remote `editorial/*` branch maps to one merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled the prior report-only release record: PR #158 final head `7eae49f8ae6297ab9c7ac5a5b6206a01b2adf4f9` was squash-merged as `cd5deeda6f88b9149673e6c382a1d300b55479ed`; Pages run `42603401147` succeeded. Today's collector commit `891f081d182e23a1a608258e8eb329510f0153e3` also has successful Pages run `42777621242`.
+- Queried all six tracked CaaS prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All six prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave returned HTTP 429 verification content throughout. Bing RSS lost intent into WhatsApp (10 cards across 7 hostnames), ChatGPT/OpenAI (10/7), 2GIS (10/4), Excel viewers (10/8), YouTube/OBS help (10/2), or Geometry Dash (10/9). Google ordinary and `site:` requests returned HTTP 200 shells with no extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks for all six prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected CaaS-canonical presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: 23 of 24 maintained CaaS, fractional-CTO, comparison, and canonical requests returned HTTP 200 at current titles after redirects. Fractional CTO Experts still fails certificate validation because its certificate is expired. Provider-specific prices, durations, SLAs, scorecards, outcomes, credentials, compliance, affiliations, and service claims remain self-authored.
+- The source-to-field map remains current and differentiated for a future existing-route refresh. Purrweb still exposes decision rights, included availability, deliverables, response time, exclusions, acceptance criteria, reporting cadence, and handover; ANSI exposes milestone checkpoints, SLAs, acceptance criteria, executive reporting, escalation, budget guidance, and KPIs; Trivanta exposes tangible deliverables, board reporting, technology budgets, incident response, and transition/handover; Fusion covers stakeholder reporting and transition to a full-time CTO; ExecViva and Uvik provide provider-authored KPI and budget examples. Sourav's canonical still covers pricing and engagement-model choice without one consolidated quote-normalization and acceptance matrix.
+- Decision: `REPEAT_CONFIRMATION`. Keep the existing-route `VALIDATED_RESEARCH_BRIEF` at `decision class → named owner → included availability → recurring deliverable/report → response/escalation → acceptance evidence → budget variance → transition trigger/handover`. This is a source-attributed research brief, not a route, draft, demand conclusion, or authorization to change public copy.
+- Lifecycle preflight: 7 of 14 historical/discovered requests returned HTTP 200, but only TechGlock UAE, NomadX UAE, Vistoplex's service page, and YaaCode's service page were exact-topic destinations. TechGlock's old article and GrowExx redirected to generic homepages; Bayden's live destination is generic enterprise consulting. Four URLs returned 404 and three hosts failed DNS resolution. The exact-topic set changed since the prior pass, reinforcing the need for immediate final-domain, title, lifecycle, transport, relevance, and claim-support checks before citation.
+- Six new AI-report rows are explicitly `Indeterminate / not scored`. The deterministic benchmark scorer will be rerun without rerunning the collector; the active AI-answer window must remain blocked unless a determinate AI-answer row exists, and no duplicate raw metric sample may be retained.
+- No article copy, metadata, registry, sitemap, CTA, dependency, source interpretation, price, SLA, compliance interpretation, credential claim, offer claim, queue state, workflow, or runtime-site byte changed.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_PENDING`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/159
+- `head_sha`: pending; the final immutable head will be recorded in the PR body after the last candidate push
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: local validation passed; independent review and GitHub checks pending
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval or release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-17`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Protect `/blog/cto-as-a-service-dubai.html` as the single CaaS canonical. Preserve the existing-route quote-normalization and acceptance-matrix brief; do not create a second pricing, SLA, reporting, handover, transition, provider-directory, or annual route from this pass.
+4. Treat all six prompt ladders and all six Google site checks as indeterminate or unavailable. Do not turn challenge pages, throttling, unrelated cards, intent drift, or non-extractable shells into negative visibility, indexation, demand, rank, completeness, or AI-answer claims.
+5. Remove the certificate-invalid Fractional CTO Experts endpoint and all stale, generic, unresolved, or missing lifecycle destinations from citation-ready evidence. Recheck the four current exact-topic service pages immediately before any approved public edit.
+6. Keep provider rates, durations, SLAs, KPI targets, budget examples, outcomes, credentials, compliance claims, affiliations, and service claims attributed and engagement-specific.
+7. Monitor GSC for `CTO as a service Dubai`, `CTO as a service pricing`, `fractional CTO cost`, `quote comparison`, `decision rights`, `SLA`, `incident response`, `board reporting`, `budget variance`, `handover`, and `transition`. Current authenticated sampled rows still contain 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility at 83 on the watchlist; current mobile performance is 98 to 100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-09 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
 
 - Read the authenticated 2026-11-09 collector record before selecting work: 0 clicks, 29 impressions, average position 7.66, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 99, fractional guide 100, CaaS 100, minimum tracked accessibility 83, and SEO 100. The sampled query rows contain 0 topical non-brand queries and only Sourav-name variants. The collector was not rerun; the raw file remains at one authoritative row for today.
