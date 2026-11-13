@@ -40,15 +40,15 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_PRIMARY_MERGED_LIVE`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/161`
-- `head_sha`: recorded in PR #161 metadata after final candidate validation; omitted here to avoid a stale branch self-reference
+- `head_sha`: `3cc285a717cb370f3cf8ea1636261252c0b205b3`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local gates passed; frozen-head independent review and GitHub check results are recorded in PR #161 metadata
+- `checks`: exact six-file allowlist, diff/security/table/JSONL/test/scorer gates, CodeRabbit substantive review of the exact head with no actionable comments, squash merge `3636f72bc1a0a2988a7323c15ad3357a180b3346`, matching Pages run `43406320808`, and six cache-busted canonical report markers passed; LanguageTool coverage was incomplete
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-19`
