@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-13 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
-- **Status:** `RESEARCH_REPORT_CANDIDATE`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — one bounded ordinary-search result set did not establish a new route opportunity; five prompt ladders were indeterminate; current sources and the two existing founder canonicals still support the same consolidation boundary.
 
@@ -71,7 +71,7 @@ For each tracked keyword, run web searches and record:
 
 ### Validation and handoff
 
-- Report-only PR: pending.
+- Report-only PR: [#163](https://github.com/sauravexodus/sauravexodus.github.io/pull/163); initial validated head `9f854505c297936a85352e7924063c008b5b0e64`; final head will be frozen after this PR-link bookkeeping commit.
 - Deterministic benchmark rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-13` reproduced the current scorecard without changing it: Behind 4, Blocked 5, Stretch 5, Watch 1; AI mention/citation remain `n/a` because no determinate AI-answer row exists and all newest 40 rows are non-AI-answer or indeterminate.
 - Local gates passed: exact six-file allowlist; `git diff --check`; added-line secret, unsafe-markup, conflict-marker, and truncation scans; 21 complete Markdown tables covering 3,671 data rows; six same-date AI rows with five exact query URLs each; one same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; and four-route local HTTP smoke.
 - Independent review and GitHub checks remain pending.
