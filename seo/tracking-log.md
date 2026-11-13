@@ -24,6 +24,48 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-12 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
+
+- Read the authenticated 2026-11-12 collector record before selecting work: 0 clicks, 20 impressions, average position 8.65, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 99, CaaS 98, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate before this report lane was prepared. Every remote `editorial/*` branch maps to one merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled the prior report-only release record: PR #160 final head `a3430647209bc6f53367fe965bc55bc9c97224e8` was squash-merged as `37ea7eddcfbb43acf7b42222acbded712f5e84ac`; Pages run `42801181577` succeeded. Today's collector commit `df4277e63c25b7d5eb3e738e7520a54cf9a2587e` also has successful Pages run `43177739757`.
+- Queried all five tracked technical-DD prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout. Bing RSS lost intent into dictionary/definition cards for four prompts (10 cards across 9 distinct domains each) and unrelated Ohio PR-01/security-control cards for the codebase prompt (10 cards across 8 domains). Google ordinary requests returned HTTP 200 shells with no extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected technical-DD-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: 13 of 14 maintained commercial, primary, and canonical requests returned HTTP 200 at expected titles after redirects. `fractionalctoexperts.com` still fails certificate validation because its TLS certificate is expired, so it remains outside citation-ready evidence. The safely reachable packet continues to connect source-owned evidence to findings, business or thesis impact, uncertainty or limitations, remediation ownership, closure evidence, and decision-ready reporting. Provider rates, timelines, rankings, outcomes, materiality thresholds, and transaction mechanics remain self-authored or engagement-specific.
+- Discovery/lifecycle preflight rejected two current-looking search-discovered routes: the Anyway Ventures hostname failed DNS resolution and the George Rios checklist URL returned HTTP 404. A recent-looking search card does not establish source identity, lifecycle, reachability, or exact claim support.
+- Framework checkpoint: the maintained NIST AI RMF and Measure, NIST SSDF 1.1, and SLSA v1.2 pages remain directly reachable. They are control vocabularies and baselines, not certifications, universal diligence thresholds, investment verdicts, or proof that a target is secure.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Today's evidence does not justify a separate annual checklist, evidence-pack, remediation-register, sample-report, investment-memo, or framework route. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, framework claim, price, credential, offer, queue status, workflow, or runtime byte changed.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with no determinate AI-answer rows and 40 non-AI-answer/indeterminate rows excluded from the newest 40 rows. No duplicate raw metric sample was retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/161`
+- `head_sha`: recorded in PR #161 metadata after final candidate validation; omitted here to avoid a stale branch self-reference
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: local gates passed; frozen-head independent review and GitHub check results are recorded in PR #161 metadata
+- `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-19`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Reject annual checklist, evidence-pack, remediation-register, report-example, investment-memo, framework, and AI-DD variants from this pass.
+4. Treat all five prompt ladders and all five Google site checks as indeterminate/unavailable. Do not infer exact rank, demand, complete coverage, search volume, source independence, search absence, Google indexation, or AI-answer citation.
+5. Recheck every source's final domain, title, topic match, lifecycle, transport validity, relevance, and claim support immediately before any approved public edit. Do not cite Fractional CTO Experts, Anyway Ventures, or the George Rios route in their current failed states.
+6. Keep provider findings, rates, timelines, quantified outcomes, deal mechanics, materiality thresholds, and illustrative sample reports attributed and engagement-specific. Keep NIST and SLSA material baseline-only.
+7. Monitor GSC for `technical due diligence`, `investor checklist`, `codebase evidence`, `remediation`, `closure evidence`, `investment thesis`, and `decision memo`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist; current mobile performance is 98–99 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-10 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
 - Read the authenticated 2026-11-10 collector record before selecting work: 0 clicks, 28 impressions, average position 7.57, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 98, fractional guide 99, CaaS 99, minimum tracked accessibility 83, and SEO 100. The sampled query rows contain 0 topical non-brand queries and only Sourav-name variants. The collector was not rerun; the raw file remains at one authoritative row for today.
