@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-13 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
-- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_PRIMARY_MERGED_LIVE`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — one bounded ordinary-search result set did not establish a new route opportunity; five prompt ladders were indeterminate; current sources and the two existing founder canonicals still support the same consolidation boundary.
 
@@ -71,10 +71,13 @@ For each tracked keyword, run web searches and record:
 
 ### Validation and handoff
 
-- Report-only PR: [#163](https://github.com/sauravexodus/sauravexodus.github.io/pull/163); initial validated head `9f854505c297936a85352e7924063c008b5b0e64`; final head will be frozen after this PR-link bookkeeping commit.
+- Report-only PR [#163](https://github.com/sauravexodus/sauravexodus.github.io/pull/163) froze final head `8ebabfb16afeeb871fdbbf1c34f18eae96163e5e` against base `2f3243059361862538d0551b73ec53b2dd108f47`.
 - Deterministic benchmark rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-13` reproduced the current scorecard without changing it: Behind 4, Blocked 5, Stretch 5, Watch 1; AI mention/citation remain `n/a` because no determinate AI-answer row exists and all newest 40 rows are non-AI-answer or indeterminate.
 - Local gates passed: exact six-file allowlist; `git diff --check`; added-line secret, unsafe-markup, conflict-marker, and truncation scans; 21 complete Markdown tables covering 3,671 data rows; six same-date AI rows with five exact query URLs each; one same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; and four-route local HTTP smoke.
-- Independent review and GitHub checks remain pending.
+- CodeRabbit reached its review limit for the exact final head; its check completed `NEUTRAL`/skipping, the review command was rate-limited, and it produced no actionable review comment. No substantive automated review was performed; Codex/OpenCode were unavailable and Claude Code was not authenticated.
+- PR #163 squash-merged as `2240a201a1bced83fc9b361734877b3ec7bd300a` on 2026-11-13; matching GitHub Pages run `43410327300` completed successfully.
+- Cache-busted production verification returned HTTP 200 with the new date/PR/state markers visible on `ai-visibility-weekly.html`, `competitor-tracking.html`, `industry-trends.html`, `recurring-actions.html`, `trend-opportunities.html`, and `seo/tracking-log.html` on the first attempt.
+- Release-record PR: [#164](https://github.com/sauravexodus/sauravexodus.github.io/pull/164). This follow-up changes only `reports/visibility/recurring-actions.md` and `seo/tracking-log.md` and does not alter Q9, public editorial copy, metadata, registry, sitemap, CTA, offer, dependency, workflow, credentials, or runtime behavior.
 - Next bounded founder/dev-agency source/search refresh: **2026-11-20**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
 
 ---
