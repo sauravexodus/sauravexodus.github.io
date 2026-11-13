@@ -77,7 +77,7 @@ For each tracked keyword, run web searches and record:
 - CodeRabbit reached its review limit for the exact final head; its check completed `NEUTRAL`/skipping, the review command was rate-limited, and it produced no actionable review comment. No substantive automated review was performed; Codex/OpenCode were unavailable and Claude Code was not authenticated.
 - PR #163 squash-merged as `2240a201a1bced83fc9b361734877b3ec7bd300a` on 2026-11-13; matching GitHub Pages run `43410327300` completed successfully.
 - Cache-busted production verification returned HTTP 200 with the new date/PR/state markers visible on `ai-visibility-weekly.html`, `competitor-tracking.html`, `industry-trends.html`, `recurring-actions.html`, `trend-opportunities.html`, and `seo/tracking-log.html` on the first attempt.
-- Release-record PR: pending. This follow-up changes only `reports/visibility/recurring-actions.md` and `seo/tracking-log.md` and does not alter Q9, public editorial copy, metadata, registry, sitemap, CTA, offer, dependency, workflow, credentials, or runtime behavior.
+- Release-record PR: [#164](https://github.com/sauravexodus/sauravexodus.github.io/pull/164). This follow-up changes only `reports/visibility/recurring-actions.md` and `seo/tracking-log.md` and does not alter Q9, public editorial copy, metadata, registry, sitemap, CTA, offer, dependency, workflow, credentials, or runtime behavior.
 - Next bounded founder/dev-agency source/search refresh: **2026-11-20**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
 
 ---
