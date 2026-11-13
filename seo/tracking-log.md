@@ -24,6 +24,61 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-13 — Weekday visibility loop (Friday non-technical founder/dev agency)
+
+- **Status:** `RESEARCH_REPORT_CANDIDATE`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — one bounded ordinary-search result set did not establish a new route opportunity; five prompt ladders were indeterminate; current sources and the two existing founder canonicals still support the same consolidation boundary.
+
+### Reconciliation
+
+- Fetched `origin/master` and safely fast-forwarded the clean dedicated cron worktree before research.
+- No open pull request existed before this report lane, and all four remote `editorial/*` branches map to merged editorial PRs rather than duplicate candidates.
+- PR #123 remains externally merged and live, but `seo/strategy.md` still records Q9 as `WAITING HUMAN APPROVAL`; PRs #161/#162 and their matching Pages runs succeeded.
+- The latest collector commit `daad71a78d91190220215711414a9e2052c82fa5` is merged on `origin/master`, and matching Pages run `43388136267` succeeded.
+- No substantive item was selected, no editorial candidate bytes changed, no queue transition was inferred, and Q10 was not opened.
+
+### Authoritative current metrics
+
+- Retained the single 2026-11-13 collector row rather than rerunning the collector: authenticated Google Search Console window `2026-11-06`→`2026-11-12`, 17 impressions, 0 clicks, average position 8.53, 0 topical non-brand queries, and every sampled query row a Sourav-name variant.
+- All 11 tracked routes and metadata checks pass, all SEO assets are healthy, mobile performance is 99 for `/`, 99 for `/blog/`, 99 for the fractional-CTO guide, and 100 for CTO as a Service; minimum tracked accessibility is 83 and tracked SEO is 100.
+- Route health remains availability evidence, not Google indexation evidence.
+
+### Bounded search evidence
+
+- Tested six exact founder/dev-agency prompts across DuckDuckGo HTML, Brave, Bing RSS, Google ordinary search, and separate Google `site:souravchandra.com` requests; the AI report records every exact query URL and explicit scoring state.
+- DuckDuckGo returned one usable 10-card agency-versus-in-house set across 9 distinct domains without Sourav or souravchandra.com; The Ninja Studio supplied two cards, so 10 cards do not equal 10 independent sources.
+- The other five DuckDuckGo prompt ladders were challenged or non-extractable; Brave returned HTTP 429 verification content for all six; Bing RSS returned YouTube, generic software/AI, or zero-card sets instead of preserving the requested buyer intent.
+- All 12 Google ordinary and `site:` requests returned HTTP 200 shells with zero extractable external links and no usable result-count field, so result presence, indexed-page count, and expected-route presence are unavailable rather than negative.
+- Only the one agency-versus-in-house DuckDuckGo row is a bounded search-visible negative. All six rows are excluded from AI-answer mention/citation rates, and the other five rows are `Indeterminate / not scored`.
+
+### Source and claim-boundary refresh
+
+- All 19 maintained founder, agency, team-model, quote, handover, primary-control, and Sourav canonical requests returned HTTP 200 after redirects across 17 final hosts.
+- Better Software still resolves to `How to Choose a Software Development Company`; GitHub's old code-referencing URL resolves to `GitHub Copilot in IDEs`; and CISA's short SBOM path resolves to its current canonical.
+- The packet still separates agency selection, proposal/quote evaluation, team-model choice, buyer-owned access, clean-environment build, tests, fresh non-production deployment, core-flow execution, handover, successor independence, optional provenance, and secure-development/acquirer vocabulary.
+- DealDigg still describes a clean-room buyer acceptance packet; GitHub still warns that artifact attestations do not guarantee security; NIST SSDF remains producer/acquirer practice vocabulary rather than product certification.
+- Provider prices, timelines, outcomes, credentials, payment terms, contract language, and legal interpretations remain source- or engagement-specific and were not converted into Sourav claims.
+- Five fresh-looking search discoveries failed direct preflight: one 114-byte HTTP-200 shell without a usable title, three HTTP 404 routes, and one TLS hostname mismatch. None entered the citation-ready source packet.
+
+### Content decision
+
+- Preserve `/blog/non-technical-founder-building-an-app.html` as the broad team, governance, contract, AI-disclosure, verification, and agency-versus-in-house guide.
+- Preserve `/blog/how-to-evaluate-a-dev-shop-quote.html` as the applied line-item, milestone-acceptance, quote-to-control, handover, and AI-evidence ledger.
+- The current packet repeats the same broad-guide versus applied-control split and adds no distinct public information gain beyond the existing clean-room acceptance artifact.
+- Do not create another annual founder checklist, proposal guide, agency-versus-in-house route, fractional-CTO-versus-agency route, AI-code handover route, SBOM/provenance route, or final-payment route.
+- This pass changes reports only. No article, index, registry, sitemap, title, metadata, schema, CTA, offer, price, payment term, contract term, credential, public source interpretation, dependency, workflow, or runtime byte changes.
+
+### Validation and handoff
+
+- Report-only PR: pending.
+- Deterministic benchmark rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-13` reproduced the current scorecard without changing it: Behind 4, Blocked 5, Stretch 5, Watch 1; AI mention/citation remain `n/a` because no determinate AI-answer row exists and all newest 40 rows are non-AI-answer or indeterminate.
+- Local gates passed: exact six-file allowlist; `git diff --check`; added-line secret, unsafe-markup, conflict-marker, and truncation scans; 21 complete Markdown tables covering 3,671 data rows; six same-date AI rows with five exact query URLs each; one same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; and four-route local HTTP smoke.
+- Independent review and GitHub checks remain pending.
+- Next bounded founder/dev-agency source/search refresh: **2026-11-20**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
+
+---
+
 ## 2026-11-12 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
 - Read the authenticated 2026-11-12 collector record before selecting work: 0 clicks, 20 impressions, average position 8.65, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 99, CaaS 98, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
