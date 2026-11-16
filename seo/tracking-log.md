@@ -76,7 +76,7 @@ For each tracked keyword, run web searches and record:
 - Local gates passed on the final head: exact six-file allowlist; `git diff --check`; 20 complete Markdown tables covering 3,762 data rows; five same-date AI rows with five exact query URLs each; one authoritative same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; four-route local HTTP smoke; and added-line secret, unsafe-markup, conflict-marker, and truncation scans.
 - CodeRabbit substantively reviewed the exact final head and generated no actionable comments. Its LanguageTool coverage was incomplete because of character and per-file limits, so that partial grammar check is not described as complete review.
 - GitHub Pages run `43848046444` for merge SHA `d94b55c8c50105d13a71c906920927bfc4efecc2` completed successfully. Cache-busted production fetches returned HTTP 200 and the row-specific 2026-11-16 markers for the AI, competitor, industry, recurring-action, trend-opportunity, and tracking pages.
-- A tiny report-only release-record PR is pending; it will only replace the pending release-record reference with its PR number before merge.
+- Tiny report-only release-record PR [#166](https://github.com/sauravexodus/sauravexodus.github.io/pull/166) only replaces the pending release-record reference with its PR number; it does not alter substantive findings or public content.
 - Next bounded fractional-CTO source/search refresh: **2026-11-23**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
 
 ---
