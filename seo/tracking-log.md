@@ -24,6 +24,60 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-16 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
+
+- **Status:** `REPORT_ONLY_DRAFT_PR_165`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — five prompt ladders were indeterminate; the current packet adds source-lifecycle changes and attributable examples but no distinct new buyer job or public information gain.
+
+### Reconciliation
+
+- Fetched `origin/master` through the control checkout and refreshed the clean dedicated cron worktree before research; the control checkout was not switched, reset, stashed, or written.
+- No open pull request existed before this report lane, and all four remote `editorial/*` branches map to merged editorial PRs rather than duplicate candidates.
+- PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its public files remain unchanged against current `master`, and cache-busted production fetches serve the article, blog card, registry, and sitemap markers.
+- `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, Q10 was not opened, and Q11 remained monitor-only.
+- Prior release-record PR #164 final head `537f625b317f7bf6c07bee188ba053c90dc0d44a` was squash-merged as `13659283d6dde701616f1634d6b88e35c4985621`; Pages run `43410896665` succeeded. The latest collector commit `5a66a7a0872d5b8ac2d977c1f83e90f08856eccb` has successful Pages run `43826194305`.
+
+### Authoritative current metrics
+
+- Retained the single 2026-11-16 collector row rather than rerunning the collector: authenticated Google Search Console window `2026-11-09`→`2026-11-15`, 18 impressions, 0 clicks, average position 8.11, 0 topical non-brand queries, and every sampled query row a Sourav/Saurav-name variant.
+- All 11 tracked routes and metadata checks pass, all SEO assets are healthy, mobile performance is 100 for `/`, 99 for `/blog/`, 100 for the fractional-CTO guide, and 99 for CTO as a Service; minimum tracked accessibility is 83 and tracked SEO is 100.
+- Route health remains availability evidence, not Google indexation evidence.
+
+### Bounded search evidence
+
+- Tested five exact fractional-CTO prompts across DuckDuckGo HTML, Brave, Bing RSS, Google ordinary search, and separate Google `site:souravchandra.com` requests; the AI report records every exact query URL and explicit scoring state.
+- DuckDuckGo returned HTTP 202 challenge pages and Brave HTTP 429 verification content throughout.
+- Bing RSS lost intent into Google Chat/help cards (10 cards across 9 domains), OSHA worker-safety pages (10 cards from one domain), PowerPoint/76 Group pages (10/7), Microsoft Teams pages (10/7 within one publisher ecosystem), or a zero-card response.
+- All 10 Google ordinary and `site:` requests returned HTTP 200 shells with zero extractable external links and no usable result-count field, so result presence, indexed-page count, and expected-route presence are unavailable rather than negative.
+- All five rows are `Indeterminate / not scored` and excluded from bounded search-negative and AI-answer mention/citation rates. No rank, demand, completeness, source-independence, indexation, or citation conclusion was made.
+
+### Source and claim-boundary refresh
+
+- Twenty of 22 maintained fractional-CTO, official, ecosystem, and canonical requests returned HTTP 200 at current titles. Giant Phoenix recovered from its prior timeout and again exposes attributed decision, roadmap, risk, reporting, hiring/vendor, board, and handover fields.
+- Both Fractional CTO Experts endpoints still fail certificate validation because the certificate is expired and remain outside citation-ready evidence.
+- All eight maintained board-reporting and first-period packet requests returned HTTP 200. The packet still supports a future Q11 shape around starting context, product and engineering trends, spend and hiring context, risk and mitigation, requested decisions, and a forward plan; Frog Capital remains dated structural material.
+- Historical lifecycle failures remain material: MyCTO redirects to an unrelated gambling page, CTOHub is a 114-byte titleless shell, Fractional CTO Expert, Arc, and Anadea return 404, StartupCTO does not resolve, the old CTO Centre route returns 525, and Qalab redirects to invalid host `blog`.
+- Eight current discoveries returned HTTP 200 at current titles: Control Shift, AsyncX, Denya, UCS, Triad Global, QBlock's current root route, Mamluk, and a RUSH fractional-CTO vacancy on LinkedIn. Their content supports only attributed packaging, operating-pattern, or employer-authored hiring observations—not market demand, neutral standards, credentials, outcomes, or Sourav's offer.
+- Provider rates, durations, scorecards, KPI/ROI claims, quantified outcomes, credentials, compliance interpretations, affiliations, and delivery claims remain source-specific and were not converted into Sourav claims.
+
+### Content decision
+
+- Preserve `/blog/fractional-cto-dubai-uae-guide.html` as the regional canonical and keep the review-only acceptance card frozen.
+- Preserve Q11 as a future `decision → risk → runway → owner → next action` board memo, but do not count this monitor pass as an evidence attempt or change queue priority.
+- The recovered and newly found pages add attributable examples, not a distinct buyer, offer, proof base, or public information gain beyond the current canonical, frozen acceptance card, or future Q11 memo shape.
+- Do not create a city, AI-startup, readiness, first-period, board-reporting, contract, directory, handover, transition, exit, or annual route from this pass.
+- This pass changes reports only. No article, index, registry, sitemap, title, metadata, schema, CTA, offer, price, credential, compliance interpretation, public source interpretation, dependency, workflow, or runtime byte changes.
+
+### Validation and handoff
+
+- Report-only PR [#165](https://github.com/sauravexodus/sauravexodus.github.io/pull/165) was opened draft-first; its body will record the immutable final head after this PR-number bookkeeping commit.
+- Deterministic benchmark rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-16` reproduced the current scorecard without changing it: Behind 4, Blocked 5, Stretch 5, Watch 1; AI mention/citation remain `n/a` because no determinate AI-answer row exists and all newest 40 rows are non-AI-answer or indeterminate.
+- Local gates passed: exact six-file allowlist; `git diff --check`; 20 complete Markdown tables covering 3,762 data rows; five same-date AI rows with five exact query URLs each; one authoritative same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; and four-route local HTTP smoke. Added-line secret, unsafe-markup, conflict-marker, and truncation scans remain required on the final staged candidate.
+- Next bounded fractional-CTO source/search refresh: **2026-11-23**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
+
+---
+
 ## 2026-11-13 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
 - **Status:** `REPORT_ONLY_PRIMARY_MERGED_LIVE`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
