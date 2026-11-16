@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-16 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
 
-- **Status:** `REPORT_ONLY_PR_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_DRAFT_PR_165`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — five prompt ladders were indeterminate; the current packet adds source-lifecycle changes and attributable examples but no distinct new buyer job or public information gain.
 
@@ -71,7 +71,7 @@ For each tracked keyword, run web searches and record:
 
 ### Validation and handoff
 
-- Report-only PR: pending draft-first handoff; the PR body will record the immutable final head after the PR-number bookkeeping commit.
+- Report-only PR [#165](https://github.com/sauravexodus/sauravexodus.github.io/pull/165) was opened draft-first; its body will record the immutable final head after this PR-number bookkeeping commit.
 - Deterministic benchmark rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-16` reproduced the current scorecard without changing it: Behind 4, Blocked 5, Stretch 5, Watch 1; AI mention/citation remain `n/a` because no determinate AI-answer row exists and all newest 40 rows are non-AI-answer or indeterminate.
 - Local gates passed: exact six-file allowlist; `git diff --check`; 20 complete Markdown tables covering 3,762 data rows; five same-date AI rows with five exact query URLs each; one authoritative same-date raw collector row; 10 scorer tests; JSON/XML parsing; 11 HTML parses; and four-route local HTTP smoke. Added-line secret, unsafe-markup, conflict-marker, and truncation scans remain required on the final staged candidate.
 - Next bounded fractional-CTO source/search refresh: **2026-11-23**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
