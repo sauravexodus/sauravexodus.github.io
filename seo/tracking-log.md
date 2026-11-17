@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-17 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
-- **Status:** `REPORT_ONLY_DRAFT_PR_167`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — six prompt ladders were indeterminate; current direct sources maintain the existing-route buyer-control brief but add no distinct new buyer job or public information gain.
 
@@ -37,6 +37,7 @@ For each tracked keyword, run web searches and record:
 - PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its five public files remain unchanged against current `master`, and cache-busted production fetches returned HTTP 200 with the article, blog card, registry, and sitemap markers live.
 - `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, and Q10 was not opened.
 - Release-record PR #166 was squash-merged as `ebfc44276975932e3ea2a2d7490e328d52c2ebfe`; Pages run `43848928635` succeeded. The latest collector commit `cd0865624fe525ba3fdef8a624d600deb9a9e316` has successful Pages run `44041329164`.
+- Report-only PR [#167](https://github.com/sauravexodus/sauravexodus.github.io/pull/167) final head `de1224438c9e2e228fb5196e76ccb11942c3fabc` was squash-merged as `7f91dba92eed57a7b85403d9cd709750ecf744e3`; matching Pages run `44065079389` succeeded. Cache-busted rendered AI, competitor, industry, recurring-action, trend-opportunity, and tracking markers all returned HTTP 200.
 
 ### Authoritative current metrics
 
@@ -69,9 +70,9 @@ For each tracked keyword, run web searches and record:
 
 ### Validation and handoff
 
-- Draft-first report-only PR [#167](https://github.com/sauravexodus/sauravexodus.github.io/pull/167) records the assigned PR number; its body will record the immutable final head, checks, evidence limits, and review boundary after this bookkeeping commit.
-- The deterministic benchmark scorer will be rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-17` without rerunning the collector or retaining a duplicate raw row.
-- Required final-head gates: exact six-file allowlist; `git diff --check`; complete Markdown-table column validation; six same-date AI rows with five exact query URLs each; one authoritative same-date raw collector row; scorer tests; JSON/XML/HTML parsing; local HTTP smoke; and added-line secret, unsafe-markup, conflict-marker, and truncation scans.
+- PR #167's exact six-file allowlist, `git diff --check`, deterministic benchmark scorer, 10/10 tests, 21-table/3,794-row Markdown validation, six same-date AI rows with five exact query URLs each, one authoritative same-date raw collector row, JSON/XML/HTML parsing, fresh direct-source preflight, six-file local HTTP smoke, and added-line secret, unsafe-markup, conflict-marker, and truncation scans passed on final head `de1224438c9e2e228fb5196e76ccb11942c3fabc`.
+- CodeRabbit substantively reviewed the prior head and raised one valid wording issue; the final head qualifies the GSC zero as sampled rows, and the review thread is resolved/outdated. The exact-head follow-up check completed `NEUTRAL` without a new substantive review because the included review allowance was exhausted. LanguageTool coverage was incomplete and is not counted as complete grammar review.
+- This release-record follow-up is pending its assigned PR number and will update only the tracking log and recurring-action row; it does not alter any public article, route, metadata, schema, CTA, offer, or runtime behavior.
 - Next bounded CaaS source/search refresh: **2026-11-24**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
 
 ---
