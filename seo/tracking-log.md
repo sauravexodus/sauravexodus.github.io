@@ -72,7 +72,7 @@ For each tracked keyword, run web searches and record:
 
 - PR #167's exact six-file allowlist, `git diff --check`, deterministic benchmark scorer, 10/10 tests, 21-table/3,794-row Markdown validation, six same-date AI rows with five exact query URLs each, one authoritative same-date raw collector row, JSON/XML/HTML parsing, fresh direct-source preflight, six-file local HTTP smoke, and added-line secret, unsafe-markup, conflict-marker, and truncation scans passed on final head `de1224438c9e2e228fb5196e76ccb11942c3fabc`.
 - CodeRabbit substantively reviewed the prior head and raised one valid wording issue; the final head qualifies the GSC zero as sampled rows, and the review thread is resolved/outdated. The exact-head follow-up check completed `NEUTRAL` without a new substantive review because the included review allowance was exhausted. LanguageTool coverage was incomplete and is not counted as complete grammar review.
-- This release-record follow-up is pending its assigned PR number and will update only the tracking log and recurring-action row; it does not alter any public article, route, metadata, schema, CTA, offer, or runtime behavior.
+- Release-record PR [#168](https://github.com/sauravexodus/sauravexodus.github.io/pull/168) updates only the tracking log and recurring-action row; it does not alter any public article, route, metadata, schema, CTA, offer, or runtime behavior.
 - Next bounded CaaS source/search refresh: **2026-11-24**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
 
 ---
