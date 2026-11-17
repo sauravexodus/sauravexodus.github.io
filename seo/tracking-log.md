@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-17 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
-- **Status:** `REPORT_ONLY_DRAFT_PR_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_DRAFT_PR_167`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — six prompt ladders were indeterminate; current direct sources maintain the existing-route buyer-control brief but add no distinct new buyer job or public information gain.
 
@@ -69,7 +69,7 @@ For each tracked keyword, run web searches and record:
 
 ### Validation and handoff
 
-- A draft-first report-only PR is pending; its body will record the assigned PR number, immutable final head, checks, evidence limits, and review boundary after PR-number bookkeeping.
+- Draft-first report-only PR [#167](https://github.com/sauravexodus/sauravexodus.github.io/pull/167) records the assigned PR number; its body will record the immutable final head, checks, evidence limits, and review boundary after this bookkeeping commit.
 - The deterministic benchmark scorer will be rerun with `SOURAV_VISIBILITY_REPORT_DATE=2026-11-17` without rerunning the collector or retaining a duplicate raw row.
 - Required final-head gates: exact six-file allowlist; `git diff --check`; complete Markdown-table column validation; six same-date AI rows with five exact query URLs each; one authoritative same-date raw collector row; scorer tests; JSON/XML/HTML parsing; local HTTP smoke; and added-line secret, unsafe-markup, conflict-marker, and truncation scans.
 - Next bounded CaaS source/search refresh: **2026-11-24**; Q9 still requires Sourav's explicit interactive release-record reconciliation before any substantive progression.
