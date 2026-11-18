@@ -24,6 +24,51 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-18 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
+
+- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- Read the authenticated 2026-11-18 collector record before selecting work: 0 clicks, 12 impressions, average position 8.92, 0 topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 98, fractional guide 99, CaaS 100, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its public files remain unchanged against current `master`; production serves the article, card, registry, and sitemap markers; and `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`. Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`; Q10 was not selected.
+- Reconciled prior operational state: release-record PR #168 final head `d41b518fb310159150e8a19cddf1d9342a1c31de` was squash-merged as `14deff7def50c469fb6acf680b9a75efc6b5076c`; matching Pages run `44066094998` succeeded. The current master collector commit `2dfac8373c493cd4c503304cc6addf6182172703` also has successful Pages run `44261545584`.
+- Queried all five tracked AI-MVP prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- DuckDuckGo produced four coherent bounded ordinary-search sets without Sourav: AI-MVP development 10 cards/10 domains, RAG-versus-fine-tuning decision matrix 10/10, AI go-live scorecard 10/10, and measured behavior failure 10 cards/9 domains with the same arXiv paper repeated twice. The cost prompt returned 10 generic AI-MVP project-price pages across 10 domains but lost the per-completed-workflow and latency-budget intent, so it remains `Indeterminate / not scored`.
+- Brave returned HTTP 429 verification content for all five prompts. Bing RSS returned broad AI cards for three prompts, 10 Under Armour cards from one domain for the RAG prompt, and nine fines/dictionary cards across eight domains for the measured-behavior prompt. Google ordinary and `site:` requests returned HTTP 200 shells with zero extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected AI-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: all 12 maintained provider, primary, and canonical requests returned HTTP 200 at current titles. Horizon still exposes staged release, human review, rollback, and incident controls. Pexon and OlloSoft still separate prompt, retrieval, behavior, and evaluation failure modes. Gigabit still frames human review and data readiness as cost drivers. Provider prices, delivery windows, savings, sample counts, thresholds, and outcomes remain attributed or excluded.
+- OpenAI lifecycle checkpoint: Evals remains read-only and scheduled to shut down on 2026-11-30. Supervised fine-tuning remains unavailable to new users; eligible existing customers can create jobs until 2027-01-06 unless a base model shuts down earlier, and listed GPT-4.1 fine-tunes shut down 2027-01-14. Current prompt-caching documentation is model-specific: GPT-5.6-and-later options include a 30-minute minimum at a 1.25× write rate and a 12-hour option at 2.5×, while earlier supported models may expose up-to-24-hour retention depending on model and organization policy. Google keeps adaptive rubrics current while `EvalTask` remains a backward-compatibility interface; NIST says AI RMF 1.0 and the Playbook are being updated.
+- Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`. The page already treats OpenAI links as method evidence rather than an adoption recommendation and says the Evals platform is scheduled to shut down on 2026-11-30. No material public claim is invalidated today; no frozen/public byte was changed.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, the Architecture Change Docket, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue state, workflow, or runtime byte changed.
+- Four new AI-report rows record bounded ordinary-search omissions; the workflow-cost row is explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; no duplicate raw metric sample was retained, and ordinary-search rows remain excluded from AI-answer rates.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_DRAFT`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: pending
+- `head_sha`: recorded in the pull-request body after the final candidate push
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: local validation and independent review pending
+- `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-25`
+
+### Actions for the next publish/review cycle
+
+1. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Do not infer approval, rewrite Q9 as published, or select Q10.
+2. Protect `/blog/ai-mvp-development.html` and `/blog/rag-vs-fine-tuning-for-startups.html` as the two AI canonicals. Do not create another annual guide, matrix, evaluation checklist, rollback page, workflow-cost page, prompt-caching page, or RAG/fine-tuning route from this pass.
+3. Treat the four DuckDuckGo results as bounded ordinary-search omissions only and the workflow-cost prompt as indeterminate. Do not infer exact rank, demand, complete coverage, search volume, source independence, Google indexation, or AI-answer citation.
+4. Recheck OpenAI's Evals state on 2026-11-25 and after 2026-11-30. Revalidate all provider/model lifecycle and cache facts immediately before any approved public update, keeping evaluation methods separate from provider-platform availability.
+5. Preserve the review-only go-live scorecard and Architecture Change Docket. Reopen public copy only when a material source change or first-party query evidence adds distinct buyer information gain.
+6. Keep provider prices, delivery windows, sample sizes, quality thresholds, cache economics, latency budgets, and outcomes attributed and workload-specific.
+7. Monitor GSC for `AI MVP development`, `RAG vs fine-tuning`, `AI evaluation`, `go-live scorecard`, `gold context`, `cost per completed workflow`, `latency budget`, and `rollback`. Current authenticated data still has 0 topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist; current mobile performance is 98–100 across the four tracked routes, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-17 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
 - **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
