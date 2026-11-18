@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-18 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
 
-- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - Read the authenticated 2026-11-18 collector record before selecting work: 0 clicks, 12 impressions, average position 8.92, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 98, fractional guide 99, CaaS 100, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
 - Reconciliation found no open pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its public files remain unchanged against current `master`; production serves the article, card, registry, and sitemap markers; and `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`. Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`; Q10 was not selected.
@@ -40,18 +40,20 @@ For each tracked keyword, run web searches and record:
 - Current source text continues to support the method and lifecycle caveat in `/blog/rag-vs-fine-tuning-for-startups.html`. The page already treats OpenAI links as method evidence rather than an adoption recommendation and says the Evals platform is scheduled to shut down on 2026-11-30. No material public claim is invalidated today; no frozen/public byte was changed.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/ai-mvp-development.html`, `/blog/rag-vs-fine-tuning-for-startups.html`, the Architecture Change Docket, and the review-only go-live scorecard as the consolidation boundary. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, platform-availability promise, price, legal claim, offer claim, queue state, workflow, or runtime byte changed.
 - Four new AI-report rows record bounded ordinary-search omissions; the workflow-cost row is explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; no duplicate raw metric sample was retained, and ordinary-search rows remain excluded from AI-answer rates.
+- Report-only PR [#169](https://github.com/sauravexodus/sauravexodus.github.io/pull/169) final head `6f822a7f1a7161cf0dbd88b75a6c73b5457cb22f` was squash-merged as `03c96c6a57d4269a790b5a975ec93479bdc8e0f1`; matching Pages run `44286073576` succeeded. Cache-busted rendered AI, competitor, industry, recurring-action, trend-opportunity, and tracking markers all returned HTTP 200.
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/169
-- `head_sha`: recorded in the pull-request body after the final candidate push
+- `head_sha`: `6f822a7f1a7161cf0dbd88b75a6c73b5457cb22f`
+- `merge_sha`: `03c96c6a57d4269a790b5a975ec93479bdc8e0f1`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local six-file allowlist, deterministic scorer, 10 tests, 21-table/3,832-row Markdown validation, 135-row JSONL validation, direct-source preflight, secret/unsafe-markup scan, JSON/XML/HTML parsing, `git diff --check`, and six-file local HTTP smoke passed; GitHub checks and independent review pending
+- `checks`: exact six-file allowlist, deterministic scorer, 10 tests, 21-table/3,832-row Markdown validation, 135-row JSONL validation, direct-source preflight, secret/unsafe-markup scan, JSON/XML/HTML parsing, `git diff --check`, and six-file local HTTP smoke passed. CodeRabbit substantively reviewed head `ad780e4adb4a407e31517e9be2a63a1bf44c538c`, identified one valid sampled-query qualifier, and the fix was applied on final head `6f822a7f1a7161cf0dbd88b75a6c73b5457cb22f`; the thread is resolved and outdated. The exact-head follow-up check completed `NEUTRAL` because the review limit was reached, so it was not a substantive exact-head review. Pages run `44286073576` succeeded and six cache-busted rendered markers returned HTTP 200.
 - `cadence_state`: open; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-25`
