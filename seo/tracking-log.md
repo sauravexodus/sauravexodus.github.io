@@ -38,7 +38,7 @@ For each tracked keyword, run web searches and record:
 - Discovery/lifecycle preflight rejected four current-looking search-discovered routes: Eagle Rock returned 404, CGV Law failed DNS resolution, CFO Consultants redirected to a 404 migration shell, and Arc Advisory failed hostname-certificate validation. A current-looking search card does not establish source identity, lifecycle, secure reachability, substantive content, or exact claim support.
 - Framework checkpoint: the maintained NIST AI RMF and Measure, NIST SSDF 1.1, and SLSA v1.2 pages remain directly reachable. They are control vocabularies and baselines, not certifications, universal diligence thresholds, investment verdicts, or proof that a target is secure.
 - Decision: `REPEAT_CONFIRMATION`. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Today's evidence does not justify a separate annual checklist, evidence-pack, remediation-register, sample-report, investment-memo, or framework route. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, framework claim, price, credential, offer, queue status, workflow, or runtime byte changed.
-- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; no duplicate raw metric sample will be retained.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; the active AI-answer window remains blocked with no determinate AI-answer rows and 40 non-AI-answer/indeterminate rows excluded from the newest 40 rows. No duplicate raw metric sample was retained.
 
 ### Structured run state
 
@@ -47,10 +47,10 @@ For each tracked keyword, run web searches and record:
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/171`
 - `head_sha`: recorded in PR metadata after final candidate validation; omitted here to avoid a stale branch self-reference
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local gates pending; frozen-head independent review and GitHub check results will be recorded in PR metadata
+- `checks`: local gates passed; frozen-head independent review and GitHub check results are recorded in PR #171 metadata
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-26`
