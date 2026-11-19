@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-19 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
-- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - Read the authenticated 2026-11-19 collector record before selecting work: 0 clicks, 11 impressions, average position 9.82, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 98, fractional guide 94, CaaS 99, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
 - Reconciliation found no open pull request and no duplicate editorial candidate before this report lane was prepared. Every remote `editorial/*` branch maps to one merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
@@ -42,15 +42,16 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/171`
-- `head_sha`: recorded in PR metadata after final candidate validation; omitted here to avoid a stale branch self-reference
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local gates passed; frozen-head independent review and GitHub check results are recorded in PR #171 metadata
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/171`; release record pending
+- `head_sha`: `808d2cc9cbf9f6295cf20bea770f40996ecfb158`
+- `merge_sha`: `611e428ad5b077430c19e761cc3913a299d02a19`
+- `preview`: `n/a` — report-only change; matching Pages run `44505008751` succeeded and all six cache-busted rendered report markers are live
+- `checks`: exact six-file allowlist, deterministic scorer, 10 tests, 21 Markdown tables/3,871 rows, 136 JSONL records with one 2026-11-19 row, `git diff --check`, added-line secret/unsafe-markup scans, and local HTTP marker smoke passed; CodeRabbit reviewed frozen head `808d2cc9cbf9f6295cf20bea770f40996ecfb158` with `SUCCESS`, minimal risk, and no actionable comments
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-26`
