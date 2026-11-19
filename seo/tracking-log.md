@@ -24,6 +24,50 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-19 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
+
+- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- Read the authenticated 2026-11-19 collector record before selecting work: 0 clicks, 11 impressions, average position 9.82, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 98, fractional guide 94, CaaS 99, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate before this report lane was prepared. Every remote `editorial/*` branch maps to one merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled the prior report-only release record: PR #170 final head `f1241be0dc4fa4f5b6d2bbb1b519a95366510804` was squash-merged as `ae38dcf5f6338c44df8370c2be28e43b66f0a8f4`; Pages run `44286981106` succeeded. Today's collector commit `c7266bd2b2b378e13671c72a7dd39f376ef043b6` also has successful Pages run `44482233364`.
+- Queried all five tracked technical-DD prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout. Bing RSS lost intent into dictionary/definition cards for four prompts (10 cards across 8 distinct domains each) and unrelated Snapchat/SNAP cards for the codebase prompt (9 cards across 6 domains). Google ordinary requests returned HTTP 200 shells with no extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected technical-DD-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Direct-source refresh: 13 of 14 maintained commercial, primary, and canonical requests returned HTTP 200 at expected titles after redirects. `fractionalctoexperts.com` still fails certificate validation because its TLS certificate is expired, so it remains outside citation-ready evidence. The safely reachable packet continues to connect source-owned evidence to findings, business or thesis impact, uncertainty or limitations, remediation ownership, closure evidence, and decision-ready reporting. Provider rates, timelines, rankings, outcomes, materiality thresholds, and transaction mechanics remain self-authored or engagement-specific.
+- Discovery/lifecycle preflight rejected four current-looking search-discovered routes: Eagle Rock returned 404, CGV Law failed DNS resolution, CFO Consultants redirected to a 404 migration shell, and Arc Advisory failed hostname-certificate validation. A current-looking search card does not establish source identity, lifecycle, secure reachability, substantive content, or exact claim support.
+- Framework checkpoint: the maintained NIST AI RMF and Measure, NIST SSDF 1.1, and SLSA v1.2 pages remain directly reachable. They are control vocabularies and baselines, not certifications, universal diligence thresholds, investment verdicts, or proof that a target is secure.
+- Decision: `REPEAT_CONFIRMATION`. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Today's evidence does not justify a separate annual checklist, evidence-pack, remediation-register, sample-report, investment-memo, or framework route. No article, metadata, registry, sitemap, CTA, dependency, source interpretation, framework claim, price, credential, offer, queue status, workflow, or runtime byte changed.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer will be rerun without rerunning the collector; no duplicate raw metric sample will be retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_OPEN`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: pending
+- `head_sha`: recorded in PR metadata after final candidate validation; omitted here to avoid a stale branch self-reference
+- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
+- `checks`: local gates pending; frozen-head independent review and GitHub check results will be recorded in PR metadata
+- `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-26`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Keep `/blog/technical-due-diligence-checklist.html` and `/blog/how-vcs-evaluate-a-codebase.html` as the two technical-DD canonicals. Reject annual checklist, evidence-pack, remediation-register, report-example, investment-memo, framework, and AI-DD variants from this pass.
+4. Treat all five prompt ladders and all five Google site checks as indeterminate/unavailable. Do not infer exact rank, demand, complete coverage, search volume, source independence, search absence, Google indexation, or AI-answer citation.
+5. Recheck every source's final domain, title, topic match, lifecycle, transport validity, substantive content, relevance, and claim support immediately before any approved public edit. Do not cite Fractional CTO Experts, Eagle Rock CFO, CGV Law, CFO Consultants, or Arc Advisory in their current failed states.
+6. Keep provider findings, rates, timelines, quantified outcomes, deal mechanics, materiality thresholds, and illustrative sample reports attributed and engagement-specific. Keep NIST and SLSA material baseline-only.
+7. Monitor GSC for `technical due diligence`, `investor checklist`, `codebase evidence`, `remediation`, `closure evidence`, `investment thesis`, and `decision memo`. Current authenticated data still has 0 sampled topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) and the fractional guide's current mobile performance (94) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-18 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
 
 - **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
