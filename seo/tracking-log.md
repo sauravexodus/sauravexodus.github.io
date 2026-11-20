@@ -26,7 +26,7 @@ For each tracked keyword, run web searches and record:
 
 ## 2026-11-20 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
-- **Status:** `REPORT_ONLY_PR_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_PR_OPEN`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - Read the authenticated 2026-11-20 collector record before selecting work: 0 clicks, 9 impressions, average position 9.89, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 100, CaaS 100, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
 - Reconciliation found no open pull request and no duplicate editorial candidate before this report lane. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
@@ -42,12 +42,12 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_PENDING`
+- `status`: `REPORT_ONLY_PR_OPEN`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/173
 - `head_sha`: pending; the final immutable head will be recorded in the PR body after the PR-number commit
 - `preview`: `n/a` — report-only change; no article/index/registry/sitemap bytes changed
 - `checks`: pending final-head validation and independent review
