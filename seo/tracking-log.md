@@ -47,7 +47,7 @@ For each tracked keyword, run web searches and record:
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/173
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/173; release record https://github.com/sauravexodus/sauravexodus.github.io/pull/174
 - `head_sha`: `6c5960804d586de99b23a8732d3fbf0b2e563dbe`
 - `merge_sha`: `49b1e91f2e87e681351bd39c553a39f975859ee2`
 - `preview`: `n/a` — report-only change; matching Pages run `44718794393` succeeded and all six cache-busted rendered report markers are live
