@@ -24,6 +24,50 @@ For each tracked keyword, run web searches and record:
 
 ---
 
+## 2026-11-20 — Weekday visibility loop (Friday non-technical founder/dev agency)
+
+- **Status:** `REPORT_ONLY_PR_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- Read the authenticated 2026-11-20 collector record before selecting work: 0 clicks, 9 impressions, average position 9.89, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 100, CaaS 100, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate before this report lane. Every remote `editorial/*` branch maps to a merged editorial PR. Q9's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live. `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`, so Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled prior operational state: release-record PR #172 final head `2ef019906f6193c083bc75a699b8d0948eb6a1b6` was squash-merged as `5aed0f914c938635a6457f0ba75b2d3e9898f856`; matching Pages run `44506027283` succeeded. The current collector commit `7717875eb622d1b4e703524bb2ab813b366779ea` also has successful Pages run `44697473676`.
+- Queried all six tracked founder/dev-agency prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- DuckDuckGo produced six coherent bounded ordinary-search sets without Sourav: five contained 10 cards across 10 domains, while agency-versus-in-house contained 10 cards across 9 domains because The Ninja Studio appeared twice. Brave returned HTTP 429 verification content throughout. Bing RSS lost intent into Chrome, Quipper, generic software, Microsoft Copilot, or broad AI cards. Google ordinary and `site:` requests exposed no extractable external cards or usable result counts.
+- All six rows are bounded ordinary-search omissions and are excluded from AI-answer mention/citation rates. They do not establish exact rank, verified demand, completeness, search volume, source independence, Google indexation, or AI citation.
+- All 19 maintained founder, agency, team-model, quote, handover, primary-control, and Sourav canonical requests returned HTTP 200 after redirects across 17 final hosts. The packet still supports the existing split between a broad founder guide and an applied quote-to-control/handover article; provider prices, timelines, outcomes, credentials, payment terms, contract language, and legal interpretations remain source- or engagement-specific.
+- Q10 monitor-only evidence improved: GitHub's current AI-code review tutorial directly covers project context, tests, vulnerability/security review, standards, and human-review workflow; CISA's current AI/SI SBOM minimum-elements page frames inventory as supply-chain transparency for risk-informed decisions. These are future primary-source inputs, not proof that generated code is secure, a universal merge threshold, or authorization to select Q10.
+- Discovery/lifecycle preflight rejected ten fresh-looking routes: nine returned HTTP 404 and one failed DNS resolution. None entered citation-ready evidence.
+- Decision: `REPEAT_CONFIRMATION`. Preserve `/blog/non-technical-founder-building-an-app.html` as the broad team/governance/verification guide and `/blog/how-to-evaluate-a-dev-shop-quote.html` as the applied quote, milestone, handover, and clean-room acceptance ledger. Do not create another annual checklist, proposal guide, team-comparison page, AI-code page, SBOM/provenance page, handover page, or final-payment page from this pass.
+- This pass changes reports only. No article, index, registry, sitemap, title, metadata, schema, CTA, offer, price, payment/contract term, credential, public source interpretation, dependency, workflow, or runtime byte changes.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_PR_PENDING`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: pending
+- `head_sha`: pending; the final immutable head will be recorded in the PR body after the PR-number commit
+- `preview`: `n/a` — report-only change; no article/index/registry/sitemap bytes changed
+- `checks`: pending final-head validation and independent review
+- `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-27`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`.
+3. Preserve the two founder canonicals and their distinct buyer jobs. Six bounded ordinary-search omissions do not justify another founder, agency, quote, AI-code, handover, or final-payment route.
+4. Retain GitHub's AI-code review guidance and CISA's AI/SI SBOM minimum elements as Q10 monitor-only primary sources. They do not count as a bounded queue evidence attempt while the substantive lane is blocked.
+5. Treat all Google site-result, indexed-page-count, and expected-route fields as unavailable rather than negative. Route health proves availability, not Google indexation.
+6. Recheck every source's final domain, title, topic match, lifecycle, transport validity, substantive content, relevance, and claim support immediately before any approved public edit.
+7. Monitor GSC for non-technical-founder, agency proposal, agency-versus-in-house, fractional-CTO-versus-agency, AI-code review, SBOM/provenance, and handover acceptance terms. Current authenticated data still has 0 sampled topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-19 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
 - **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
