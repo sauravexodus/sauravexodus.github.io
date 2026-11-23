@@ -48,7 +48,7 @@ For each tracked keyword, run web searches and record:
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/175
-- `head_sha`: recorded in the final PR body after the frozen report candidate is pushed
+- `head_sha`: recorded in PR #175's final body; a follow-up release-record PR must persist the reviewed final head and merge/deployment facts before the next cron reads this log
 - `preview`: `n/a` — report-only change; production verification pending
 - `checks`: pending final-head validation and independent review
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
@@ -57,14 +57,11 @@ For each tracked keyword, run web searches and record:
 
 ### Actions for the next publish/review cycle
 
-1. Sourav must interactively reconcile Q9 against PR #123 exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
-2. Keep Q9 item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`.
-3. Preserve the regional fractional-CTO canonical and frozen acceptance-card scope. Today five prompt ladders are indeterminate and authenticated GSC still has 0 sampled topical non-brand queries.
-4. Keep Q11 monitor-only. Use NIST CSF and IR 8286C only as neutral governance boundaries for a future decision-risk-runway memo; do not convert them into a fractional-CTO KPI template or count today as a bounded Q11 attempt.
-5. Restore Fractional CTO Experts only as attributed provider evidence after its TLS recovery; exclude Hub71 while verification blocks direct content. Recheck all source identity, final URL, title, transport, lifecycle, substantive content, relevance, and exact claim support before any approved public edit.
-6. Treat the CTO Input, Muzammil, and Djinni pages as attributed discovery inputs. Do not infer market demand, independent source agreement, credentials, outcomes, prices, or Sourav service claims.
-7. Monitor GSC for fractional-CTO, AI-startup, first-period, board-reporting, decision-rights, handover, transition, and runway terms. Current sampled rows remain name-navigation variants only.
-8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) and CaaS mobile performance (98) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, keep Q9 `WAITING_HUMAN`, keep the substantive lane `BLOCKED_UNSAFE_STATE`, and do not select Q10.
+2. Preserve the regional fractional-CTO canonical and frozen acceptance-card scope. Treat today's five prompt ladders as indeterminate and monitor GSC for fractional-CTO, AI-startup, first-period, board-reporting, decision-rights, handover, transition, and runway terms; current sampled rows remain name-navigation variants only.
+3. Keep Q11 monitor-only. Use NIST CSF and IR 8286C only as neutral governance boundaries for a future decision-risk-runway memo; do not convert them into a fractional-CTO KPI template or count today as a bounded Q11 attempt.
+4. Restore Fractional CTO Experts only as attributed provider evidence, exclude Hub71 while verification blocks direct content, and treat CTO Input, Muzammil, and Djinni as attributed discovery inputs. Recheck identity, final URL, title, transport, lifecycle, substantive content, relevance, and exact claim support before any approved edit; do not infer demand, credentials, outcomes, prices, or Sourav service claims.
+5. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) and CaaS mobile performance (98) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
 
 ---
 
