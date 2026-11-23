@@ -47,7 +47,7 @@ For each tracked keyword, run web searches and record:
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/175
 - `head_sha`: recorded in the final PR body after the frozen report candidate is pushed
 - `preview`: `n/a` — report-only change; production verification pending
 - `checks`: pending final-head validation and independent review
