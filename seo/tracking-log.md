@@ -23,6 +23,47 @@ For each tracked keyword, run web searches and record:
 - (plus the primary keyword of every published post in blog/posts.json)
 
 ---
+## 2026-11-23 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
+
+- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- Read the authenticated 2026-11-23 collector record before selecting work: 1 click, 8 impressions, 12.5% CTR, average position 5.63, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 99, blog 99, fractional guide 100, CaaS 98, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Reconciliation found no open pull request and no duplicate editorial candidate. Every remote `editorial/*` branch maps to a merged editorial PR. Q9 frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; the five public files are unchanged against current `master`; cache-busted article, blog-card, registry, and sitemap requests returned HTTP 200 with exact markers; and `seo/strategy.md` still records `DRAFT PR #123 — WAITING HUMAN APPROVAL`. Q9 remains `WAITING_HUMAN`, the substantive lane remains `BLOCKED_UNSAFE_STATE`, and Q10 was not selected.
+- Reconciled prior operational state: release-record PR #174 final head `8ee7dccdd6c54ad363dbb6db5c36e9ceafe861cf` was squash-merged as `d14dafe3748d2b4e1febbb31606ffc928aae79ec`; matching Pages run `44719593997` succeeded. Today collector commit `d82cdd52b3d1a80a465a34bc4b8df69c043f4906` also has successful Pages run `45133590529`.
+- Queried all five tracked fractional-CTO prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All five prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout. Bing RSS lost intent into gas-dehydration cards (10 cards/8 domains), Instagram pages (10/7 hostnames in one ecosystem), AnyDesk/scam-support pages (10/3), ChatGPT/resume pages (10/3), or ChatGPT/general-AI pages (10/7). Google ordinary and site requests exposed no extractable external cards or usable result counts.
+- Separate Google `site:souravchandra.com` checks for all five prompts exposed zero extractable external links and no usable result-count field. Site result, indexed-page count, and expected fractional-guide presence are unavailable rather than negative. Route HTTP and metadata health proves availability, not Google indexation.
+- Direct-source refresh: 21 of 22 maintained fractional-CTO, official, ecosystem, and canonical requests returned HTTP 200 at current titles. Both Fractional CTO Experts pages recovered with valid TLS and exact-topic content. Hub71 now returns a Cloudflare HTTP 403 verification page and is outside citation-ready evidence. The reachable packet still repeats decision ownership, readiness, roadmaps, risks, architecture, first-period deliverables, reporting, hiring/vendor actions, and handover/transition already represented in the regional guide or frozen acceptance card.
+- Q11 monitor-only packet improved: all eight maintained board/first-period sources remain reachable, and current NIST CSF FAQ plus NIST IR 8286C Rev. 1 pages add neutral primary-source support for leadership responsibility, enterprise-risk integration, prioritization, and governance oversight. They do not define a fractional-CTO KPI list, certify an engagement, or count as a bounded Q11 evidence attempt while Q9 blocks the lane and Q10 remains next in rotation.
+- Lifecycle preflight changed selectively. Nine historical routes remain substantive exact-topic HTTP-200 destinations; MyCTO is still unrelated, CTOHub remains a 114-byte shell, four routes are 404 including the expired RUSH vacancy, StartupCTO is unresolved, the old CTO Centre path returns 525, and Qalab still redirects to invalid host `blog`. Two current practitioner/provider pages and one Djinni vacancy passed direct preflight, but add attributed examples rather than independent demand proof.
+- Decision: `REPEAT_CONFIRMATION`. Preserve `/blog/fractional-cto-dubai-uae-guide.html` and the frozen acceptance-card boundary. Do not create city, AI-startup, readiness, first-30-days, board-reporting, contract, handover, transition, annual, hiring-checklist, or vacancy-derived routes from this pass.
+- This pass changes reports only. No article, index, registry, sitemap, title, metadata, schema, CTA, offer, price, compliance interpretation, credential, public source interpretation, dependency, workflow, or runtime byte changes.
+- Five new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer is rerun without rerunning the collector; no duplicate raw metric sample is retained.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_DRAFT`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `REPEAT_CONFIRMATION`
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/175
+- `head_sha`: recorded in PR #175's final body; a follow-up release-record PR must persist the reviewed final head and merge/deployment facts before the next cron reads this log
+- `preview`: `n/a` — report-only change; production verification pending
+- `checks`: pending final-head validation and independent review
+- `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9 exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-11-30`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, keep Q9 `WAITING_HUMAN`, keep the substantive lane `BLOCKED_UNSAFE_STATE`, and do not select Q10.
+2. Preserve the regional fractional-CTO canonical and frozen acceptance-card scope. Treat today's five prompt ladders as indeterminate and monitor GSC for fractional-CTO, AI-startup, first-period, board-reporting, decision-rights, handover, transition, and runway terms; current sampled rows remain name-navigation variants only.
+3. Keep Q11 monitor-only. Use NIST CSF and IR 8286C only as neutral governance boundaries for a future decision-risk-runway memo; do not convert them into a fractional-CTO KPI template or count today as a bounded Q11 attempt.
+4. Restore Fractional CTO Experts only as attributed provider evidence, exclude Hub71 while verification blocks direct content, and treat CTO Input, Muzammil, and Djinni as attributed discovery inputs. Recheck identity, final URL, title, transport, lifecycle, substantive content, relevance, and exact claim support before any approved edit; do not infer demand, credentials, outcomes, prices, or Sourav service claims.
+5. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) and CaaS mobile performance (98) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
 
 ## 2026-11-20 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
