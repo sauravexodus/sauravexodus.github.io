@@ -42,15 +42,16 @@ For each tracked keyword, run web searches and record:
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_DRAFT`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `REPEAT_CONFIRMATION`
-- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/175
-- `head_sha`: recorded in PR #175's final body; a follow-up release-record PR must persist the reviewed final head and merge/deployment facts before the next cron reads this log
-- `preview`: `n/a` — report-only change; production verification pending
-- `checks`: pending final-head validation and independent review
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/175; release record pending
+- `head_sha`: `62080967f7af96f5772387cea757e42f3da32e80`
+- `merge_sha`: `f4d419588391d5df4b83279dd0e259e1e517c16a`
+- `preview`: `n/a` — report-only change; matching Pages run `45155966755` succeeded and all six cache-busted rendered report markers are live
+- `checks`: exact six-file allowlist; deterministic scorer; 10 tests; 21-table/4,037-row Markdown validation; one current raw row; JSON/XML parsing; local HTTP smoke; added-line security/unsafe-markup scans; CodeRabbit substantive review with both final-head fixes confirmed and both threads resolved; clean merge state; Pages run `45155966755`; six cache-busted production markers
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9 exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-11-30`
