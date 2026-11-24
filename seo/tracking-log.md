@@ -25,7 +25,7 @@ For each tracked keyword, run web searches and record:
 ---
 ## 2026-11-24 — Weekday visibility loop (Tuesday CTO as a service Dubai)
 
-- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_DRAFT_PR_177`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — six prompt ladders were indeterminate; current direct sources maintain the existing-route buyer-control brief but add no distinct new buyer job or public information gain.
 
@@ -70,7 +70,7 @@ For each tracked keyword, run web searches and record:
 - Validate the exact six-file allowlist, all Markdown table widths and historical rows, current raw-row uniqueness and provenance, JSON/XML/HTML parsing, added-line secret/unsafe-markup scans, `git diff --check`, repository tests, and local HTTP smoke checks before opening the report-only PR.
 - Request independent review on the exact report head. A rate-limited or skipped bot status is not substantive approval; any actionable finding must be fixed before the low-risk report-only merge policy can apply.
 
-- `next_action`: open one report-only PR after local validation; never merge, modify, or recreate the Q9 editorial candidate from this cron.
+- `next_action`: complete exact-head review for report-only PR #177; never merge, modify, or recreate the Q9 editorial candidate from this cron.
 - `next_attempt_at`: `2026-12-01`
 
 ---
