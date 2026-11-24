@@ -23,6 +23,57 @@ For each tracked keyword, run web searches and record:
 - (plus the primary keyword of every published post in blog/posts.json)
 
 ---
+## 2026-11-24 — Weekday visibility loop (Tuesday CTO as a service Dubai)
+
+- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- **Reason code:** `REPEAT_CONFIRMATION_REPORT_ONLY` — six prompt ladders were indeterminate; current direct sources maintain the existing-route buyer-control brief but add no distinct new buyer job or public information gain.
+
+### Reconciliation
+
+- Fetched `origin/master` through the control checkout and refreshed the clean dedicated cron worktree before research; the control checkout was not switched, reset, stashed, discarded, or written.
+- No open pull request existed before this report lane, and all four remote `editorial/*` branches map to merged editorial PRs rather than duplicate candidates.
+- PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its five public files remain unchanged against current `master`, and cache-busted production fetches returned HTTP 200 with the article, blog card, registry, and sitemap markers live.
+- `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, and Q10 was not opened.
+- Release-record PR #176 was squash-merged as `acc48ca58a87270b34f0aed9c01372de70de099a`; Pages run `45156651319` succeeded. The latest collector commit `cb05d1386dcaae30c250615533e49329d4287532` has successful Pages run `45350637475`.
+
+### Authoritative current metrics
+
+- Retained the single 2026-11-24 collector row rather than rerunning the collector: authenticated Google Search Console window `2026-11-17`→`2026-11-23`, 8 impressions, 1 click, 12.5% CTR, average position 5.63, 0 sampled topical non-brand queries, and every sampled query row a Sourav/Saurav-name variant.
+- All 11 tracked routes and metadata checks pass, both SEO assets are healthy, mobile performance is 99 for `/`, 99 for `/blog/`, 99 for the fractional-CTO guide, and 100 for CTO as a Service; minimum tracked accessibility is 83 and tracked SEO is 100.
+- Route health remains availability evidence, not Google indexation evidence.
+
+### Bounded search evidence
+
+- Tested six exact CaaS prompts across DuckDuckGo HTML, Brave, Bing RSS, Google ordinary search, and separate Google `site:souravchandra.com` requests; the AI report records all five exact query URLs and an explicit scoring state for every prompt.
+- DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout.
+- Bing RSS lost intent into Planner 5D, Microsoft Office/help, Pexels, WhatsApp, or YouTube/streaming cards. The six sets contained 10 cards each across 4, 3, 4, 1, 2, and 2 hostnames respectively; repeated hostnames inside publisher ecosystems do not establish source independence.
+- All 12 Google ordinary and `site:` requests returned HTTP 200 shells with zero extractable external links and no usable result-count field, so result presence, indexed-page count, and expected-route presence are unavailable rather than negative.
+- All six rows are `Indeterminate / not scored` and excluded from bounded search-negative and AI-answer mention/citation rates. No rank, demand, completeness, source-independence, indexation, or citation conclusion was made.
+
+### Source and claim-boundary refresh
+
+- Twenty-three of 24 maintained CaaS, fractional-CTO, comparison, and canonical requests returned HTTP 200 at current titles. Fractional CTO Experts recovered with exact-topic HTTP-200 content and valid transport; ExecViva now returns HTTP 403 browser verification and remains outside citation-ready evidence.
+- Six of the seven operating-packet pages remain directly reachable. Purrweb and ANSI expose deliverables, acceptance, escalation, reporting, decision, SLA, budget, or KPI fields; Trivanta, Fusion, and Uvik repeat deliverable, response, reporting, budget, decision, handover, or transition fields. Sourav's canonical still covers pricing and engagement-model choice without one consolidated quote-normalization and acceptance matrix.
+- Nine of 17 lifecycle/current-discovery requests returned HTTP 200. TechGlock UAE, NomadX UAE, Vistoplex's service page, YaaCode's service page, Flojics, and Ali Fouad were exact-topic destinations. Two generic-home redirects and Bayden's generic enterprise page remain unsuitable for exact-topic citation; five routes returned 404 and three hosts failed resolution.
+- Provider prices, durations, SLAs, scorecards, KPI/ROI claims, quantified outcomes, credentials, compliance interpretations, affiliations, and service claims remain source-specific and were not converted into Sourav claims.
+
+### Decision
+
+- The existing CaaS route retains a source-attributed `VALIDATED_RESEARCH_BRIEF`: `decision class → named owner → included availability → recurring deliverable/report → response/escalation → acceptance evidence → budget variance → transition trigger/handover`.
+- This is `REPEAT_CONFIRMATION`, not a draft, rewrite, queue attempt, route proposal, or permission to edit the public canonical. Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`; Q10 was not selected.
+- No article HTML, metadata, registry, sitemap route, CTA, offer, price, SLA, credential, compliance interpretation, source interpretation, queue transition, dependency, workflow, or runtime byte changed.
+
+### Validation plan
+
+- Run the deterministic benchmark scorer after adding the six indeterminate rows and assert that the current date is replaced rather than duplicated, with the newest 40 AI rows still yielding no determinate AI-answer denominator.
+- Validate the exact six-file allowlist, all Markdown table widths and historical rows, current raw-row uniqueness and provenance, JSON/XML/HTML parsing, added-line secret/unsafe-markup scans, `git diff --check`, repository tests, and local HTTP smoke checks before opening the report-only PR.
+- Request independent review on the exact report head. A rate-limited or skipped bot status is not substantive approval; any actionable finding must be fixed before the low-risk report-only merge policy can apply.
+
+- `next_action`: open one report-only PR after local validation; never merge, modify, or recreate the Q9 editorial candidate from this cron.
+- `next_attempt_at`: `2026-12-01`
+
+---
 ## 2026-11-23 — Weekday visibility loop (Monday fractional CTO Dubai/UAE)
 
 - **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
