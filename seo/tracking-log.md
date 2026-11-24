@@ -5,12 +5,12 @@ to inform keyword and topic selection. Newest entries at the top.
 
 ## How to add an entry (tracking automation must follow exactly)
 
-For each tracked keyword, run web searches and record:
-- SERP presence: does souravchandra.com appear in results for the keyword? Position if visible.
-- Indexation: search `site:souravchandra.com` and note the number of indexed pages, and whether each blog URL appears.
-- GEO/AI visibility: query the keyword phrased as a question and note whether souravchandra.com or "Sourav Chandra" is cited or mentioned in AI-generated answers or answer-engine style results.
-- Competitors: note 2-3 domains that consistently outrank us per keyword.
-- Actions for next publish run: 2-5 concrete recommendations (e.g., "target longer-tail variant X", "add FAQ schema to post Y", "post Z not indexed — check internal links").
+Use the approved weekday theme rotation in `seo/strategy.md` rather than querying every tracked keyword on every run. For each prompt in the current day's bounded theme set, record:
+- Search-surface presence when an exact-intent result set is usable; otherwise mark the prompt `Indeterminate / not scored` and preserve the exact query URLs.
+- Separate `site:souravchandra.com` indexation evidence: indexed-page count and expected target presence when extractable, or unavailable rather than negative when challenged or non-extractable.
+- GEO/AI visibility only from a genuine AI-answer surface; ordinary search results must remain search-visible evidence and stay outside AI mention/citation rates.
+- Competitors or observed source domains only for usable sets, including card count, distinct-domain count, repeated publishers, and source-independence caveats.
+- Actions for the next eligible publish or maintenance run: 2-5 concrete recommendations, while preserving the one-item editorial WIP and human-approval gates.
 
 ## Tracked keywords
 
