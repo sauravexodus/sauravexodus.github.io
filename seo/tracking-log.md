@@ -74,7 +74,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_LIFECYCLE_UPDATE_REPEAT_CONFIRMATION_REPORT_ONLY`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/178
-- `release_record`: pending
+- `release_record`: https://github.com/sauravexodus/sauravexodus.github.io/pull/179
 - `head_sha`: `4a32af8023e2d086949843771395d8fe1583191b`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
 - `checks`: local validation passed; CodeRabbit substantively reviewed predecessor head, the one actionable wording finding was fixed and resolved on final head, follow-up review was unavailable because the hourly allowance was exhausted, merge state was clean, Pages run `45594036432` succeeded, and all six rendered markers were production-verified
