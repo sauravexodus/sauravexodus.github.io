@@ -25,7 +25,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 ---
 ## 2026-11-25 — Weekday visibility loop (Wednesday AI MVP/RAG/fine-tuning)
 
-- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `SOURCE_LIFECYCLE_UPDATE_REPEAT_CONFIRMATION_REPORT_ONLY` — the search surfaces were indeterminate; OpenAI moved one dated fine-tuning cutoff earlier, but the existing public article does not state the superseded date and its provider-method boundary remains accurate.
 
@@ -36,6 +36,8 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its five public files remain unchanged against current `master`, and cache-busted production fetches returned HTTP 200 with the article, blog card, registry, and sitemap markers live.
 - `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, and Q10 was not opened.
 - Report PR #177 was squash-merged as `97e5afaa4564b0ac48db523aa0d0d3b3b173ff25`; Pages run `45374897545` succeeded. The latest collector commit `e8deec03df7db6c71e8df926cfb8ab17c6816540` has successful Pages run `45570795611`.
+- Report PR #178 final head `4a32af8023e2d086949843771395d8fe1583191b` was squash-merged as `149315ab2fd8bda713c83f0550becc947185d4f7`; matching Pages run `45594036432` succeeded. Cache-busted rendered markers were verified at all six AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs.
+- CodeRabbit substantively reviewed predecessor head `5da3ecd9c953938e7f64e60876002874e5388eed`, rated the report minimal risk, and raised one actionable wording clarification. Final head `4a32af8023e2d086949843771395d8fe1583191b` applies exactly that clarification; the review thread was replied to and resolved. The follow-up CodeRabbit check was neutral because the included hourly allowance was exhausted, so it is not counted as a second substantive approval; there were zero unresolved review threads at merge.
 
 ### Authoritative current metrics
 
@@ -66,15 +68,16 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_DRAFT`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_LIFECYCLE_UPDATE_REPEAT_CONFIRMATION_REPORT_ONLY`
 - `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/178
-- `head_sha`: recorded in the pull-request body after the final candidate push
+- `release_record`: https://github.com/sauravexodus/sauravexodus.github.io/pull/179
+- `head_sha`: `4a32af8023e2d086949843771395d8fe1583191b`
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation passed; independent review and repository checks pending
+- `checks`: local validation passed; CodeRabbit substantively reviewed predecessor head, the one actionable wording finding was fixed and resolved on final head, follow-up review was unavailable because the hourly allowance was exhausted, merge state was clean, Pages run `45594036432` succeeded, and all six rendered markers were production-verified
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-12-02`
