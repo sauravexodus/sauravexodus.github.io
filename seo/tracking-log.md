@@ -71,10 +71,10 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_LIFECYCLE_UPDATE_REPEAT_CONFIRMATION_REPORT_ONLY`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/178
 - `head_sha`: recorded in the pull-request body after the final candidate push
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, or runtime byte
-- `checks`: local validation and independent review pending
+- `checks`: local validation passed; independent review and repository checks pending
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-12-02`
