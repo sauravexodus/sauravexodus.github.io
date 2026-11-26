@@ -25,7 +25,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 ---
 ## 2026-11-26 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
-- **Status:** `REPORT_ONLY_PR_OPEN_REVIEW_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `SOURCE_RECOVERY_REPEAT_CONFIRMATION_REPORT_ONLY` — all search surfaces were indeterminate, Fractional CTO Experts recovered from the prior certificate failure, and current discovery still repeats the existing evidence-to-decision canonicals rather than supporting a distinct new route.
 
@@ -36,6 +36,8 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; cache-busted production fetches returned HTTP 200 with the article, blog card, registry, and sitemap markers live.
 - `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, and Q10 was not opened.
 - Release-record PR #179 was squash-merged as `f3b18420c23f43d899b94999815f8ee577d1651f`. The latest collector commit `120dd2ef616552b4b4bf000c6aa361e28211fd70` has successful Pages run `45777851108`.
+- Report-only PR #180 final head `7618f35281fc9f180e4b1a76b89aa860af6c5f1b` was squash-merged as `d324769805d0101b4e54a0db0650da97f3f66e7f`; matching Pages run `45800500589` succeeded. Cache-busted rendered markers were verified at all six AI, competitor, industry, recurring-action, trend-opportunity, and tracking report URLs.
+- CodeRabbit substantively reviewed exact final head `7618f35281fc9f180e4b1a76b89aa860af6c5f1b`, rated the report minimal risk, completed with `SUCCESS`, and generated no actionable comments.
 
 ### Current collector and visibility evidence
 
@@ -55,15 +57,16 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_OPEN_REVIEW_PENDING`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_RECOVERY_REPEAT_CONFIRMATION_REPORT_ONLY`
-- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/180`
-- `head_sha`: initial report head `ac8e60a34ce4e94df8cd8fc5db0a087c5f44610e`; final reviewed head will be recorded after review/merge
-- `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, dependency, workflow, or runtime byte
-- `checks`: exact six-file report-only allowlist, deterministic scorer (`Behind: 3, Blocked: 5, Stretch: 6, Watch: 1`), 10 unit tests, 21 Markdown tables/4,113 data rows, one authoritative 2026-11-26 raw row, JSON/XML/HTML/JSON-LD/internal-link validation, six-file local HTTP marker smoke, `git diff --check`, and added-line secret/unsafe-markup scans passed; independent review pending
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/180`; release record `https://github.com/sauravexodus/sauravexodus.github.io/pull/181`
+- `head_sha`: `7618f35281fc9f180e4b1a76b89aa860af6c5f1b`
+- `merge_sha`: `d324769805d0101b4e54a0db0650da97f3f66e7f`
+- `preview`: `n/a` — report-only change; matching Pages run `45800500589` succeeded and all six cache-busted rendered report markers are live
+- `checks`: exact six-file report-only allowlist, deterministic scorer (`Behind: 3, Blocked: 5, Stretch: 6, Watch: 1`), 10 unit tests, 21 Markdown tables/4,113 data rows, one authoritative 2026-11-26 raw row, JSON/XML/HTML/JSON-LD/internal-link validation, six-file local HTTP marker smoke, `git diff --check`, and added-line secret/unsafe-markup scans passed; CodeRabbit substantively reviewed exact final head `7618f35281fc9f180e4b1a76b89aa860af6c5f1b` with `SUCCESS`, minimal risk, and no actionable comments; Pages run `45800500589` and all six production markers passed
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-12-03`
