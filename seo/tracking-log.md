@@ -62,7 +62,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_RECOVERY_REPEAT_CONFIRMATION_REPORT_ONLY`
-- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/180`; release record pending
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/180`; release record `https://github.com/sauravexodus/sauravexodus.github.io/pull/181`
 - `head_sha`: `7618f35281fc9f180e4b1a76b89aa860af6c5f1b`
 - `merge_sha`: `d324769805d0101b4e54a0db0650da97f3f66e7f`
 - `preview`: `n/a` — report-only change; matching Pages run `45800500589` succeeded and all six cache-busted rendered report markers are live
