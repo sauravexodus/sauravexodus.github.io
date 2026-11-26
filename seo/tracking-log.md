@@ -25,7 +25,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 ---
 ## 2026-11-26 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
-- **Status:** `REPORT_ONLY_PR_PENDING_REVIEW`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
+- **Status:** `REPORT_ONLY_PR_OPEN_REVIEW_PENDING`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `SOURCE_RECOVERY_REPEAT_CONFIRMATION_REPORT_ONLY` — all search surfaces were indeterminate, Fractional CTO Experts recovered from the prior certificate failure, and current discovery still repeats the existing evidence-to-decision canonicals rather than supporting a distinct new route.
 
@@ -55,13 +55,13 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_PR_PENDING_REVIEW`
+- `status`: `REPORT_ONLY_PR_OPEN_REVIEW_PENDING`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `SOURCE_RECOVERY_REPEAT_CONFIRMATION_REPORT_ONLY`
-- `pr_url`: pending
-- `head_sha`: pending
+- `pr_url`: `https://github.com/sauravexodus/sauravexodus.github.io/pull/180`
+- `head_sha`: initial report head `ac8e60a34ce4e94df8cd8fc5db0a087c5f44610e`; final reviewed head will be recorded after review/merge
 - `preview`: `n/a` — report-only change with no public route, article, metadata, registry, sitemap, CTA, dependency, workflow, or runtime byte
 - `checks`: exact six-file report-only allowlist, deterministic scorer (`Behind: 3, Blocked: 5, Stretch: 6, Watch: 1`), 10 unit tests, 21 Markdown tables/4,113 data rows, one authoritative 2026-11-26 raw row, JSON/XML/HTML/JSON-LD/internal-link validation, six-file local HTTP marker smoke, `git diff --check`, and added-line secret/unsafe-markup scans passed; independent review pending
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
