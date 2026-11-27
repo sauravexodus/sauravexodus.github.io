@@ -25,7 +25,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 ---
 ## 2026-11-27 — Weekday visibility loop (Friday non-technical founder/dev agency)
 
-- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; public-route decision `REPEAT_CONFIRMATION`; Q10 research decision `EVIDENCE_ADVANCED_MONITOR_ONLY`.
+- **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; public-route decision `REPEAT_CONFIRMATION`; Q10 research decision `EVIDENCE_ADVANCED_MONITOR_ONLY`.
 - **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
 - **Reason code:** `Q10_EVIDENCE_ADVANCED_REPORT_ONLY` — all six discovery ladders were indeterminate, the two public founder routes remain the consolidation boundary, and current official/primary evidence strengthens Q10's future merge-evidence protocol without authorizing a draft.
 
@@ -58,15 +58,15 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 
 ### Structured run state
 
-- `status`: `REPORT_ONLY_DRAFT`
+- `status`: `REPORT_ONLY_MERGED_PAGES_VERIFIED`
 - `item_id`: `Q9`
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `Q10_EVIDENCE_ADVANCED_REPORT_ONLY`
-- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/182
-- `head_sha`: pending final report candidate
-- `preview`: `n/a` — report-only change; local and GitHub checks pending
-- `checks`: pending exact six-file allowlist, scorer, tests, Markdown/JSON/XML/HTML/JSON-LD/internal-link checks, local HTTP markers, diff/security scans, and independent exact-head review
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/182; release record pending
+- `head_sha`: report head `4deca4db187de1754904bdaf1f77a664b1ee9e4d`; squash merge `2fa835b220ec2d1206cb491ac3721ad9fd1a6ce3`
+- `preview`: `n/a` — report-only change; six cache-busted production report URLs returned HTTP 200 with row-specific markers
+- `checks`: exact six-file allowlist; deterministic scorer; 10 tests; 21 Markdown tables/4,198 data rows; one authoritative raw row; JSON/XML/HTML/JSON-LD/internal-link checks; local HTTP smoke; `git diff --check`; added-line security/unsafe-markup scans; CodeRabbit exact-head review with minimal risk and no actionable comments; Pages run `45982272703` success; six production markers verified
 - `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
 - `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
 - `next_attempt_at`: `2026-12-04`
