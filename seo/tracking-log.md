@@ -63,7 +63,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `Q10_EVIDENCE_ADVANCED_REPORT_ONLY`
-- `pr_url`: pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/182
 - `head_sha`: pending final report candidate
 - `preview`: `n/a` — report-only change; local and GitHub checks pending
 - `checks`: pending exact six-file allowlist, scorer, tests, Markdown/JSON/XML/HTML/JSON-LD/internal-link checks, local HTTP markers, diff/security scans, and independent exact-head review
