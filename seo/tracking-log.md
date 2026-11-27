@@ -63,7 +63,7 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
 - `reason_code`: `Q10_EVIDENCE_ADVANCED_REPORT_ONLY`
-- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/182; release record pending
+- `pr_url`: https://github.com/sauravexodus/sauravexodus.github.io/pull/182; release record https://github.com/sauravexodus/sauravexodus.github.io/pull/183
 - `head_sha`: report head `4deca4db187de1754904bdaf1f77a664b1ee9e4d`; squash merge `2fa835b220ec2d1206cb491ac3721ad9fd1a6ce3`
 - `preview`: `n/a` — report-only change; six cache-busted production report URLs returned HTTP 200 with row-specific markers
 - `checks`: exact six-file allowlist; deterministic scorer; 10 tests; 21 Markdown tables/4,198 data rows; one authoritative raw row; JSON/XML/HTML/JSON-LD/internal-link checks; local HTTP smoke; `git diff --check`; added-line security/unsafe-markup scans; CodeRabbit exact-head review with minimal risk and no actionable comments; Pages run `45982272703` success; six production markers verified
