@@ -23,6 +23,67 @@ Use the approved weekday theme rotation in `seo/strategy.md` rather than queryin
 - (plus the primary keyword of every published post in blog/posts.json)
 
 ---
+## 2026-11-27 — Weekday visibility loop (Friday non-technical founder/dev agency)
+
+- **Status:** `REPORT_ONLY_DRAFT`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; public-route decision `REPEAT_CONFIRMATION`; Q10 research decision `EVIDENCE_ADVANCED_MONITOR_ONLY`.
+- **State before → after:** `WAITING_HUMAN / BLOCKED_UNSAFE_STATE` → `WAITING_HUMAN / BLOCKED_UNSAFE_STATE`.
+- **Reason code:** `Q10_EVIDENCE_ADVANCED_REPORT_ONLY` — all six discovery ladders were indeterminate, the two public founder routes remain the consolidation boundary, and current official/primary evidence strengthens Q10's future merge-evidence protocol without authorizing a draft.
+
+### Reconciliation
+
+- Fetched `origin/master` through the control checkout and recreated the clean dedicated cron worktree at `0ebf16cb55b9f29927a1e03cf71894c61223681c`; the control checkout was not switched, reset, stashed, discarded, or written.
+- No open pull request existed before this report lane, and all four remote `editorial/*` branches map to merged editorial PRs rather than duplicate candidates.
+- PR #123's frozen head and squash-merge trees remain byte-identical at `a906721cae483a2426bb332216c1ce4f015dc712`; its five public files remain unchanged against current `master`; cache-busted production requests returned HTTP 200 with the article, blog card, registry, and sitemap markers live.
+- `seo/strategy.md` still records Q9 as `DRAFT PR #123 — WAITING HUMAN APPROVAL`; no approval was inferred, no substantive item was selected, and Q10 was not opened.
+- Release-record PR #181 final head `5f5cf986d3b0319ea7d8a310b6d260cbb1a660cf` was squash-merged as `73541d908780a8f150e18594617d366057f5cb17`; matching Pages run `45801609505` succeeded. The current collector commit `0ebf16cb55b9f29927a1e03cf71894c61223681c` has successful Pages run `45960816882`.
+
+### Current collector and visibility evidence
+
+- Read the authenticated 2026-11-27 collector record before research: 1 click, 14 impressions, 7.14% CTR, average position 6.07, 0 sampled topical non-brand queries, 11/11 tracked routes and metadata healthy, all SEO assets healthy, homepage mobile performance 100, blog 99, fractional guide 100, CaaS 99, minimum tracked accessibility 83, and SEO 100. Every sampled query row is a Sourav/Saurav-name variant. The collector was not rerun; the raw file remains at one authoritative row for today.
+- Queried all six tracked founder/dev-agency prompts across DuckDuckGo HTML, Brave, Bing RSS, Google, and separate Google `site:` surfaces. Exact reproducible URLs for all five surfaces and every prompt are recorded in `reports/visibility/ai-visibility-weekly.md`.
+- All six prompt ladders are `Indeterminate / not scored`. DuckDuckGo returned HTTP 202 challenge content and Brave HTTP 429 verification content throughout. Bing RSS lost intent into noon/non definitions (9 cards/9 domains), WhatsApp (10 cards/4 domains in one publisher ecosystem), generic software (10 cards/9 domains), iLovePDF (10 cards/6 hostnames in one publisher ecosystem), or broad AI (10 cards/10 domains). Google ordinary and site requests returned HTTP 200 shells with no extractable external cards or usable result-count fields.
+- Separate Google `site:souravchandra.com` checks exposed zero extractable external links and no usable result-count field. For every prompt, site result, indexed-page count, and expected founder-route presence are unavailable rather than negative. The collector's HTTP and metadata checks prove availability, not Google indexation.
+- Six new AI-report rows are explicitly `Indeterminate / not scored`. The benchmark scorer was rerun without rerunning the collector; ordinary search and indeterminate rows remain outside AI-answer rates, and no duplicate raw metric sample was retained.
+
+### Source, Q10, and information-gain review
+
+- Direct-source refresh: 20 of 21 maintained founder, agency, handover, framework, Q10, and canonical requests returned HTTP 200 after redirects. CMEoLabs timed out in both normal and IPv4 60-second retries, so it is `INDETERMINATE` rather than proved invalid. Better Software, GitHub's old code-referencing path, and CISA's short SBOM path resolve to current canonical destinations.
+- Two current commercial discoveries passed direct preflight: Axented and Upwwwards returned HTTP 200 at current proposal/agency-evaluation titles. Their scope, assumptions, team, ownership, milestones, pricing, communication, and verification fields repeat the existing split between Sourav's broad founder guide and applied quote-to-control ledger.
+- Q10 monitor-only evidence materially improved. ENISA's September 2026 version 0.4 draft advisory frames AI-assisted development as `identify lifecycle and requirements → specify constraints → verify through review, approval, tests and security checks → record evidence`. CISA's Software Acquisition Guide asks whether products include AI-generated source code/libraries and requests SBOM, attestation, and provenance controls. Current GitHub review/attestation guidance, CISA AI/SI SBOM minimum elements, NIST SSDF, and SLSA provenance remain reachable.
+- A 2026-10-15 arXiv survey of 239 practitioners, `Plausible Is Not Enough: Trust and Evidence in AI-Authored Pull Request Review`, reports higher evidence expectations and stronger concern about ownership and residual uncertainty for AI-authored PRs. Treat it as a self-reported practitioner study, not a universal threshold or market measure.
+- Source lifecycle is explicit: NIST SSDF 1.1 remains final; SSDF 1.2 is an initial public draft; SLSA v1.2 remains the approved provenance specification; ENISA's version 0.4 document is draft/informational. These are control vocabularies and research inputs, not certifications, legal advice, universal merge thresholds, or proof that generated code is secure.
+- Public-route decision: `REPEAT_CONFIRMATION`. Preserve `/blog/non-technical-founder-building-an-app.html` as the broad team/governance/verification guide and `/blog/how-to-evaluate-a-dev-shop-quote.html` as the applied quote, milestone, handover, and clean-room acceptance ledger. Do not create another annual checklist, proposal guide, team-comparison page, AI-code page, SBOM/provenance page, handover page, or final-payment page from this pass.
+- Q10 research decision: `EVIDENCE_ADVANCED_MONITOR_ONLY`. Preserve a future buyer-facing artifact as `intent and scope → authority and named ownership → executable checks → supply-chain evidence → reviewer reasoning → residual uncertainty → named acceptance`. This observation does not count as a bounded Q10 queue evidence attempt while Q9 blocks the substantive lane.
+- This pass changes reports only. No article, index, registry, sitemap, title, metadata, schema, CTA, offer, price, payment/contract term, credential, public source interpretation, dependency, workflow, or runtime byte changes.
+
+### Structured run state
+
+- `status`: `REPORT_ONLY_DRAFT`
+- `item_id`: `Q9`
+- `state_before`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `state_after`: Q9 `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`
+- `reason_code`: `Q10_EVIDENCE_ADVANCED_REPORT_ONLY`
+- `pr_url`: pending
+- `head_sha`: pending final report candidate
+- `preview`: `n/a` — report-only change; local and GitHub checks pending
+- `checks`: pending exact six-file allowlist, scorer, tests, Markdown/JSON/XML/HTML/JSON-LD/internal-link checks, local HTTP markers, diff/security scans, and independent exact-head review
+- `cadence_state`: open since 2026-10-21 13:02:46 UTC; cadence expiry cannot repair the missing interactive Q9 approval/release decision
+- `next_action`: Sourav interactively reconciles Q9's exact frozen release trail; cron does not select Q10
+- `next_attempt_at`: `2026-12-04`
+
+### Actions for the next publish/review cycle
+
+1. Sourav must interactively reconcile Q9 against PR #123's exact frozen head, byte-identical merge tree, review artifact, matching Pages run, and live route. Until that release trail is explicit, cron must not infer approval, rewrite Q9 as published, or select Q10.
+2. Keep Q9's item state and lane state separate: Q9 remains `WAITING_HUMAN`; the substantive lane remains `BLOCKED_UNSAFE_STATE`. Cadence is open, but cadence expiry cannot repair the approval split.
+3. Preserve the two founder canonicals and their distinct buyer jobs. Today's six indeterminate search ladders do not justify another founder, agency, quote, AI-code, handover, or final-payment route.
+4. Retain ENISA, CISA, GitHub, NIST, SLSA, and the arXiv survey in Q10's future evidence packet with exact lifecycle and provenance labels. Do not turn draft guidance or self-reported survey findings into universal requirements.
+5. Keep CMEoLabs outside citation-ready evidence while normal and IPv4 retries time out. Recheck final domain, title, transport, lifecycle, substantive content, relevance, and claim support before any approved public edit.
+6. Treat all Google site-result, indexed-page-count, and expected-route fields as unavailable rather than negative. Route health proves availability, not Google indexation.
+7. Monitor GSC for non-technical-founder, agency proposal, agency-versus-in-house, fractional-CTO-versus-agency, AI-code review, SBOM/provenance, and handover acceptance terms. Current authenticated data still has 0 sampled topical non-brand queries.
+8. Complete or verify Bing Webmaster ownership and sitemap submission if still pending. Keep `/blog/` accessibility (83) on the watchlist, secondary to topical discovery and Q9 release-record reconciliation.
+
+---
+
 ## 2026-11-26 — Weekday visibility loop (Thursday technical due diligence/investor checklist)
 
 - **Status:** `REPORT_ONLY_MERGED_PAGES_VERIFIED`; Q9 item state `WAITING_HUMAN`; substantive lane `BLOCKED_UNSAFE_STATE`; content decision `REPEAT_CONFIRMATION`.
